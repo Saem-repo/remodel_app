@@ -152,7 +152,7 @@ def home () :
 
 
     # 밑에는 한국 지역별 에너지(전기,가스,난방) 사용량 지도
-    df = pd.read_csv("C:\\Users\\SSEL\\Desktop\\Experiment\\Remodel_app\\dataset\\geo\\latest_geo_df.csv", encoding='euc-kr')
+    df = pd.read_csv("./dataset/geo/latest_geo_df.csv", encoding='euc-kr')
 
     kor_geo_file = './dataset/geo/sig.zip.geojson'
     kor_geo = json.load(open(kor_geo_file, encoding='utf-8'))
@@ -255,7 +255,7 @@ def case_summary() : # 수집된 사례 데이터 집계
     # 3. 저감율에 따른 사례 건물 유형
     # 4. 저감율(에너지, CO2, LCC) 별로 패시브, 액티브, 신재생 항목 어떤건지?
 
-    df = pd.read_csv("C:\\Users\\SSEL\\Desktop\\Experiment\\Remodel_app\\dataset\\search\\rev_search_df.csv", encoding='euc-kr')
+    df = pd.read_csv("./dataset/search/rev_search_df.csv", encoding='euc-kr')
 
     build_type = {"단독주택(1)": 16,
                   '공동주택(2)': 90,
@@ -641,7 +641,7 @@ def search_cases (): # 사례 검색
 
     if st.button("리모델링 사례 검색") :
         # 수집 데이터 로드
-        df = pd.read_csv("C:\\Users\\SSEL\\Desktop\\Experiment\\Remodel_app\\dataset\\search\\rev_search_df.csv", encoding='euc-kr')
+        df = pd.read_csv("./dataset/search/rev_search_df.csv", encoding='euc-kr')
 
         # st.write(len(build_type[bldg_info_2]))
         # st.write(bldg_info_list)
@@ -735,7 +735,7 @@ def rec_cases ():
     # 전_창문열관류율	후_창문열관류율	창문열관류율_향상율	전_기밀성	후_기밀성	기밀성_향상율	
     # 전_일사차폐계수	후_일사차폐계수	일사차폐계수_향상율	전_이산화탄소배출량	후_이산화탄소배출량	이산화탄소배출량_향상율
 
-    df = pd.read_csv("C:\\Users\\SSEL\\Desktop\\Experiment\\Remodel_app\\dataset\\rec\\rev_rec_df.csv", encoding='euc-kr')
+    df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
     # df.columns = ['id', 'pic', 'name', 'construction_year', 'remodel_year', 'BT', 'loc', 'Area', 'N_floor_ground',
     #               'N_floor_underground', 'ECB', 'ECA', 'ER', 'UWaB', 'UWaA', 'UWaI', 'UFB', 'UFA',
     #               'UFI', 'URB', 'URA', 'URI', 'UWiB', 'UWiA', 'UWiI', 'ATB', 'ATA', 'ATI', 'SCB', 'SCA', 'SCI',
