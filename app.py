@@ -139,7 +139,7 @@ def home () :
         
     with col2:               # To display the header text using css style
         # st.video('./img/home/smartcity.mp4')
-        st.image('./img/home/remodel_img.png')
+        st.image('./img/Home/remodel_img.png')
     
 
     st.markdown("---")
