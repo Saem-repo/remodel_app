@@ -40,7 +40,7 @@ st.set_page_config(layout='wide',
                 #    initial_sidebar_state='collapsed',
                    page_title='건축물 리모델링 설계/시공 사례기반 시스템 (BRICS: Building Remodeling Information & Casebase System)')
 
-st.sidebar.image('./img/home/SSEL_logo.png')
+st.sidebar.image('./img/Home/SSEL_logo.png')
 
 #%%
 
