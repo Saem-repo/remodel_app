@@ -239,7 +239,7 @@ def home () :
 
 def case_summary() : # 수집된 사례 데이터 집계
 
-    sns.set(font="Malgun Gothic")
+    sns.set(font="./font/Malgun Gothic")
     # sns.set_style('white')
 
     
