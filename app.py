@@ -288,7 +288,7 @@ def case_summary() : # 수집된 사례 데이터 집계
         fig_1_list = [NofK, NofI, total]
         fig_1 = pd.DataFrame([fig_1_list], columns=['국내사례', '해외사례', '전체사례'])
 
-        
+        fig = plt.figure(figsize=(10,6.25))
         sns.barplot(fig_1)
         plt.ylabel("사례 갯수(건)")
         
