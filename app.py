@@ -701,7 +701,7 @@ def search_cases (): # 사례 검색
 
             html = convert_df(search_result_rev.iloc[:15,:])
             
-            # st.write(html)
+            st.write(html)
 
             st.markdown(
             html,
