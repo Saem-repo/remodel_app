@@ -239,7 +239,11 @@ def home () :
 
 def case_summary() : # 수집된 사례 데이터 집계
 
-    sns.set(font="./font/Malgun Gothic")
+    import matplotlib.font_manager as fm
+    
+    font = fm.FontProperties(fname="./font/Malgun Gothic")
+    
+    # sns.set(font="./font/Malgun Gothic")
     # sns.set_style('white')
 
     
@@ -286,7 +290,8 @@ def case_summary() : # 수집된 사례 데이터 집계
 
         fig = plt.figure(figsize=(10,6.25))
         sns.barplot(fig_1)
-        plt.ylabel("사례 갯수(건)")
+        plt.xlabel(['국내사례', '해외사례', '전체사례'], fontproperties= font)
+        plt.ylabel("사례 갯수(건)", fontproperties= font)
         
         st.pyplot(fig)
         
