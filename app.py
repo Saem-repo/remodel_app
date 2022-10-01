@@ -867,7 +867,10 @@ def rec_cases ():
                     return (e.args[0])
 
             rev_df = df.iloc[:102, 2:]
-            clf_df = rev_df.iloc[:102, 4:]
+            clf_df = rev_df.iloc[:102, 3:]
+
+            st.write(rev_df.columns)
+            st.write(clf_df.columns)
 
             pred_result = label(clf_df)
             rev_df['Label'] = pred_result
@@ -883,7 +886,6 @@ def rec_cases ():
             result_df.sort_values(by='Similarity', ascending=True, inplace=True)
 
             st.write(result_df.columns)
-
             st.write(result_df)
 
             # kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율', '리모델링 전 벽열관료율', '리모델링 후 벽열관류율',
