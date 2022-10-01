@@ -678,60 +678,68 @@ def search_cases (): # 사례 검색
         st.write(search_result_rev)
 
         # st.write()
+        html = search_result_rev.to_html(escape=False, justify='center')
+
+        st.write(html)
+
+        st.markdown(
+        html,
+        unsafe_allow_html=True
+        )
 
         
-        center_1, center_2, center_3 = st.columns([2.5, 7, 2.5])
+        # center_1, center_2, center_3 = st.columns([2.5, 7, 2.5])
         
-        with center_2 :
-            def get_thumbnail(path) :
-                        img = Image.open(path)
-                        img.thumbnail((87, 87))
-                        return img
+        # with center_2 :
+        #     def get_thumbnail(path) :
+        #                 img = Image.open(path)
+        #                 img.thumbnail((87, 87))
+        #                 return img
 
-            def image_to_base64(img_path: str) -> str:
-                img = get_thumbnail(img_path)
-                with BytesIO() as buffer:
-                    img.save(buffer, 'png') # or 'jpeg'
-                    return base64.b64encode(buffer.getvalue()).decode()
+        #     def image_to_base64(img_path: str) -> str:
+        #         img = get_thumbnail(img_path)
+        #         with BytesIO() as buffer:
+        #             img.save(buffer, 'png') # or 'jpeg'
+        #             return base64.b64encode(buffer.getvalue()).decode()
 
-            def pop_url (df, img_path) :
-                temp = df.loc[df['photo_path'] == img_path, 'explain_path']
-                # temp = temp['exlain_path'].values[0]
+        #     def pop_url (df, img_path) :
+        #         temp = df.loc[df['photo_path'] == img_path, 'explain_path']
+        #         # temp = temp['exlain_path'].values[0]
                 
-                return temp
+        #         return temp
 
-            def image_formatter(img_path):
+        #     def image_formatter(img_path):
 
-                import re
+        #         import re
 
-                exp_df = pd.read_csv("./dataset/search/rev_search_df_1.csv", encoding='euc-kr')
-                target_url = pop_url(exp_df, img_path)
+        #         exp_df = pd.read_csv("./dataset/search/rev_search_df_1.csv", encoding='euc-kr')
+        #         target_url = pop_url(exp_df, img_path)
                 
-                # st.write(type(target_url))
+        #         # st.write(type(target_url))
 
-                st.write(target_url['explain_path'])
+        #         st.write(target_url['explain_path'])
 
-                # rev_pop = re.sub(r'[1-9]', "", target_url)
-                # rev_pop = str(target_url).replace(str(target_url),)
-                # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                return f'''<a href="{target_url}">
-                           <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
+        #         # rev_pop = re.sub(r'[1-9]', "", target_url)
+        #         # rev_pop = str(target_url).replace(str(target_url),)
+        #         # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+        #         # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+        #         return f'''<a href="{target_url}">
+        #                    <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
 
 
-            @st.cache(suppress_st_warning=True)
-            def convert_df(input_df):
-                # IMPORTANT: Cache the conversion to prevent computation on every rerun
-                return input_df.to_html(escape=False, formatters=dict(사진=image_formatter), justify='center')
+        #     @st.cache(suppress_st_warning=True)
+        #     def convert_df(input_df):
+        #         # IMPORTANT: Cache the conversion to prevent computation on every rerun
+        #         return input_df.to_html(escape=False, formatters=dict(사진=image_formatter), justify='center')
 
-            html = convert_df(search_result_rev.iloc[:15,:])
+        #     html = convert_df(search_result_rev.iloc[:15,:])
             
-            st.write(html)
+        #     st.write(html)
 
-            st.markdown(
-            html,
-            unsafe_allow_html=True
-            )
+        #     st.markdown(
+        #     html,
+        #     unsafe_allow_html=True
+        #     )
 
             # @st.cache(allow_output_mutation=True)
             # def get_base64_of_bin_file(bin_file):
