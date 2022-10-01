@@ -241,7 +241,7 @@ def case_summary() : # 수집된 사례 데이터 집계
 
     import matplotlib.font_manager as fm
     
-    font = fm.FontProperties(fname="/font/Malgun Gothic.ttf").get_name()
+    font = fm.FontProperties(fname="./font/Malgun Gothic.ttf").get_name()
     plt.rc('font', family=font)
     
     # sns.set(font="./font/Malgun Gothic")
