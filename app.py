@@ -693,7 +693,7 @@ def search_cases (): # 사례 검색
             def image_formatter(img_path: str) -> str:
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                return f'<a href="/popup_2/Explain_1.png"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                return f'<a href="https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/popup_2/Explain_1.png"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
 
 
             @st.cache
