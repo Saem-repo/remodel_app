@@ -675,7 +675,7 @@ def search_cases (): # 사례 검색
         
         search_result_rev['건물 유형'] = search_result_rev['건물 유형'].apply(lambda x: build_type[x])
 
-        st.write(search_result_rev)
+        # st.write(search_result_rev)
 
         # st.write()
         # html = search_result_rev.to_html(escape=False, justify='center')
@@ -726,7 +726,7 @@ def search_cases (): # 사례 검색
 
             html = convert_df(search_result_rev.iloc[:15,:])
             
-            st.write(html)
+            # st.write(html)
 
             st.markdown(
             html,
@@ -929,10 +929,10 @@ def rec_cases ():
                             <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
                 
                 
-                @st.cache
+                @st.cache(suppress_st_warning=True)
                 def convert_df(input_df):
                     # IMPORTANT: Cache the conversion to prevent computation on every rerun
-                    return input_df.to_html(escape=False, formatters=dict(사진=image_formatter), justify='center')
+                    return input_df.to_html(escape=False, formatters=dict(사진=image_formatter))
 
                 html = convert_df(result_df.iloc[:,:20])
 
