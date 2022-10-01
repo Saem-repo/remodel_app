@@ -694,7 +694,8 @@ def search_cases (): # 사례 검색
 
             def pop_url (df, img_path) :
                 temp = df.loc[df['photo_path'] == img_path, 'explain_path']
-                temp = temp['exlain_path'].values[0]
+                # temp = temp['exlain_path'].values[0]
+                
                 return temp
 
             def image_formatter(img_path):
@@ -702,7 +703,7 @@ def search_cases (): # 사례 검색
                 exp_df = pd.read_csv("./dataset/search/rev_search_df_1.csv", encoding='euc-kr')
                 target_url = pop_url(exp_df, img_path)
                 
-                st.write(target_url)
+                st.write(target_url.value)
                 # rev_pop = str(target_url).replace(str(target_url),)
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
@@ -710,7 +711,7 @@ def search_cases (): # 사례 검색
                            <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
 
 
-            # @st.cache(suppress_st_warning=True)
+            @st.cache(suppress_st_warning=True)
             def convert_df(input_df):
                 # IMPORTANT: Cache the conversion to prevent computation on every rerun
                 return input_df.to_html(escape=False, formatters=dict(사진=image_formatter), justify='center')
