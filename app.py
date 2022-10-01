@@ -675,6 +675,8 @@ def search_cases (): # 사례 검색
         
         search_result_rev['건물 유형'] = search_result_rev['건물 유형'].apply(lambda x: build_type[x])
 
+        st.write(search_result_rev)
+
         
         center_1, center_2, center_3 = st.columns([2.5, 7, 2.5])
         
