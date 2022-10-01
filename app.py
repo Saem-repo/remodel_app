@@ -895,7 +895,7 @@ def rec_cases ():
 
             result_df.columns = kor_rec_cols
 
-            # st.write(result_df)
+            st.write(result_df.iloc[:,:])
 
             center_1, center_2, center_3 = st.columns([0.01, 13, 0.01])
         
@@ -914,7 +914,9 @@ def rec_cases ():
 
                 def image_formatter(img_path: str) -> str:
                     # return f'<a href="{image_to_base64(img_path)}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                    return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                    # return f'<a href="./img/popup2/Explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                    return f'<a href="www.naver.com"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+
 
                 # @st.cache(allow_output_mutation=True)
                 # def get_base64_of_bin_file(bin_file):
