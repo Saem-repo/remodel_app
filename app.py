@@ -710,17 +710,9 @@ def search_cases (): # 사례 검색
 
             def image_formatter(img_path):
 
-                import re
-
                 exp_df = pd.read_csv("./dataset/search/rev_search_df_1.csv", encoding='euc-kr')
                 target_url = pop_url(exp_df, img_path)
                 
-                # st.write(type(target_url))
-
-                st.write(list(target_url)[0])
-
-                # rev_pop = re.sub(r'[1-9]', "", target_url)
-                # rev_pop = str(target_url).replace(str(target_url),)
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 return f'''<a href="{list(target_url)[0]}">
@@ -741,30 +733,7 @@ def search_cases (): # 사례 검색
             unsafe_allow_html=True
             )
 
-            # @st.cache(allow_output_mutation=True)
-            # def get_base64_of_bin_file(bin_file):
-            #     with open(bin_file, 'rb') as f:
-            #         data = f.read()
-            #     return base64.b64encode(data).decode()
-
-            # @st.cache(allow_output_mutation=True)
-            # def get_img_with_href(local_img_path, target_url):
-            #     img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
-            #     bin_str = get_base64_of_bin_file(local_img_path)
-            #     html_code = f'''
-            #         <a href="{target_url}">
-            #             <img src="data:image/{img_format};base64,{bin_str}" />
-            #         </a>'''
-            #     return html_code
-
-            # gif_html = get_img_with_href('tenor.gif', 'https://docs.streamlit.io')
-            # st.markdown(gif_html, unsafe_allow_html=True)
-
-            # st.write(search_result_rev)
-
-            # st.write(search_result_rev)
             
-
 def rec_cases ():
     
     st.markdown(""" <style> .font {
@@ -933,10 +902,10 @@ def rec_cases ():
         
             with center_2 :
             
-                def get_thumbnail(path: str) -> Image:
-                    img = Image.open(path)
-                    img.thumbnail((87, 87))
-                    return img
+                def get_thumbnail(path) :
+                        img = Image.open(path)
+                        img.thumbnail((87, 87))
+                        return img
 
                 def image_to_base64(img_path: str) -> str:
                     img = get_thumbnail(img_path)
@@ -944,38 +913,27 @@ def rec_cases ():
                         img.save(buffer, 'png') # or 'jpeg'
                         return base64.b64encode(buffer.getvalue()).decode()
 
-                def image_formatter(img_path: str) -> str:
-                    # return f'<a href="{image_to_base64(img_path)}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                    return f'<a href="/popup_2/Explain_1.png"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                    # return f'<a href="https://github.com/Saem-repo/remodel_app/blob/master/img/popup_2/Explain_1.png"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                def pop_url (df, img_path) :
+                    temp = df.loc[df['photo_path'] == img_path, 'explain_path']
+                    # temp = temp['exlain_path'].values[0]
+                    
+                    return temp
 
-
-                # @st.cache(allow_output_mutation=True)
-                # def get_base64_of_bin_file(bin_file):
-                #     with open(bin_file, 'rb') as f:
-                #         data = f.read()
-                #     return base64.b64encode(data).decode()
-
-                # @st.cache(allow_output_mutation=True)
-                # def get_img_with_href(local_img_path, target_url):
-                #     img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
-                #     bin_str = get_base64_of_bin_file(local_img_path)
-                #     html_code = f'''
-                #         <a href="{target_url}">
-                #             <img src="data:image/{img_format};base64,{bin_str}" />
-                #         </a>'''
-                #     return html_code
-
-                # gif_html = get_img_with_href('tenor.gif', 'https://docs.streamlit.io')
-                # st.markdown(gif_html, unsafe_allow_html=True)
-
+                def image_formatter(img_path):
+                    exp_df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
+                    target_url = pop_url(exp_df, img_path)
+                    
+                    # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                    # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                    return f'''<a href="{list(target_url)[0]}">
+                            <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
+                
+                
                 @st.cache
                 def convert_df(input_df):
                     # IMPORTANT: Cache the conversion to prevent computation on every rerun
-                    return input_df.to_html(escape=False, formatters=dict(사진=image_formatter))
+                    return input_df.to_html(escape=False, formatters=dict(사진=image_formatter), justify='center')
 
-                
-                
                 html = convert_df(result_df.iloc[:,:20])
 
                 # html = convert_df(rev_df)
