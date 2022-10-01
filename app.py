@@ -296,6 +296,7 @@ def case_summary() : # 수집된 사례 데이터 집계
         fig = plt.figure(figsize=(10,6.75))
         sns.barplot(fig_1)
         plt.ylabel("사례 갯수(건)", fontproperties=font)
+        plt.xticks(fontproperties=font)
         # plt.rcParams['font.family'] = 'Malgun Gothic'
         
         st.pyplot(fig)
@@ -312,9 +313,10 @@ def case_summary() : # 수집된 사례 데이터 집계
         # st.write(fig_2.T)
         # plt.figure(figsize=(10,7))
         fig_2.T.plot(kind='barh', figsize=(10,7))
-        plt.ylabel('건물 유형')
-        plt.rcParams['font.family'] = 'Malgun Gothic'
-                
+        plt.ylabel('건물 유형', fontproperties=font)
+        plt.yticks(fontproperties=font)
+        plt.xticks(fontproperties=font)
+        
         st.pyplot()
 
     #     col3, col4 = st.columns(2)            
