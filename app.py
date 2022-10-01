@@ -895,7 +895,7 @@ def rec_cases ():
 
             result_df.columns = kor_rec_cols
 
-            st.write(result_df.iloc[:,:])
+            st.dataframe(result_df.iloc[:,:])
 
             center_1, center_2, center_3 = st.columns([0.01, 13, 0.01])
         
