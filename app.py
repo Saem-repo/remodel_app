@@ -281,6 +281,9 @@ def case_summary() : # 수집된 사례 데이터 집계
 
     col1, col2 = st.columns(2)
     with col1:
+        plt.rcParams['font.family'] ='Malgun Gothic'
+        plt.rcParams['axes.unicode_minus'] =False
+        
         st.markdown('### 전체 리모델링 사례 데이터 현황')
         NofK = len(df.loc[(df['iso_flag'] == 410),:])
         NofI = len(df.loc[(df['iso_flag'] != 410),:])
@@ -288,21 +291,24 @@ def case_summary() : # 수집된 사례 데이터 집계
         fig_1_list = [NofK, NofI, total]
         fig_1 = pd.DataFrame([fig_1_list], columns=['국내사례', '해외사례', '전체사례'])
 
-        fig = plt.figure(figsize=(10,6.25))
+        fig = plt.figure(figsize=(10,6.5))
         sns.barplot(fig_1)
         plt.ylabel("사례 갯수(건)")
-        plt.rcParams['font.family'] = 'Malgun Gothic'
+        # plt.rcParams['font.family'] = 'Malgun Gothic'
         
         st.pyplot(fig)
         
     with col2:
+        plt.rcParams['font.family'] ='Malgun Gothic'
+        plt.rcParams['axes.unicode_minus'] =False
+
         st.markdown('### 전체 건물 유형별 리모델링 사례')
-        st.set_option('deprecation.showPyplotGlobalUse', False)
+        # st.set_option('deprecation.showPyplotGlobalUse', False)
         
         fig_2 = pd.DataFrame([build_type], columns=build_type.keys())
         fig_2.index = ['사례 건수(건)']
         # st.write(fig_2.T)
-        plt.figure(figsize=(10,7))
+        # plt.figure(figsize=(10,7))
         fig_2.T.plot(kind='barh', figsize=(10,7))
         plt.rcParams['font.family'] = 'Malgun Gothic'
                 
