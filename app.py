@@ -942,7 +942,7 @@ def rec_cases ():
 
                 
                 
-                html = convert_df(result_df.iloc[:,:])
+                html = convert_df(result_df.iloc[:,:20])
 
                 # html = convert_df(rev_df)
 
