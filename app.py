@@ -895,7 +895,7 @@ def rec_cases ():
 
             result_df.columns = kor_rec_cols
 
-            # st.write(result_df)
+            st.write(result_df)
 
             center_1, center_2, center_3 = st.columns([0.01, 13, 0.01])
         
@@ -941,7 +941,7 @@ def rec_cases ():
                     return input_df.to_html(escape=False, formatters=dict(사진=image_formatter))
 
                 
-                st.write(result_df)
+                
                 html = convert_df(result_df.iloc[:,:])
 
                 # html = convert_df(rev_df)
@@ -953,10 +953,7 @@ def rec_cases ():
                 unsafe_allow_html=True
                 )
 
-
-
-
-
+                # st.write(result_df)
 
 
     else : 
