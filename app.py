@@ -755,23 +755,6 @@ def rec_cases ():
         except ValueError as e:
             return (e.args[0])
 
-    # 원래 수집 데이터 셋 !! 아래는 각 변수들 이름 및 대응되는 영어 명칭!!
-    # Id	사진	이름	준공년도	리모델링년도	빌딩타입	위치	면적	지상층수	지하층수
-    # 전_에너지소비량	후_에너지소비량	에너지저감율	전_벽열관류율	후_벽열관류율	벽열관류율_향상율
-    # 전_바닥열관류율	후_바닥열관류율	바닥열관류율_향상율	전_지붕열관류율	후_지붕열관류율	지붕열관류율_향상율
-    # 전_창문열관류율	후_창문열관류율	창문열관류율_향상율	전_기밀성	후_기밀성	기밀성_향상율	
-    # 전_일사차폐계수	후_일사차폐계수	일사차폐계수_향상율	전_이산화탄소배출량	후_이산화탄소배출량	이산화탄소배출량_향상율
-
-    df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
-    # df.columns = ['id', 'pic', 'name', 'construction_year', 'remodel_year', 'BT', 'loc', 'Area', 'N_floor_ground',
-    #               'N_floor_underground', 'ECB', 'ECA', 'ER', 'UWaB', 'UWaA', 'UWaI', 'UFB', 'UFA',
-    #               'UFI', 'URB', 'URA', 'URI', 'UWiB', 'UWiA', 'UWiI', 'ATB', 'ATA', 'ATI', 'SCB', 'SCA', 'SCI',
-    #               'COB', 'COA', 'COI']
-
-    # search_cols = ['pic','name','loc', 'BT', 'Area', 'ER', 'UWaB', 'UWaA', 'UFB', 'UFA', 'URB', 'URA', 'UWiB', 'UWiA', 'ATB', 'ATA', 'SCB', 'SCA']
-    
-    
-    
     # 사례 추천을 위한 사용자 입력 
 
     rec_cols_1 = st.columns(4)
@@ -855,6 +838,22 @@ def rec_cases ():
         # st.write(remodel_renewable_info_list)
         # st.write(remodel_result_info_list)
 
+            # 원래 수집 데이터 셋 !! 아래는 각 변수들 이름 및 대응되는 영어 명칭!!
+            # Id	사진	이름	준공년도	리모델링년도	빌딩타입	위치	면적	지상층수	지하층수
+            # 전_에너지소비량	후_에너지소비량	에너지저감율	전_벽열관류율	후_벽열관류율	벽열관류율_향상율
+            # 전_바닥열관류율	후_바닥열관류율	바닥열관류율_향상율	전_지붕열관류율	후_지붕열관류율	지붕열관류율_향상율
+            # 전_창문열관류율	후_창문열관류율	창문열관류율_향상율	전_기밀성	후_기밀성	기밀성_향상율	
+            # 전_일사차폐계수	후_일사차폐계수	일사차폐계수_향상율	전_이산화탄소배출량	후_이산화탄소배출량	이산화탄소배출량_향상율
+
+            df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
+            # df.columns = ['id', 'pic', 'name', 'construction_year', 'remodel_year', 'BT', 'loc', 'Area', 'N_floor_ground',
+            #               'N_floor_underground', 'ECB', 'ECA', 'ER', 'UWaB', 'UWaA', 'UWaI', 'UFB', 'UFA',
+            #               'UFI', 'URB', 'URA', 'URI', 'UWiB', 'UWiA', 'UWiI', 'ATB', 'ATA', 'ATI', 'SCB', 'SCA', 'SCI',
+            #               'COB', 'COA', 'COI']
+
+            # search_cols = ['pic','name','loc', 'BT', 'Area', 'ER', 'UWaB', 'UWaA', 'UFB', 'UFA', 'URB', 'URA', 'UWiB', 'UWiA', 'ATB', 'ATA', 'SCB', 'SCA']
+    
+
             def label(unit):
                 try:
                     pickle_in = open("./classification.pickle", "rb")
@@ -867,8 +866,8 @@ def rec_cases ():
                 except ValueError as e:
                     return (e.args[0])
 
-            rev_df = df.iloc[:102, 1:]
-            clf_df = rev_df.iloc[:102, 2:]
+            rev_df = df.iloc[:102, 2:]
+            clf_df = rev_df.iloc[:102, 3:]
 
             pred_result = label(clf_df)
             rev_df['Label'] = pred_result
