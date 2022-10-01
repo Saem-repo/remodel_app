@@ -661,7 +661,7 @@ def search_cases (): # 사례 검색
 
         # search_cols = ['build_nm', 'photo_path', 'explain_path', 'build_type', 're_cost', 're_energy', 're_emission', 're_life_cycle_cost']
 
-        search_cols = ['build_nm', 'photo_path', 'explain_path','build_type', 're_cost', 're_energy', 're_emission', 're_life_cycle_cost']
+        search_cols = ['build_nm', 'photo_path','build_type', 're_cost', 're_energy', 're_emission', 're_life_cycle_cost']
 
         search_result_rev = search_result.loc[:,search_cols]
 
@@ -669,7 +669,7 @@ def search_cases (): # 사례 검색
         search_result_rev['re_emission'] = search_result_rev['re_emission'] * 100
         search_result_rev['re_life_cycle_cost'] = search_result_rev['re_life_cycle_cost'] * 100
 
-        kor_search_cols = ['사례 이름', '사진', '상세정보', '건물 유형', '리모델링비용', '에너지 저감율', 'CO2 저감율', 'LCC 저감율']
+        kor_search_cols = ['사례 이름', '사진', '건물 유형', '리모델링비용', '에너지 저감율', 'CO2 저감율', 'LCC 저감율']
 
         search_result_rev.columns = kor_search_cols
         
