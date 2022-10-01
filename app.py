@@ -694,6 +694,7 @@ def search_cases (): # 사례 검색
 
             def pop_url (df, img_path) :
                 temp = df.loc[df['photo_path'] == img_path, 'explain_path']
+                temp = temp['exlain_path'].values[0]
                 return temp
 
             def image_formatter(img_path):
