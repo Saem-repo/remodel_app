@@ -700,10 +700,14 @@ def search_cases (): # 사례 검색
 
             def image_formatter(img_path):
 
+                import re
+
                 exp_df = pd.read_csv("./dataset/search/rev_search_df_1.csv", encoding='euc-kr')
                 target_url = pop_url(exp_df, img_path)
                 
-                st.write(target_url)
+                st.write(target_url.iloc[0,0])
+
+                # new_text = re.sub(r'[1-9]', "", target_url)
                 # rev_pop = str(target_url).replace(str(target_url),)
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
