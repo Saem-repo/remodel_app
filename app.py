@@ -791,52 +791,52 @@ def rec_cases ():
         BT_info = st.selectbox('건물유형', options = list(BT.keys()), format_func=lambda x: BT[x])
 
     with rec_cols_1[2] :
-        Area = st.text_input("연면적 (m2)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        Area = st.text_input("연면적 (m2)", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_1[3] :
-        ER = st.text_input("에너지 저감율(%)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        ER = st.text_input("에너지 저감율(%)", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
     
     rec_cols_2 = st.columns(4)
 
     with rec_cols_2[0] :
-        UWaB = st.text_input("리모델링 전 벽열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        UWaB = st.text_input("리모델링 전 벽열관류율", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_2[1] :
-        UWaA = st.text_input("리모델링 후 벽열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        UWaA = st.text_input("리모델링 후 벽열관류율", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_2[2] :
-        UFB = st.text_input("리모델링 전 바닥열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        UFB = st.text_input("리모델링 전 바닥열관류율", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_2[3] :
-        UFA = st.text_input("리모델링 후 바닥열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        UFA = st.text_input("리모델링 후 바닥열관류율", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     rec_cols_3 = st.columns(4)
 
     with rec_cols_3[0] :
-        URB = st.text_input("리모델링 전 지붕열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        URB = st.text_input("리모델링 전 지붕열관류율", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_3[1] :
-        URA = st.text_input("리모델링 후 지붕열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        URA = st.text_input("리모델링 후 지붕열관류율", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
     
     with rec_cols_3[2] :
-        UWiB = st.text_input("리모델링 전 창문열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        UWiB = st.text_input("리모델링 전 창문열관류율", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_3[3] :
-        UWiA = st.text_input("리모델링 후 창문열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        UWiA = st.text_input("리모델링 후 창문열관류율", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     rec_cols_4 = st.columns(4)
 
     with rec_cols_4[0] :
-        ATB = st.text_input("리모델링 전 기밀성", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        ATB = st.text_input("리모델링 전 기밀성", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_4[1] :
-        ATA = st.text_input("리모델링 후 기밀성", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        ATA = st.text_input("리모델링 후 기밀성", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_4[2] :
-        SCB = st.text_input("리모델링 전 일사차폐계수", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        SCB = st.text_input("리모델링 전 일사차폐계수", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
     
     with rec_cols_4[3] :
-        SCA = st.text_input("리모델링 후 일사차폐계수", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        SCA = st.text_input("리모델링 후 일사차폐계수", "", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     
     rec_info = [loc_info, BT_info, Area, ER, UWaB, UWaA, UFB, UFA, URB, URA, UWiB, UWiA, ATB, ATA, SCB, SCA]
