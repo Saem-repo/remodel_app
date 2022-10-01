@@ -692,12 +692,18 @@ def search_cases (): # 사례 검색
                     img.save(buffer, 'png') # or 'jpeg'
                     return base64.b64encode(buffer.getvalue()).decode()
 
+            def pop_url (df, img_path) :
+                temp = df.loc[df['photo_path'] == img_path, 'explain_path']
+                return temp
+
             def image_formatter(img_path):
 
-                st.write(img_path)
+                exp_df = pd.read_csv("./dataset/search/rev_search_df_1.csv", encoding='euc-kr')
+                target_url = pop_url(exp_df, img_path)
+
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                return f'''<a href="https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/popup_2/Explain_1.png">
+                return f'''<a href="{target_url}">
                            <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
 
 
