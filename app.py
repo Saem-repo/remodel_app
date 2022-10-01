@@ -914,7 +914,7 @@ def rec_cases ():
 
                 def image_formatter(img_path: str) -> str:
                     # return f'<a href="{image_to_base64(img_path)}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                    return f'<a href="/img/popup2/Explain_1.png"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                    return f'<a href="./Explain_1.png"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                     # return f'<a href="https://github.com/Saem-repo/remodel_app/blob/master/img/popup_2/Explain_1.png"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
 
 
