@@ -661,7 +661,7 @@ def search_cases (): # 사례 검색
 
         # search_cols = ['build_nm', 'photo_path', 'explain_path', 'build_type', 're_cost', 're_energy', 're_emission', 're_life_cycle_cost']
 
-        search_cols = ['build_nm', 'photo_path', 'build_type', 're_cost', 're_energy', 're_emission', 're_life_cycle_cost']
+        search_cols = ['build_nm', 'photo_path', 'explain_path','build_type', 're_cost', 're_energy', 're_emission', 're_life_cycle_cost']
 
         search_result_rev = search_result.loc[:,search_cols]
 
@@ -669,13 +669,15 @@ def search_cases (): # 사례 검색
         search_result_rev['re_emission'] = search_result_rev['re_emission'] * 100
         search_result_rev['re_life_cycle_cost'] = search_result_rev['re_life_cycle_cost'] * 100
 
-        kor_search_cols = ['사례 이름', '사진', '건물 유형', '리모델링비용', '에너지 저감율', 'CO2 저감율', 'LCC 저감율']
+        kor_search_cols = ['사례 이름', '사진', '상세정보', '건물 유형', '리모델링비용', '에너지 저감율', 'CO2 저감율', 'LCC 저감율']
 
         search_result_rev.columns = kor_search_cols
         
         search_result_rev['건물 유형'] = search_result_rev['건물 유형'].apply(lambda x: build_type[x])
 
         st.write(search_result_rev)
+
+        # st.write()
 
         
         center_1, center_2, center_3 = st.columns([2.5, 7, 2.5])
@@ -707,13 +709,13 @@ def search_cases (): # 사례 검색
                 
                 # st.write(type(target_url))
 
-                st.write(target_url.get_values)
+                st.write(target_url)
 
                 # rev_pop = re.sub(r'[1-9]', "", target_url)
                 # rev_pop = str(target_url).replace(str(target_url),)
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                return f'''<a href="{target_url.get_values}">
+                return f'''<a href="{target_url}">
                            <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
 
 
