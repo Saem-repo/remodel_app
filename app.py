@@ -883,7 +883,9 @@ def rec_cases ():
 
             result_df.sort_values(by='Similarity', ascending=True, inplace=True)
 
-            # st.write(result_df.columns)
+            st.write(result_df.columns)
+
+            st.write(result_df)
 
             # kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율', '리모델링 전 벽열관료율', '리모델링 후 벽열관류율',
             #                    '리모델링 전 바닥열관류율', '리모델링 후 바닥열관류율', '리모델링 전 지붕열관류율', '리모델링 후 바닥열관류율',
