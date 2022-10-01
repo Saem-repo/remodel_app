@@ -690,10 +690,13 @@ def search_cases (): # 사례 검색
                     img.save(buffer, 'png') # or 'jpeg'
                     return base64.b64encode(buffer.getvalue()).decode()
 
-            def image_formatter(img_path: str) -> str:
+            def image_formatter(img_path):
+
+                st.write(img_path)
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                return f'<a href="https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/popup_2/Explain_1.png"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                return f'''<a href="https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/popup_2/Explain_1.png">
+                           <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
 
 
             @st.cache
@@ -703,7 +706,7 @@ def search_cases (): # 사례 검색
 
             html = convert_df(search_result_rev.iloc[:15,:])
             
-            st.write(html)
+            # st.write(html)
 
             st.markdown(
             html,
