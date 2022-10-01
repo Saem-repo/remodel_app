@@ -709,7 +709,7 @@ def search_cases (): # 사례 검색
                 
                 # st.write(type(target_url))
 
-                st.write(target_url)
+                st.write(target_url['explain_path'])
 
                 # rev_pop = re.sub(r'[1-9]', "", target_url)
                 # rev_pop = str(target_url).replace(str(target_url),)
