@@ -913,7 +913,27 @@ def rec_cases ():
                         return base64.b64encode(buffer.getvalue()).decode()
 
                 def image_formatter(img_path: str) -> str:
-                    return f'<a href="{image_to_base64(img_path)}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                    # return f'<a href="{image_to_base64(img_path)}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                    return f'<a href="./img/popup/explain 1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+
+                # @st.cache(allow_output_mutation=True)
+                # def get_base64_of_bin_file(bin_file):
+                #     with open(bin_file, 'rb') as f:
+                #         data = f.read()
+                #     return base64.b64encode(data).decode()
+
+                # @st.cache(allow_output_mutation=True)
+                # def get_img_with_href(local_img_path, target_url):
+                #     img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
+                #     bin_str = get_base64_of_bin_file(local_img_path)
+                #     html_code = f'''
+                #         <a href="{target_url}">
+                #             <img src="data:image/{img_format};base64,{bin_str}" />
+                #         </a>'''
+                #     return html_code
+
+                # gif_html = get_img_with_href('tenor.gif', 'https://docs.streamlit.io')
+                # st.markdown(gif_html, unsafe_allow_html=True)
 
                 @st.cache
                 def convert_df(input_df):
@@ -921,6 +941,7 @@ def rec_cases ():
                     return input_df.to_html(escape=False, formatters=dict(사진=image_formatter))
 
                 
+                st.write(result_df)
                 html = convert_df(result_df.iloc[:,:])
 
                 # html = convert_df(rev_df)
@@ -931,6 +952,13 @@ def rec_cases ():
                 html,
                 unsafe_allow_html=True
                 )
+
+
+
+
+
+
+
     else : 
         st.error("0보다 큰 값을 입력해주세요.")     
 
