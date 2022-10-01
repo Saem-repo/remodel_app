@@ -723,7 +723,7 @@ def search_cases (): # 사례 검색
                 # rev_pop = str(target_url).replace(str(target_url),)
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                return f'''<a href="{target_url}">
+                return f'''<a href="{list(target_url)[0]}">
                            <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
 
 
