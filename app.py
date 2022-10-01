@@ -692,6 +692,8 @@ def search_cases (): # 사례 검색
                     return base64.b64encode(buffer.getvalue()).decode()
 
             def image_formatter(img_path: str) -> str:
+                # path = os.path.dirname(__file__)
+                # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
 
             @st.cache
