@@ -699,7 +699,7 @@ def search_cases (): # 사례 검색
                            <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
 
 
-            @st.cache
+            @st.cache(suppress_st_warning=True)
             def convert_df(input_df):
                 # IMPORTANT: Cache the conversion to prevent computation on every rerun
                 return input_df.to_html(escape=False, formatters=dict(사진=image_formatter), justify='center')
