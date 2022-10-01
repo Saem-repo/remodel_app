@@ -645,7 +645,7 @@ def search_cases (): # 사례 검색
 
     if st.button("리모델링 사례 검색") :
         # 수집 데이터 로드
-        df = pd.read_csv("./dataset/search/rev_search_df.csv", encoding='euc-kr')
+        df = pd.read_csv("./dataset/search/rev_search_df_1.csv", encoding='euc-kr')
 
         # st.write(len(build_type[bldg_info_2]))
         # st.write(bldg_info_list)
@@ -679,7 +679,6 @@ def search_cases (): # 사례 검색
         center_1, center_2, center_3 = st.columns([2.5, 7, 2.5])
         
         with center_2 :
-            # def get_thumbnail(path: str) -> Image:
             def get_thumbnail(path) :
                         img = Image.open(path)
                         img.thumbnail((87, 87))
@@ -692,9 +691,9 @@ def search_cases (): # 사례 검색
                     return base64.b64encode(buffer.getvalue()).decode()
 
             def image_formatter(img_path: str) -> str:
-                # path = os.path.dirname(__file__)
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                return f'<a href="./img/popup/explain 1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+
 
             @st.cache
             def convert_df(input_df):
@@ -703,12 +702,33 @@ def search_cases (): # 사례 검색
 
             html = convert_df(search_result_rev.iloc[:15,:])
             
-            st.write(html)
+            # st.write(html)
 
             st.markdown(
             html,
             unsafe_allow_html=True
             )
+
+            # @st.cache(allow_output_mutation=True)
+            # def get_base64_of_bin_file(bin_file):
+            #     with open(bin_file, 'rb') as f:
+            #         data = f.read()
+            #     return base64.b64encode(data).decode()
+
+            # @st.cache(allow_output_mutation=True)
+            # def get_img_with_href(local_img_path, target_url):
+            #     img_format = os.path.splitext(local_img_path)[-1].replace('.', '')
+            #     bin_str = get_base64_of_bin_file(local_img_path)
+            #     html_code = f'''
+            #         <a href="{target_url}">
+            #             <img src="data:image/{img_format};base64,{bin_str}" />
+            #         </a>'''
+            #     return html_code
+
+            # gif_html = get_img_with_href('tenor.gif', 'https://docs.streamlit.io')
+            # st.markdown(gif_html, unsafe_allow_html=True)
+
+            # st.write(search_result_rev)
 
             # st.write(search_result_rev)
             
