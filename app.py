@@ -241,7 +241,8 @@ def case_summary() : # 수집된 사례 데이터 집계
 
     import matplotlib.font_manager as fm
     
-    font = fm.FontProperties(fname="./font/Malgun Gothic")
+    font = fm.FontProperties(fname="/font/Malgun Gothic.ttf").get_name()
+    plt.rc('font', family=font)
     
     # sns.set(font="./font/Malgun Gothic")
     # sns.set_style('white')
@@ -283,7 +284,7 @@ def case_summary() : # 수집된 사례 데이터 집계
     with col1:
         plt.rcParams['font.family'] ='Malgun Gothic'
         plt.rcParams['axes.unicode_minus'] =False
-        
+
         st.markdown('### 전체 리모델링 사례 데이터 현황')
         NofK = len(df.loc[(df['iso_flag'] == 410),:])
         NofI = len(df.loc[(df['iso_flag'] != 410),:])
@@ -291,7 +292,7 @@ def case_summary() : # 수집된 사례 데이터 집계
         fig_1_list = [NofK, NofI, total]
         fig_1 = pd.DataFrame([fig_1_list], columns=['국내사례', '해외사례', '전체사례'])
 
-        fig = plt.figure(figsize=(10,6.5))
+        fig = plt.figure(figsize=(10,7))
         sns.barplot(fig_1)
         plt.ylabel("사례 갯수(건)")
         # plt.rcParams['font.family'] = 'Malgun Gothic'
