@@ -692,7 +692,7 @@ def search_cases (): # 사례 검색
 
             def image_formatter(img_path: str) -> str:
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                return f'<a href="./img/popup/explain 1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
 
 
             @st.cache
@@ -914,7 +914,7 @@ def rec_cases ():
 
                 def image_formatter(img_path: str) -> str:
                     # return f'<a href="{image_to_base64(img_path)}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                    return f'<a href="./img/popup/explain 1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                    return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
 
                 # @st.cache(allow_output_mutation=True)
                 # def get_base64_of_bin_file(bin_file):
