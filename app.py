@@ -122,9 +122,9 @@ def home () :
         font-size:45px ; font-family: 'Cooper Black'; color: #FF9633;} 
         </style> """, unsafe_allow_html=True)
     st.markdown(""" <style> .font1 {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633;} 
+        font-size:25px ; font-family: 'Cooper Black'; color: #FF9633;} 
         </style> """, unsafe_allow_html=True)
-    st.markdown('''<p class="font"><strong>건축물 리모델링 설계/시공 사례기반 시스템</strong></p><br>
+    st.markdown('''<p class="font"><strong>건축물 리모델링 설계/시공 사례기반 시스템</strong></p>   
                    <p class="font1"><strong>BRICS : Building Remodeling Information & Casebase System</strong></p>
                 ''', unsafe_allow_html=True)  
         
@@ -133,7 +133,7 @@ def home () :
     with col1:               # To display the header text using css style
         st.markdown('''
                     - ### 시스템 개요
-                        - <p style="font-size:25px;"> 본 프로그램은 기존 건축물 저탄소 에너지효율화 최적 모델 기반 구축을 위해 국내·외 리모델링 사례들을 수집하고 유형화시킨 DB 시스템을 고안하여 이를 토대로 향후 기 건축물들의 리모델링을 위한 가이드라인을 제공함으로써 최적의 리모델링 방안 도출을 목적으로 개발됨 </p>
+                        - <p style="font-size:20px;"> 본 프로그램은 기존 건축물 저탄소 에너지효율화 최적 모델 기반 구축을 위해 국내·외 리모델링 사례들을 수집하고 유형화시킨 DB 시스템을 고안하여 이를 토대로 향후 기 건축물들의 리모델링을 위한 가이드라인을 제공함으로써 최적의 리모델링 방안 도출을 목적으로 개발됨 </p>
                     
                     - ### 시스템 기능
                         - <p style="font-size:20px;"> 유사케이스 추천 모드는 각 건물 유형에 따라 데이터를 군집 및 분류된 리모델링 사례 간 유사도 측정하여 해당 사례를 올림차순하여 상위 15개 제공 </p>    
