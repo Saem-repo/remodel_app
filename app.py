@@ -258,7 +258,7 @@ def case_summary() : # 수집된 사례 데이터 집계
 
     
     st.markdown(""" <style> .font {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633;} 
+        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     st.markdown('<p class="font"><strong>리모델링 사례 현황</strong></p>', unsafe_allow_html=True) 
     st.markdown("---")
@@ -392,7 +392,7 @@ def case_summary() : # 수집된 사례 데이터 집계
 
 def search_cases (): # 사례 검색
     st.markdown(""" <style> .font {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633;} 
+        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     st.markdown('<p class="font"><strong>리모델링 사례 검색</strong></p>', unsafe_allow_html=True) 
     st.markdown("---")
@@ -710,7 +710,7 @@ def search_cases (): # 사례 검색
         # )
 
         
-        center_1, center_2, center_3 = st.columns([1.5, 9, 1.5])
+        center_1, center_2, center_3 = st.columns([4.5, 14, 1])
         
         with center_2 :
             def get_thumbnail(path) :
@@ -738,7 +738,7 @@ def search_cases (): # 사례 검색
                 # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
                 return f'''<a href="{list(target_url)[0]}">
-                           <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
+                            <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
 
 
             @st.cache(suppress_st_warning=True)
@@ -747,8 +747,8 @@ def search_cases (): # 사례 검색
                 return input_df.to_html(escape=False, formatters=dict(사진=image_formatter), justify='center')
 
             html = convert_df(search_result_rev.iloc[:15,:])
-            
-            # st.write(html)
+                
+                # st.write(html)
 
             st.markdown(
             html,
@@ -759,7 +759,7 @@ def search_cases (): # 사례 검색
 def rec_cases ():
     
     st.markdown(""" <style> .font {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633;} 
+        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     st.markdown('<p class="font"><strong>신규프로젝트지원(사례 추천)</strong></p>', unsafe_allow_html=True) 
     st.markdown("---")
