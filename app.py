@@ -119,14 +119,17 @@ def home () :
     # st.markdown("---")
 
     st.markdown(""" <style> .font {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633;} 
+        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     st.markdown(""" <style> .font1 {
-        font-size:25px ; font-family: 'Cooper Black'; color: #FF9633;} 
+        font-size:25px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
         </style> """, unsafe_allow_html=True)
+    
     st.markdown('''<p class="font"><strong>건축물 리모델링 설계/시공 사례기반 시스템</strong></p>   
                    <p class="font1"><strong>BRICS : Building Remodeling Information & Casebase System</strong></p>
-                ''', unsafe_allow_html=True)  
+                ''', unsafe_allow_html=True)
+    
+    st.markdown("---")
         
     col1, col2 = st.columns([0.5, 0.6])
     
