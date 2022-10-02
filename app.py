@@ -122,7 +122,7 @@ def home () :
         font-size:45px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     st.markdown(""" <style> .font1 {
-        font-size:25px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
+        font-size:25px ; font-family: 'Cooper Black'; color: #FFFFFF; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     
     st.markdown('''<p class="font"><strong>건축물 리모델링 설계/시공 사례기반 시스템</strong></p>   
