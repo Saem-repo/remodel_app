@@ -118,19 +118,23 @@ def home () :
     # st.image(img)
     # st.markdown("---")
 
+    st.markdown(""" <style> .font {
+        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633;} 
+        </style> """, unsafe_allow_html=True)
+    st.markdown('<p class="font"><strong>건축물 리모델링 설계/시공 사례기반 시스템</strong></p>', unsafe_allow_html=True)  
+    st.markdown('''
+                    - ### BRICS : Building Remodeling Information & Casebase System
+                        
+                ''')
+        
     col1, col2 = st.columns([0.5, 0.6])
     
     with col1:               # To display the header text using css style
-        st.markdown(""" <style> .font {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633;} 
-        </style> """, unsafe_allow_html=True)
-        st.markdown('<p class="font"><strong>건축물 리모델링 설계/시공 사례기반 시스템</strong></p>', unsafe_allow_html=True)  
-        
         st.markdown('''
-                    - ### BRICS : Building Remodeling Information & Casebase System
+                    - ### 시스템 개요
                         - <p style="font-size:25px;"> 본 프로그램은 기존 건축물 저탄소 에너지효율화 최적 모델 기반 구축을 위해 국내·외 리모델링 사례들을 수집하고 유형화시킨 DB 시스템을 고안하여 이를 토대로 향후 기 건축물들의 리모델링을 위한 가이드라인을 제공함으로써 최적의 리모델링 방안 도출을 목적으로 개발됨 </p>
                     
-                    - ### 주요 기능
+                    - ### 시스템 기능
                         - <p style="font-size:20px;"> 유사케이스 추천 모드는 각 건물 유형에 따라 데이터를 군집 및 분류된 리모델링 사례 간 유사도 측정하여 해당 사례를 올림차순하여 상위 15개 제공 </p>    
                         - <p style="font-size:20px;"> DB 검색 모드는 리모델링 사례 DB 시스템의 전체 사례들에 대해 접근할 수 있는 모드로써 특정 입력값을 통해 결과값을 표시 </p>    
                         - <p style="font-size:20px;"> 웹 기반 인터페이스 활용을 통한 추가 건물 특성 정보 데이터 확보 및 기계학습 기반 추천 알고리즘의 성능 업데이트 </p>    
