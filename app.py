@@ -119,10 +119,10 @@ def home () :
     # st.markdown("---")
 
     st.markdown(""" <style> .font {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
+        font-size:45px ; font-family: 'Cooper Black'; color: #0064ff; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     st.markdown(""" <style> .font1 {
-        font-size:25px ; font-family: 'Cooper Black'; color: #FFFFFF; text-align: center;} 
+        font-size:25px ; font-family: 'Cooper Black'; color: #46CCFF; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     
     st.markdown('''<p class="font"><strong>건축물 리모델링 설계/시공 사례기반 시스템</strong></p>   
@@ -392,9 +392,15 @@ def case_summary() : # 수집된 사례 데이터 집계
 
 def search_cases (): # 사례 검색
     st.markdown(""" <style> .font {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
+        font-size:45px ; font-family: 'Cooper Black'; color: #0064ff; text-align: center;} 
         </style> """, unsafe_allow_html=True)
-    st.markdown('<p class="font"><strong>리모델링 사례 검색</strong></p>', unsafe_allow_html=True) 
+    st.markdown('<p class="font"><strong>리모델링 사례 검색</strong></p>', unsafe_allow_html=True)
+    st.markdown('''
+                    - ### 사례 검색 개요 및 순서
+                        - <p style="font-size:20px;"> 수집된 건축물 리모델링 사례들로부터 속성 정보를 선택적으로 입력 후 조건에 만족하는 모든 사례들의 대한 정보를 표형식으로 제공   </p>
+                        - <p style="font-size:20px;"> 각 도출된 사례들의 상세 정보는 표에서 제공되는 건축물 그림을 클릭하여 접근 가능</p>
+                ''')
+
     st.markdown("---")
 
     st.markdown('1. 건물 개요')
@@ -759,9 +765,18 @@ def search_cases (): # 사례 검색
 def rec_cases ():
     
     st.markdown(""" <style> .font {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
+        font-size:45px ; font-family: 'Cooper Black'; color: #0064ff; text-align: center;} 
         </style> """, unsafe_allow_html=True)
-    st.markdown('<p class="font"><strong>신규프로젝트지원(사례 추천)</strong></p>', unsafe_allow_html=True) 
+    st.markdown('<p class="font"><strong>유사 프로젝트 리모델링 사례 추천</strong></p>', unsafe_allow_html=True)
+
+
+    st.markdown('''
+                    - ### 유사 리모델링 사례 추천 개요 및 순서
+                        - <p style="font-size:20px;"> 사용자가 건물 일반정보(위치, 유형, 연면적) 및 에너지 저감율과 리모델링 전후 벽, 바닥, 지붕, 창호 관련 계수들을 입력 후 검색 버튼을 클릭    </p>
+                        - <p style="font-size:20px;"> 구축한 기계학습 기반의 사례 추천 모듈에 따라 검색 조건과 가장 유사한 기존 리모델링 사례들을 내림차순(유사도 기반) 표 형식으로 제공    </p>
+                        - <p style="font-size:20px;"> 각 도출된 유사 사례들의 상세 정보는 표에서 제공되는 건축물 그림을 클릭하여 접근 가능</p>
+                ''')
+
     st.markdown("---")
 
     #Define a label prediction function
@@ -985,7 +1000,7 @@ page_names_to_funcs = {
     "홈": home,
     "리모델링 사례 현황": case_summary,
     "리모델링 사례 검색": search_cases,
-    "신규프로젝트지원": rec_cases
+    "유사프로젝트사례추천": rec_cases
     }
 
 page_names_to_funcs[selected]()
