@@ -51,7 +51,7 @@ def streamlit_menu(example=1):
         with st.sidebar:
             selected = option_menu(
                 menu_title=None,  # required
-                options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "유사 프로젝트 사례 추천"],  # required
+                options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "유사 리모델링 사례 추천"],  # required
                 icons=["house", "sd-card", "search", "list-task"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
@@ -68,7 +68,7 @@ def streamlit_menu(example=1):
         # 2. horizontal menu w/o custom style
         selected = option_menu(
             menu_title=None,  # required
-            options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "유사 프로젝트 사례 추천"],  # required
+            options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "유사 리모델링 사례 추천"],  # required
             icons=["house", "sd-card", "search", "list-task"],  # optional
             menu_icon="cast",  # optional
             default_index=0,  # optional
@@ -1000,7 +1000,7 @@ page_names_to_funcs = {
     "홈": home,
     "리모델링 사례 현황": case_summary,
     "리모델링 사례 검색": search_cases,
-    "유사프로젝트사례추천": rec_cases
+    "유사 리모델링 사례 추천": rec_cases
     }
 
 page_names_to_funcs[selected]()
