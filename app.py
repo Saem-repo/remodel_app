@@ -51,7 +51,7 @@ def streamlit_menu(example=1):
         with st.sidebar:
             selected = option_menu(
                 menu_title=None,  # required
-                options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "신규프로젝트지원"],  # required
+                options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "유사 프로젝트 사례 추천"],  # required
                 icons=["house", "sd-card", "search", "list-task"],  # optional
                 menu_icon="cast",  # optional
                 default_index=0,  # optional
@@ -68,7 +68,7 @@ def streamlit_menu(example=1):
         # 2. horizontal menu w/o custom style
         selected = option_menu(
             menu_title=None,  # required
-            options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "신규프로젝트지원"],  # required
+            options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "유사 프로젝트 사례 추천"],  # required
             icons=["house", "sd-card", "search", "list-task"],  # optional
             menu_icon="cast",  # optional
             default_index=0,  # optional
@@ -258,7 +258,7 @@ def case_summary() : # 수집된 사례 데이터 집계
 
     
     st.markdown(""" <style> .font {
-        font-size:45px ; font-family: 'Cooper Black'; color: #FF9633; text-align: center;} 
+        font-size:45px ; font-family: 'Cooper Black'; color: #0064ff; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     st.markdown('<p class="font"><strong>리모델링 사례 현황</strong></p>', unsafe_allow_html=True) 
     st.markdown("---")
