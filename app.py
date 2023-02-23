@@ -321,13 +321,13 @@ def case_summary() : # 수집된 사례 데이터 집계
         # st.write(fig_2)
         # st.write(fig_2.T)
         # plt.figure(figsize=(10,7))
-        fig_2.T.plot(kind='barh', figsize=(10,7))
+        fig_2_1 = fig_2.T.plot(kind='barh', figsize=(10,7))
         plt.ylabel('건물 유형', fontproperties=font)
         plt.yticks(fontproperties=font)
         plt.xticks(fontproperties=font)
         # plt.legend(fontproperties=font)
         
-        # st.pyplot()
+        st.pyplot(fig_2_1)
 
     #     col3, col4 = st.columns(2)            
     #     with col3:
