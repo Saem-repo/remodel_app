@@ -318,6 +318,7 @@ def case_summary() : # 수집된 사례 데이터 집계
         
         fig_2 = pd.DataFrame([build_type], columns=build_type.keys())
         fig_2.index = ['사례 건수(건)']
+        st.write(fig_2)
         # st.write(fig_2.T)
         # plt.figure(figsize=(10,7))
         fig_2.T.plot(kind='barh', figsize=(10,7))
