@@ -323,7 +323,7 @@ def case_summary() : # 수집된 사례 데이터 집계
         
         
         fig_2 = plt.figure(figsize=(10,7))
-        plt.barh(fig_2.T)
+        plt.barh(fig_2_df.T)
         # fig_2.T.plot(kind='barh')
         plt.ylabel('건물 유형', fontproperties=font)
         plt.yticks(fontproperties=font)
