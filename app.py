@@ -322,15 +322,15 @@ def case_summary() : # 수집된 사례 데이터 집계
         # st.write(fig_2.T)
         
         
-        fig_2 = plt.figure(figsize=(10,7))
-        plt.barh(fig_2_df.T)
+        plt.figure(figsize=(10,7))
+        # plt.barh(fig_2_df.T)
         # fig_2.T.plot(kind='barh')
         plt.ylabel('건물 유형', fontproperties=font)
         plt.yticks(fontproperties=font)
         plt.xticks(fontproperties=font)
         # plt.legend(fontproperties=font)
         
-        st.pyplot(fig_2)
+        st.pyplot(plt.barh(fig_2_df.T))
 
     #     col3, col4 = st.columns(2)            
     #     with col3:
