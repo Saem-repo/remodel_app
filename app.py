@@ -944,6 +944,7 @@ def rec_cases ():
             
             kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도']
             result_df = result_df.loc[:,kor_rec_cols]
+            st.write(result_df)
             
             # kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도']
             result_df.columns = kor_rec_cols
