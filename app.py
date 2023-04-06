@@ -983,7 +983,7 @@ def rec_cases ():
                     # IMPORTANT: Cache the conversion to prevent computation on every rerun
                     return input_df.to_html(escape=False, formatters=dict(사진=image_formatter))
 
-                html = convert_df(result_df.iloc[:,:15])
+                html = convert_df(result_df.iloc[:,:])
 
                 # html = convert_df(rev_df)
 
