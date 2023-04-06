@@ -933,6 +933,7 @@ def rec_cases ():
             result_df['Similarity'] = dist
 
             result_df.sort_values(by='Similarity', ascending=True, inplace=True)
+            st.write(result_df)
 
             # st.write(result_df.columns)
             # st.write(result_df)
