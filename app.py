@@ -987,7 +987,7 @@ def rec_cases ():
                 rev_df['Label'] = pred_result
                 
                 # label = randint(2, 3)
-                label = label(rec_info)
+                label = label(np.array(rec_info).revel())
                 st.write(label)
                 
                 result_df = rev_df.loc[rev_df['Label'] == label, :]
