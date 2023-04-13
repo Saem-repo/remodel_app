@@ -827,7 +827,7 @@ def rec_cases ():
     rec_cols_2 = st.columns(4)
 
     with rec_cols_2[0] :
-        UFB = st.text_input("리모델링 전 에너지 소비량(kWh/㎡)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        UFB = st.text_input("리모델링 전 에너지 소비량(kWh/㎡·yr)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_2[1] :
         UWaA = st.text_input("리모델링 전 이산화탄소 배출량(kgCO₂eq)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
@@ -974,8 +974,8 @@ def rec_cases ():
                     except ValueError as e:
                         return (e.args[0])
 
-                rev_df = df.iloc[:102, 2:]
-                clf_df = rev_df.iloc[:102, 2:]
+                rev_df = df.iloc[:, 2:]
+                clf_df = rev_df.iloc[:, 2:]
 
                 # st.write(rev_df.columns)
                 # st.write(clf_df.columns)
