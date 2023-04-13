@@ -977,6 +977,9 @@ def rec_cases ():
                 rev_df = df.iloc[:, 2:]
                 clf_df = rev_df.iloc[:, 2:]
 
+                st.write(rev_df)
+                st.write(clf_df)
+
                 # st.write(rev_df.columns)
                 # st.write(clf_df.columns)
 
