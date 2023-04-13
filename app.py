@@ -839,7 +839,7 @@ def rec_cases ():
         ER = st.text_input("에너지 저감율(%, 희망요구사항)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
 
-    rec_cols_3 = st.columns(14)
+    rec_cols_3 = st.columns(5)
 
     choice = {0: '시공하지 않음', 1: '시공함'}
 
@@ -858,31 +858,36 @@ def rec_cases ():
     with rec_cols_3[4] :
         overhang = st.selectbox('차양', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[5] :
+    rec_cols_4 = st.columns(5)
+    
+    with rec_cols_3[0] :
         vent = st.selectbox('환기시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[6] :
+    with rec_cols_3[1] :
         light = st.selectbox('조명시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[7] :
+    with rec_cols_3[2] :
         pv = st.selectbox('태양광시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[8] :
+    with rec_cols_3[3] :
         solar_thermal = st.selectbox('태양열시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[9] :
+    with rec_cols_3[4] :
         geo = st.selectbox('지열시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[10] :
+    
+    rec_cols_5 = st.columns(5)
+    
+    with rec_cols_5[0] :
         wind = st.selectbox('풍력시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[11] :
+    with rec_cols_5[1] :
         bio = st.selectbox('바이오에너지', options = list(choice.keys()), format_func=lambda x: choice[x])
     
-    with rec_cols_3[12] :
+    with rec_cols_5[2] :
         fuel_cell = st.selectbox('연료전지', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[13] :
+    with rec_cols_5[3] :
         ess = st.selectbox('에너지저장장치', options = list(choice.keys()), format_func=lambda x: choice[x])
     
     
