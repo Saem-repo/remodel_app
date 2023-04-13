@@ -1,0 +1,210 @@
+explain_path,photo_path,name,con_yr,re_yr,bldg_type,bldg_loc,Area,gr_floor,under_floor,re_cost,energy_reduction,co2_reduction
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_1.png,img/rec_fig/1.png,충북 보은군 장애인회관,2002.00,2015.62,8.00,4.00,1565.00,4.00,0.00,176526140.00,0.10,0.10
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_2.png,img/rec_fig/2.png,경북 성주군청사,1995.00,2015.62,11.00,11.00,9179.64,6.00,1.00,2360000000.00,0.77,0.77
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_3.png,img/rec_fig/3.png,강원 양구군청사,1984.00,2015.62,11.00,16.00,3533.00,3.00,0.00,253417752.00,0.18,0.52
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_4.png,img/rec_fig/4.png,전남 영암군 군서면사무소,1991.00,2015.62,11.00,9.00,762.90,2.00,0.00,28800000.00,0.46,0.46
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_5.png,img/rec_fig/5.png,전남 영암군 미암면사무소,1988.00,2015.62,11.00,9.00,566.00,2.00,0.00,220000000.00,0.41,0.41
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_6.png,img/rec_fig/6.png,한국 폴리텍대학 창원캠퍼스,1981.00,2015.62,7.00,12.00,3104.00,2.00,1.00,990000000.00,0.74,0.74
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_7.png,img/rec_fig/7.png,대전광역시청사,1999.00,2015.62,11.00,13.00,87742.00,21.00,2.00,2759000000.00,0.22,0.22
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_8.png,img/rec_fig/8.png,세종시청 조치원청사 C동,1988.00,2015.62,11.00,7.00,1647.00,3.00,1.00,302359500.00,0.21,0.21
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_9.png,img/rec_fig/9.png,헌법재판소,1993.00,2015.62,11.00,1.00,19270.00,5.00,1.00,11027000000.00,0.68,0.33
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_10.png,img/rec_fig/10.png,부산연제경찰서,1991.00,2015.62,11.00,14.00,7357.00,4.00,1.00,1601000000.00,0.39,0.39
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_11.png,img/rec_fig/11.png,제주도 서귀포시 평생학습관,1998.00,2015.62,11.00,17.00,1016.00,2.00,1.00,549000000.00,0.28,0.28
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_12.png,img/rec_fig/12.png,강릉 장애인직업재활시설 사랑의 일터,2003.00,2015.62,8.00,16.00,630.00,2.00,1.00,487000000.00,0.38,0.38
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_13.png,img/rec_fig/13.png,정보통신기술진흥센터 청사,1995.00,2015.62,11.00,6.00,19354.00,6.00,1.00,3288000000.00,0.60,0.60
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_14.png,img/rec_fig/14.png,전남 보성군 복내면사무소,1989.00,2015.62,11.00,10.00,495.00,2.00,1.00,586000000.00,0.62,0.62
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_15.png,img/rec_fig/15.png,경기도 부천시 춘의동사무소,1985.00,2015.62,11.00,2.00,731.00,3.00,1.00,321000000.00,0.59,0.59
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_16.png,img/rec_fig/16.png,한국연구재단 대전청사 본관,1990.00,2015.62,11.00,6.00,5443.00,4.00,1.00,3954000000.00,0.50,0.50
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_17.png,img/rec_fig/17.png,한국교통대학교 화학생명관,1985.00,2015.62,7.00,4.00,7367.00,4.00,1.00,2947000000.00,0.74,0.74
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_18.png,img/rec_fig/18.png,강릉 입암3아파트 사회복지관,1994.00,2015.62,11.00,16.00,1615.01,2.00,1.00,409000000.00,0.39,0.39
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_19.png,img/rec_fig/19.png,경기도 시흥시 ABC 행복학습타운,1988.00,2015.62,7.00,2.00,17784.00,3.00,1.00,1303000000.00,0.56,0.56
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_20.png,img/rec_fig/20.png,대구 달서구청,1992.00,2015.62,11.00,13.00,17898.00,8.00,1.00,2720000000.00,0.27,0.27
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_21.png,img/rec_fig/21.png,충청북도 자치연수원 공무원교육관,1996.00,2015.62,11.00,4.00,9591.00,3.00,1.00,2168000000.00,0.68,0.68
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_22.png,img/rec_fig/22.png,충주 성내동우체국,1977.00,2015.62,11.00,4.00,2863.00,3.00,1.00,1927000000.00,0.71,0.71
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_23.png,img/rec_fig/23.png,구) 남원역사,1986.00,2015.62,11.00,8.00,761.00,1.00,0.00,440000000.00,0.58,0.58
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_24.png,img/rec_fig/24.png,전남 광양시 의회청사,1993.00,2015.62,11.00,9.00,6895.00,5.00,1.00,1396000000.00,0.69,0.69
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_25.png,img/rec_fig/25.png,충북 음성군청 본청사,1995.00,2015.62,11.00,4.00,8684.00,6.00,1.00,4319000000.00,0.60,0.60
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_26.png,img/rec_fig/26.png,진주 평거2주공아파트,1991.00,2015.62,2.00,12.00,22036.00,6.00,1.00,3172000000.00,0.48,0.48
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_27.png,img/rec_fig/27.png,충북 중앙경찰학교 1강의동,1987.00,2015.62,7.00,4.00,8732.00,4.00,1.00,4892000000.00,0.28,0.28
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_28.png,img/rec_fig/28.png,과천시민회관,1995.00,2015.62,11.00,2.00,41056.00,4.00,3.00,1167000000.00,0.51,0.51
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_29.png,img/rec_fig/29.png,경북 구미시청 본관,1979.00,2015.62,11.00,11.00,8360.00,5.00,1.00,6074000000.00,0.44,0.44
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_30.png,img/rec_fig/30.png,부산 금정구청,1991.00,2015.62,11.00,14.00,14464.00,8.00,2.00,6891000000.00,0.61,0.61
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_31.png,img/rec_fig/31.png,경남 하동군청사,1992.00,2015.62,11.00,12.00,5330.00,3.00,1.00,144100000.00,0.50,0.50
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_32.png,img/rec_fig/32.png,하남시 신장도서관,1996.00,2015.62,3.00,2.00,2145.00,3.00,1.00,2233000000.00,0.90,0.90
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_33.png,img/rec_fig/33.png,부산 중구청,1988.00,2015.62,11.00,14.00,7860.00,8.00,2.00,4855000000.00,0.46,0.46
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_34.png,img/rec_fig/34.png,대구 시립중앙도서관,1985.00,2015.62,7.00,13.00,10181.00,4.00,1.00,3533000000.00,0.51,0.51
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_35.png,img/rec_fig/35.png,충남 청양 우체국,1991.00,2015.62,11.00,5.00,1569.00,2.00,1.00,694000000.00,0.62,0.62
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_36.png,img/rec_fig/36.png,국립농산물품질관리원 경남지원,1988.00,2015.62,11.00,12.00,1697.00,5.00,1.00,698000000.00,0.57,0.57
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_37.png,img/rec_fig/37.png,한국철도공사 동대구역사(다시확인),1971.00,2015.62,11.00,13.00,31965.00,5.00,1.00,17458000000.00,0.81,0.82
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_38.png,img/rec_fig/38.png,전남 장성군 북일면 행정복지센터,1989.00,2015.62,11.00,9.00,722.00,2.00,0.98,447000000.00,0.72,0.72
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_39.png,img/rec_fig/39.png,강원대학교 농업생명과학대학 1호관,1978.00,2015.62,7.00,16.00,4222.00,4.00,1.00,2033000000.00,0.87,0.87
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_40.png,img/rec_fig/40.png,서울 서초구 서운중학교,1984.00,2015.62,7.00,1.00,8662.00,4.00,1.00,3057000000.00,0.52,0.52
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_41.png,img/rec_fig/41.png,서울대학교 공학관2(31동),1979.00,2015.62,7.00,1.00,6987.00,4.00,1.00,1776000000.00,0.46,0.46
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_42.png,img/rec_fig/42.png,한국철도공사서울사옥(다시확인),1979.00,2015.62,11.00,1.00,23272.28,8.00,2.00,4646000000.00,0.39,0.39
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_43.png,img/rec_fig/43.png,부산 범일2동 주민센터,1989.00,2015.62,11.00,14.00,400.26,2.00,0.98,380000000.00,0.80,0.80
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_44.png,img/rec_fig/44.png,대구 침산1동 주민센터,1992.00,2015.62,11.00,13.00,551.48,2.00,1.00,345000000.00,0.65,0.65
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_45.png,img/rec_fig/45.png,한국 환경산업 기술원 연수동,1977.00,2015.62,11.00,1.00,3514.00,4.00,1.00,4795000.00,0.67,0.67
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_46.png,img/rec_fig/46.png,인천 의료원 장례식장,1997.00,2015.62,15.00,3.00,3469.00,4.00,1.00,4795000.00,0.39,0.39
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_47.png,img/rec_fig/47.png,춘천 교도소,1981.00,2015.62,16.00,16.00,112554.00,2.00,0.98,770960.00,0.59,0.61
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_48.png,img/rec_fig/48.png,목포 대학교 사회 과학관,1982.00,2015.62,7.00,9.00,13605.00,4.00,1.00,2740000.00,0.41,0.41
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_49.png,img/rec_fig/49.png,정읍시 연지청사,1990.00,2015.62,11.00,8.00,1739.00,4.00,1.00,1641828.00,0.29,0.29
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_50.png,img/rec_fig/50.png,거창 여자고등학교,1972.00,2015.62,7.00,12.00,9487.00,3.00,0.98,1641828.00,0.36,0.36
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_51.png,img/rec_fig/51.png,통영시청 제2청사,1988.59,2015.62,11.00,12.00,5684.60,5.00,1.00,1641828.00,0.24,0.44
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_52.png,img/rec_fig/52.png,영천시청 본관,1988.59,2015.62,11.00,11.00,5495.50,3.00,0.00,1641828.00,0.13,0.13
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_53.png,img/rec_fig/53.png,경찰청사 남관,1988.59,2015.62,11.00,1.00,3571.00,15.00,0.98,1641828.00,0.36,0.36
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_54.png,img/rec_fig/54.png,서울도봉경찰서,1988.59,2015.62,11.00,1.00,9099.90,4.00,1.00,1641828.00,0.24,0.24
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_55.png,img/rec_fig/55.png,전라북도 농업기술원,1988.59,2015.62,7.00,8.00,14413.50,3.00,0.00,1641828.00,0.28,0.29
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_56.png,img/rec_fig/56.png,통영시 수산과학관,1988.59,2015.62,7.00,12.00,3587.00,2.00,1.00,1641828.00,0.24,0.44
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_57.png,img/rec_fig/57.png,목포자연사박물관 자연사관동,1988.59,2015.62,7.00,9.00,6610.90,4.30,0.98,1641828.00,0.22,0.23
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_58.png,img/rec_fig/58.png,동학농민혁명기념관(전시관동),1988.59,2015.62,3.00,8.00,3945.70,4.30,0.98,1641828.00,0.23,0.23
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_59.png,img/rec_fig/59.png,서울대학교 052(예술관(미대)3),1988.59,2015.62,7.00,1.00,4383.70,4.30,0.98,1641828.00,0.48,0.48
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_60.png,img/rec_fig/60.png,서울대학교 021(약학관1),1988.59,2015.62,7.00,1.00,6575.50,4.30,0.98,1641828.00,0.42,0.57
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_61.png,img/rec_fig/61.png,충남대학교 실내체육관,1988.59,2015.62,7.00,6.00,3682.00,4.30,0.98,1641828.00,0.21,0.21
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_62.png,img/rec_fig/62.png,충남대학교 중앙도서관,1988.59,2015.62,7.00,6.00,21618.00,4.30,0.98,1641828.00,0.36,0.36
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_63.png,img/rec_fig/63.png,수정청소년수련관,1988.59,2015.62,9.00,2.00,7746.40,4.30,0.98,1641828.00,0.34,0.34
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_64.png,img/rec_fig/64.png,동작구문화복지센터(보건소),1988.59,2015.62,6.00,1.00,10022.00,4.30,0.98,1641828.00,0.10,0.10
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_65.png,img/rec_fig/65.png,단양 수련시설,1994.00,2015.00,9.00,4.00,8220.18,5.86,1.00,3823000000.00,0.31,0.31
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_66.png,img/rec_fig/66.png,여수 하희현가 그린리모델링,1998.00,2017.00,1.00,9.00,18184.00,3.00,0.00,3823000000.00,0.38,0.38
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_67.png,img/rec_fig/67.png,외유내강,1969.00,2017.00,1.00,14.00,204.82,2.00,1.00,3823000000.00,0.35,0.35
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_68.png,img/rec_fig/68.png,부평 단독주택,1984.00,2016.00,1.00,3.00,146.13,2.00,1.00,89680000.00,0.65,0.65
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_69.png,img/rec_fig/69.png,경기도 수원시 권선구 단독주택 2층,1987.00,2016.00,1.00,2.00,209.43,2.00,1.00,7300000.00,0.33,0.33
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_70.png,img/rec_fig/70.png,EAN 테크놀로지 신사옥,1998.00,2017.00,11.00,1.00,2000.00,10.00,1.00,7300000.00,0.38,0.38
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_71.png,img/rec_fig/71.png,부평 단독주택,1984.00,2016.00,1.00,3.00,146.00,2.00,1.00,7300000.00,0.66,0.66
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_72.png,img/rec_fig/72.png,한서빌딩,1983.00,2017.00,11.00,1.00,2467.00,5.00,1.00,7300000.00,0.52,0.52
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_73.png,img/rec_fig/73.png,피닉스호텔,1976.00,2017.00,12.00,14.00,6858.00,15.00,2.00,7300000.00,0.63,0.63
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_74.png,img/rec_fig/74.png,한국외국어대학교 글로벌캠퍼스 인문경상관,1985.00,2017.00,7.00,2.00,6599.00,4.00,1.00,1100000000.00,0.46,0.46
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_75.png,img/rec_fig/75.png,경기도 용인시 처인구 단독주택,1996.00,2016.00,1.00,2.00,199.00,2.00,1.00,35000000.00,0.38,0.38
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_76.png,img/rec_fig/76.png,광주 계림동 숙박시설 금수장관광호텔,1998.00,2016.00,12.00,10.00,3163.00,5.86,1.00,140000000.00,0.33,0.33
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_77.png,img/rec_fig/77.png,서초동 업무시설,1995.00,2015.00,11.00,1.00,14514.00,5.86,1.00,495000000.00,0.31,0.31
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_78.png,img/rec_fig/78.png,국도화학 공장,1997.00,2016.00,11.00,1.00,4826.00,5.86,1.00,1717100000.00,0.27,0.27
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_79.png,img/rec_fig/79.png,한국외대 글로벌 캠퍼스 어문학관,2002.00,2015.00,7.00,2.00,13172.00,4.00,1.00,3000000000.00,0.33,0.33
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_80.png,img/rec_fig/80.png,경북 영주 문수면 사무소,1985.00,2013.00,11.00,11.00,892.00,5.86,1.00,1333000.00,0.34,0.34
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_81.png,img/rec_fig/81.png,충북대학교 생활관(진리관),1990.00,2013.00,7.00,4.00,2655.00,5.86,1.00,2350000.00,0.36,0.36
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_82.png,img/rec_fig/82.png,전북 고창 동리국악당(신재효고택동리국악당),1990.00,2014.00,3.00,8.00,2248.00,5.86,1.00,2550000.00,0.27,0.27
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_83.png,img/rec_fig/83.png,충북 청주 시립 미술관,1978.00,2015.00,3.00,4.00,4546.00,5.86,1.00,3469000.00,0.41,0.41
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_84.png,img/rec_fig/84.png,서울세관 2동 청사,1982.00,2015.00,11.00,1.00,13346.00,5.86,1.00,2370000.00,0.32,0.32
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_85.png,img/rec_fig/85.png,경기도청 제2별관,1990.00,2014.00,11.00,2.00,8120.00,8.00,2.00,1312181.00,0.35,0.35
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_86.png,img/rec_fig/86.png,경북 문경시청사,1990.00,2015.00,11.00,11.00,10067.00,4.00,1.00,3500000.00,0.22,0.22
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_87.png,img/rec_fig/87.png,한국수자원공사 물사랑어린이집,1988.00,2015.00,8.00,6.00,550.00,2.00,1.00,350000.00,0.22,0.22
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_88.png,img/rec_fig/88.png,한국건설기술연구원 (구교통연구원),1988.00,2015.00,11.00,2.00,8145.00,5.86,1.00,1321000.00,0.45,0.45
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_89.png,img/rec_fig/89.png,전남 무안군 농업기술센터,1988.00,2016.00,11.00,9.00,932.00,2.00,1.00,1067604.00,0.31,0.31
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_90.png,img/rec_fig/90.png,광주 시립 청소년 삶 디자인센터,1967.00,2015.00,6.00,10.00,8415.00,6.00,1.00,11300000.00,0.22,0.22
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_91.png,img/rec_fig/91.png,제주 서귀포의료원 (산후조리원),1982.00,2015.00,6.00,17.00,3624.00,4.00,2.00,2826745.00,0.29,0.29
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_92.png,img/rec_fig/92.png,한국도로공사 군위지사,1995.00,2015.00,11.00,11.00,1896.00,2.00,1.00,2041000.00,0.24,0.24
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_93.png,img/rec_fig/93.png,한국과학기술원 기계공학동,1993.00,2016.00,7.00,6.00,30387.00,7.00,1.00,10130000.00,0.19,0.19
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_94.png,img/rec_fig/94.png,김포국제공항,1980.00,2018.00,11.00,1.00,77775.00,4.00,1.00,67600000.00,0.32,0.32
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_95.png,img/rec_fig/95.png,경기도 따복기숙사(경기도기숙사),1984.00,2017.00,2.00,2.00,5510.00,5.00,1.00,11980368.00,0.19,0.19
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_96.png,img/rec_fig/96.png,서울 강동구청 별관(성안별관),1979.00,2017.00,11.00,1.00,4705.00,5.00,1.00,8912760.00,0.74,0.74
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_97.png,img/rec_fig/97.png,대구 수성구청 별관,2003.00,2018.00,11.00,13.00,3100.00,5.00,1.00,1520000.00,0.26,0.26
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_98.png,img/rec_fig/98.png,한국도로공사 홍천지사,1995.00,2017.00,11.00,16.00,1922.00,5.86,1.00,2019000.00,0.49,0.49
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_99.png,img/rec_fig/99.png,한국방송통신대학교 열린관,1982.00,2018.00,7.00,1.00,5808.00,5.86,1.00,7475000.00,0.53,0.53
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_100.png,img/rec_fig/100.png,한국교통대학교 건축관,1985.00,2018.00,7.00,4.00,2666.00,3.00,0.00,2900000.00,0.51,0.51
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_101.png,img/rec_fig/101.png,대구시 대명동 상가주택,1995.00,2006.00,1.00,13.00,6820.33,2.00,1.00,2900000.00,0.49,0.49
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_102.png,img/rec_fig/102.png,경기도 안양시 ARK,1973.00,2016.00,1.00,2.00,204.00,3.00,0.00,2900000.00,0.44,0.44
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_103.png,img/rec_fig/103.png,DPR Construction Phoenix Regional Office(NZEB),1972.00,2011.00,11.00,23.00,1519.43,1.65,0.05,2480000.00,0.99,0.99
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_104.png,img/rec_fig/104.png,The George D. Aiken Center at the University of Vermont,1982.00,2011.00,7.00,25.00,3716.12,1.65,0.05,2480000.00,0.63,0.63
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_105.png,img/rec_fig/105.png,5Pev,1954.71,2014.00,2.00,56.00,84.08,1.65,0.05,2480000.00,0.69,0.66
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_106.png,img/rec_fig/106.png,A2Dominion- Northholt,1954.71,2010.35,2.00,32.00,79.90,1.65,0.05,2480000.00,0.50,0.57
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_107.png,img/rec_fig/107.png,Almshouses,1954.71,2010.00,2.00,34.00,27.87,1.65,0.05,2480000.00,0.80,0.80
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_108.png,img/rec_fig/108.png,Barbrook PassivHaus,1954.71,2010.00,2.00,33.00,71.07,1.65,0.05,2480000.00,0.88,0.94
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_109.png,img/rec_fig/109.png,BISF Steel Frame House,1954.71,2010.00,2.00,34.00,88.26,1.65,0.05,2480000.00,0.46,0.37
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_110.png,img/rec_fig/110.png,Bringing Wates homes into the Future,1954.71,2010.00,2.00,49.00,75.25,1.65,0.05,2480000.00,0.65,0.65
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_111.png,img/rec_fig/111.png,Bristol Retrofit,1954.71,2013.00,2.00,35.00,188.13,1.65,0.05,2480000.00,0.66,0.65
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_112.png,img/rec_fig/112.png,City West Homes,1954.71,2010.00,2.00,32.00,59.46,1.65,0.05,2480000.00,0.71,0.70
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_113.png,img/rec_fig/113.png,Compton,1954.71,2010.00,2.00,32.00,59.46,1.65,0.05,2480000.00,0.71,0.70
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_114.png,img/rec_fig/114.png,Hospital in Egypt,1954.71,2010.35,2.00,66.00,31029.60,1.65,0.05,2480000.00,0.41,0.35
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_115.png,img/rec_fig/115.png,435 Indio Way(NZEB),1954.71,2014.00,11.00,20.00,2950.60,1.65,0.05,5120000.00,0.99,0.99
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_116.png,img/rec_fig/116.png,mid-terrace Victorian house,1954.71,2010.00,2.00,32.00,60.39,1.65,0.05,5120000.00,0.79,0.77
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_117.png,img/rec_fig/117.png,Chale Green,1954.71,2010.00,2.00,37.00,88.26,1.65,0.05,5120000.00,0.86,0.83
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_118.png,img/rec_fig/118.png,Crawley Homes,1954.71,2010.00,2.00,38.00,90.58,1.65,0.05,5120000.00,0.61,0.52
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_119.png,img/rec_fig/119.png,Drum Housing Association,1954.71,2010.00,2.00,40.00,68.75,1.65,0.05,5120000.00,0.69,0.71
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_120.png,img/rec_fig/120.png,Penwith Housing,1954.71,2010.00,2.00,41.00,65.03,1.65,0.05,5120000.00,0.78,0.34
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_121.png,img/rec_fig/121.png,Sarsen Housing,1954.71,2010.00,2.00,42.00,76.18,1.65,0.05,5120000.00,0.88,0.89
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_122.png,img/rec_fig/122.png,East Midlands Housing,1954.71,2010.00,2.00,43.00,70.61,1.65,0.05,5120000.00,0.87,0.86
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_123.png,img/rec_fig/123.png,Grove Housing Association,1896.00,2010.00,2.00,63.00,89.19,1.00,0.05,5120000.00,0.84,0.82
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_124.png,img/rec_fig/124.png,Eco-retrofit Bolton,1954.71,2012.00,2.00,35.00,83.61,1.00,0.05,5120000.00,0.38,0.28
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_125.png,img/rec_fig/125.png,BYRON G. ROGERS FEDERAL BUILDING,1965.00,2013.00,10.00,22.00,45986.99,17.00,0.05,159000000.00,0.51,0.51
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_126.png,img/rec_fig/126.png,Eco-retrofit Brierfield,1954.71,2010.00,2.00,44.00,169.08,1.00,0.05,159000000.00,0.54,0.57
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_127.png,img/rec_fig/127.png,Eco-retrofit Colne,1954.71,2010.00,2.00,44.00,88.72,1.00,0.05,159000000.00,0.18,-0.36
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_128.png,img/rec_fig/128.png,Eco-retrofit Ealing,1954.71,2010.00,2.00,32.00,116.13,1.00,0.05,159000000.00,0.23,0.12
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_129.png,img/rec_fig/129.png,Eco-retrofit Orpington,1954.71,2010.00,2.00,52.00,94.76,1.00,0.05,159000000.00,0.32,0.26
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_130.png,img/rec_fig/130.png,Eltham,1954.71,2010.00,2.00,52.00,94.76,1.00,0.05,159000000.00,0.32,0.26
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_131.png,img/rec_fig/131.png,Enfield Homes retrofit,1954.71,2010.00,2.00,52.00,94.76,1.00,0.05,159000000.00,0.32,0.26
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_132.png,img/rec_fig/132.png,Flagship Retrofit,1954.71,2010.00,2.00,62.00,62.71,1.00,0.05,159000000.00,0.71,0.71
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_133.png,img/rec_fig/133.png,Gentoo Retrofit,1954.71,2010.00,2.00,50.00,78.04,1.65,0.05,159000000.00,0.79,0.78
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_134.png,img/rec_fig/134.png,Gentoo Retrofit Bid 2,1954.71,2010.00,2.00,50.00,78.04,1.65,0.05,159000000.00,0.87,0.86
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_135.png,img/rec_fig/135.png,Gentoo Retrofit Bid 3,1954.71,2010.00,2.00,50.00,64.10,1.65,0.05,159000000.00,0.80,0.80
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_136.png,img/rec_fig/136.png,Green Structures(PCM),1954.71,2010.00,2.00,32.00,100.34,1.00,0.00,159000000.00,0.92,0.92
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_137.png,img/rec_fig/137.png,Grove Cottage,1954.71,2009.00,2.00,83.00,134.71,1.00,0.00,159000000.00,0.57,0.55
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_138.png,img/rec_fig/138.png,Hanley,1954.71,2009.00,2.00,83.00,134.71,1.00,0.00,159000000.00,0.57,0.55
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_139.png,img/rec_fig/139.png,Hard to Heat Homes,1954.71,2010.00,2.00,46.00,48.31,1.00,0.00,159000000.00,0.69,0.69
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_140.png,img/rec_fig/140.png,Harrow Road Retrofit,1954.71,2010.00,2.00,31.00,124.95,1.65,0.05,159000000.00,0.69,0.67
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_141.png,img/rec_fig/141.png,Hounslow Council,1954.71,2010.00,2.00,32.00,84.54,1.00,0.00,159000000.00,0.89,0.88
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_142.png,img/rec_fig/142.png,Hounslow Passivhaus Retrofit,1954.71,2010.00,2.00,32.00,84.54,1.00,0.00,159000000.00,0.87,0.86
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_143.png,img/rec_fig/143.png,Ilford,1954.71,2010.00,2.00,32.00,84.54,1.00,0.00,159000000.00,0.87,0.86
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_144.png,img/rec_fig/144.png,Property in Whitehaven,1954.71,2010.00,2.00,48.00,76.18,1.00,0.00,159000000.00,0.79,0.78
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_145.png,img/rec_fig/145.png,Inspiration Birmingham 2020,1954.71,2010.00,2.00,85.00,158.86,1.00,0.00,159000000.00,0.77,0.79
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_146.png,img/rec_fig/146.png,Prewett Bizley Architects,1954.71,2010.00,2.00,32.00,105.91,1.00,0.00,159000000.00,0.77,0.73
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_147.png,img/rec_fig/147.png,Isos Housing Group,1954.71,2010.00,2.00,50.00,70.61,1.00,0.00,159000000.00,0.82,0.78
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_148.png,img/rec_fig/148.png,L&Q Group,1954.71,2010.00,2.00,50.00,70.61,1.00,0.00,159000000.00,0.82,0.78
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_149.png,img/rec_fig/149.png,LB Greenwich,1954.71,2010.00,2.00,32.00,108.70,1.00,0.00,159000000.00,0.93,0.92
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_150.png,img/rec_fig/150.png,Lena Gardens,1954.71,2010.00,2.00,32.00,195.10,1.00,0.00,159000000.00,0.82,0.85
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_151.png,img/rec_fig/151.png,Leicester Housing Association,1974.00,2010.00,2.00,31.00,87.33,1.00,0.00,159000000.00,0.56,0.52
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_152.png,img/rec_fig/152.png,Hastoe Housing Association,1948.00,2010.00,2.00,51.00,51.10,1.65,0.05,159000000.00,0.93,0.93
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_153.png,img/rec_fig/153.png,Low Carbon Sheppey,1974.00,2010.00,2.00,52.00,74.32,1.00,0.00,159000000.00,0.55,0.57
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_154.png,img/rec_fig/154.png,Hay Tor,1950.00,2010.00,2.00,53.00,78.50,1.65,0.05,159000000.00,0.49,0.47
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_155.png,img/rec_fig/155.png,Metropolitan Housing Trust,1954.71,2010.00,2.00,32.00,109.63,1.00,0.00,159000000.00,0.71,0.68
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_156.png,img/rec_fig/156.png,Castle Rock Edinvar,1954.71,2010.00,2.00,32.00,75.25,1.65,0.05,159000000.00,0.46,-0.48
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_157.png,img/rec_fig/157.png,One Planet Sutton,1954.71,2010.00,2.00,54.00,74.32,1.00,0.00,159000000.00,0.61,0.59
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_158.png,img/rec_fig/158.png,Plus Dane Group,1954.71,2010.00,2.00,55.00,89.19,1.00,0.00,159000000.00,0.60,0.60
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_159.png,img/rec_fig/159.png,Peabody,1954.71,2010.00,2.00,32.00,97.55,1.00,0.00,159000000.00,0.57,0.59
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_160.png,img/rec_fig/160.png,Peterborough EnviroCluster,1970.00,2010.00,2.00,34.00,76.18,1.00,0.00,159000000.00,0.69,0.63
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_161.png,img/rec_fig/161.png,Dartford Borough Council,1954.71,2010.00,2.00,52.00,60.39,1.00,0.00,159000000.00,0.38,0.37
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_162.png,img/rec_fig/162.png,Redlands,1955.00,2011.00,2.00,33.00,150.50,1.00,0.00,159000000.00,0.56,0.61
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_163.png,img/rec_fig/163.png,Powys County Council,1954.71,2010.00,2.00,64.00,81.75,1.00,0.00,159000000.00,0.79,0.76
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_164.png,img/rec_fig/164.png,White Design Associates,1954.71,2010.00,2.00,35.00,69.68,1.65,0.05,159000000.00,0.85,0.85
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_165.png,img/rec_fig/165.png,Appledore,1954.71,2010.00,2.00,35.00,69.68,1.65,0.05,159000000.00,0.85,0.85
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_166.png,img/rec_fig/166.png,Hockerton Housing Project Trading,1954.71,2010.00,2.00,84.00,84.08,1.00,0.00,159000000.00,0.84,0.80
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_167.png,img/rec_fig/167.png,Victorian mid-terrace,1888.00,2013.00,2.00,56.00,60.39,1.00,0.00,159000000.00,0.20,0.21
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_168.png,img/rec_fig/168.png,Cottages,1888.00,2013.00,2.00,56.00,60.39,1.00,0.00,159000000.00,0.20,0.21
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_169.png,img/rec_fig/169.png,Home in Scotland,1970.00,2010.00,2.00,86.00,77.39,1.00,0.00,159000000.00,0.78,0.76
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_170.png,img/rec_fig/170.png,A+G Architects,1960.00,2010.00,2.00,57.00,91.97,1.00,0.00,159000000.00,0.79,0.78
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_171.png,img/rec_fig/171.png,Riverside HA,1950.00,2010.00,2.00,48.00,64.10,1.00,0.00,159000000.00,0.82,0.82
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_172.png,img/rec_fig/172.png,Brampton retrofit,1950.00,2010.00,2.00,58.00,79.90,1.00,0.00,159000000.00,0.72,0.85
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_173.png,img/rec_fig/173.png,Encraft Ltd,1954.71,2010.00,2.00,59.00,79.90,1.00,0.00,159000000.00,0.73,0.91
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_174.png,img/rec_fig/174.png,Victory Housing Trust,1954.71,2010.00,2.00,60.00,85.94,1.00,0.00,159000000.00,0.63,0.72
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_175.png,img/rec_fig/175.png,RCT Homes,1954.71,2010.00,2.00,64.00,74.32,1.00,0.00,159000000.00,0.72,0.65
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_176.png,img/rec_fig/176.png,SNW Home retrofit - Crawley,1968.00,2010.00,2.00,38.00,83.61,1.00,0.00,159000000.00,0.70,0.69
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_177.png,img/rec_fig/177.png,SOLAR HOUSE 80/50,1954.71,2010.00,2.00,61.00,99.41,1.00,0.00,159000000.00,0.44,0.44
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_178.png,img/rec_fig/178.png,Victorian house,1954.71,2010.00,2.00,32.00,87.33,1.00,0.00,159000000.00,0.50,0.45
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_179.png,img/rec_fig/179.png,Holistic Optimal Retrofit,1989.00,2010.00,2.00,64.00,57.97,1.00,0.00,159000000.00,0.80,0.76
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_180.png,img/rec_fig/180.png,South Chingford - Ascham Homes,1960.00,2010.00,2.00,32.00,104.98,1.00,0.00,159000000.00,0.70,0.70
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_181.png,img/rec_fig/181.png,Yorkshire Housing,1954.71,2010.00,2.00,58.00,75.25,1.65,0.05,159000000.00,0.69,0.60
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_182.png,img/rec_fig/182.png,Thamesmead Retrofit House,1954.71,2012.00,2.00,32.00,175.12,2.00,0.00,159000000.00,0.80,0.79
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_183.png,img/rec_fig/183.png,Melin Homes,1960.00,2011.00,2.00,64.00,85.47,1.00,0.00,159000000.00,0.73,0.72
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_184.png,img/rec_fig/184.png,The Oxford Whole House Carbon Reduction Project,1954.71,2010.00,2.00,57.00,77.11,1.00,0.00,159000000.00,0.68,0.65
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_185.png,img/rec_fig/185.png,Tower Hamlets,1960.00,2010.00,2.00,32.00,104.05,2.00,0.00,159000000.00,0.65,0.61
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_186.png,img/rec_fig/186.png,Tunbridge Wells,1950.00,2010.00,2.00,52.00,77.11,1.00,0.00,159000000.00,0.70,0.75
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_187.png,img/rec_fig/187.png,WHISCERS,1954.71,2010.00,2.00,32.00,113.34,1.00,0.00,159000000.00,0.58,0.54
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_188.png,img/rec_fig/188.png,Wakefield and District Housing Kettlethorpe retrofit 2,1950.00,2010.00,2.00,58.00,82.68,1.00,0.00,159000000.00,0.63,0.58
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_189.png,img/rec_fig/189.png,Two Piers Housing Co-Operative,1954.71,2010.00,2.00,39.00,177.44,1.00,0.00,159000000.00,0.81,0.79
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_190.png,img/rec_fig/190.png,Crawley Homes,1950.00,2010.00,2.00,38.00,78.97,1.00,0.00,159000000.00,0.71,0.67
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_191.png,img/rec_fig/191.png,Princedale Road,1910.00,2010.00,2.00,32.00,0.00,1.00,0.00,230000.00,0.49,0.71
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_192.png,img/rec_fig/192.png,Mosaic Midmoor Road,1910.00,2010.00,2.00,32.00,0.00,1.00,0.00,162000.00,0.67,0.58
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_193.png,img/rec_fig/193.png,Penzance,1950.00,2010.00,2.00,41.00,0.00,1.00,0.00,78000.00,0.79,0.89
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_194.png,img/rec_fig/194.png,406 Collins Street,1960.00,2011.00,11.00,65.00,4004.12,1.65,0.05,1500000.00,0.50,0.50
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_195.png,img/rec_fig/195.png,182 Capel Street,1984.00,2011.00,11.00,65.00,1600.72,3.00,1.00,420000.00,0.50,0.50
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_196.png,img/rec_fig/196.png,Council House 2 (CH2),1984.00,2011.00,11.00,65.00,1600.72,3.00,1.00,420000.00,0.50,0.50
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_197.png,img/rec_fig/197.png,1525 WILSON BOULEVARD,1987.00,2010.00,11.00,30.00,29109.95,12.00,0.00,1100000.00,0.25,0.25
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_198.png,img/rec_fig/198.png,Johann B?mstrasse 34 + 36,1960.00,2013.00,2.00,67.00,2844.97,3.00,1.00,5424950.00,0.72,0.72
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_199.png,img/rec_fig/199.png,Vester Voldgade.DK,1938.00,2015.00,11.00,68.00,6734.54,5.00,0.00,3517146.00,0.50,0.50
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_200.png,img/rec_fig/200.png,PHI_GAG_Hoheloog_Ludwigshafen,1965.00,2007.00,2.00,75.00,960.15,3.00,0.00,3517146.00,0.94,0.93
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_201.png,img/rec_fig/201.png,Factor10_N?nberg,1930.00,2002.00,2.00,76.00,960.15,2.00,0.00,569845.00,0.84,0.83
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_202.png,img/rec_fig/202.png,Gym Ostfildern,1970.00,2008.00,10.00,77.00,2439.91,1.65,0.05,3169984.00,0.55,0.56
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_203.png,img/rec_fig/203.png,Angela School,1965.00,2010.00,7.00,78.00,2670.03,2.00,0.00,2554977.00,0.78,0.78
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_204.png,img/rec_fig/204.png,Friedrich-Fr?el-School Olbersdorf,1928.00,2011.00,7.00,79.00,5610.41,3.00,1.00,6159321.00,0.74,0.73
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_205.png,img/rec_fig/205.png,High School Passive House,1968.00,2013.00,7.00,82.00,1016.36,2.00,0.00,6159321.00,0.90,0.90
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_206.png,img/rec_fig/206.png,Riga,1968.00,2013.00,7.00,82.00,1016.36,2.00,0.00,377652.00,0.90,0.90
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_207.png,img/rec_fig/207.png,The Mildmay Centre,1890.00,2012.00,11.00,32.00,665.19,2.00,0.00,1824984.00,0.85,0.85
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_208.png,img/rec_fig/208.png,Grand Junction,1918.00,2013.00,11.00,22.00,3861.05,1.65,0.05,16693077.00,0.99,0.99
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_209.png,img/rec_fig/209.png,Silver Spring and Lanham,1970.00,2014.00,11.00,29.00,14643.56,1.65,0.05,16693077.00,0.47,0.49
