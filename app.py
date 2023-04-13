@@ -153,6 +153,15 @@ def home () :
     
 
     st.markdown("---")
+    col1, col2, col3 = st.columns([0.15, 0.8, 0.1])
+    
+    with col2:               
+        st.markdown('''<p class="font2"><strong> BRICS 구조 및 데이터 처리 순서도 </strong></p>  
+                       <p class="font3"><strong> ※ 이미지 확대를 원할시 이미지에 마우스 커서를 올렸을 때 나타나는 우측 상단에 확대 버튼을 누르세요.
+                    ''', unsafe_allow_html=True)
+        st.image('./img/brics_intro.png')
+
+    st.markdown("---")
     
     # st.markdown(""" <style> .font {
     # text-align: left; font-size:40px ; font-family: 'Cooper Black'; color: #FF9633;} 
@@ -784,6 +793,16 @@ def rec_cases ():
                         - 구축한 기계학습 기반의 사례 추천 모듈에 따라 검색 조건과 가장 유사한 기존 리모델링 사례들을 내림차순(유사도 기반) 표 형식으로 제공
                         - 각 도출된 유사 사례들의 상세 정보는 표에서 제공되는 건축물 그림을 클릭하여 접근 가능
                 ''')
+
+    st.markdown("---")
+
+    col1, col2, col3 = st.columns([0.15, 0.8, 0.1])
+    
+    with col2:               
+        st.markdown('''<p class="font2"><strong> 리모델링 설계/시공 사례 추천 모델 순서도 </strong></p>  
+                       <p class="font3"><strong> ※ 이미지 확대를 원할시 이미지에 마우스 커서를 올렸을 때 나타나는 우측 상단에 확대 버튼을 누르세요.
+                    ''', unsafe_allow_html=True)
+        st.image('./img/ml.png')
 
     st.markdown("---")
 
