@@ -203,7 +203,7 @@ def home () :
         
         fig_elec = px.choropleth_mapbox(df, geojson=kor_geo,
                                locations='sigun_code',
-                               color='시공 사례(건)',
+                            #    color='시공 사례(건)',
                                color_continuous_scale="matter",
                                range_color=(0, 2),
                                mapbox_style="carto-positron",
@@ -224,7 +224,7 @@ def home () :
         
         fig_gas = px.choropleth_mapbox(df, geojson=kor_geo,
                                locations='sigun_code',
-                               color='시공 사례(건)',
+                            #    color='시공 사례(건)',
                                color_continuous_scale="matter",
                                range_color=(0, 2),
                                mapbox_style="carto-positron",
@@ -243,7 +243,7 @@ def home () :
         
         fig_heat = px.choropleth_mapbox(df, geojson=kor_geo,
                                 locations='sigun_code',
-                                color='시공 사례(건)',
+                                # color='시공 사례(건)',
                                 color_continuous_scale="matter",
                                 range_color=(0, 2),
                                 mapbox_style="carto-positron",
