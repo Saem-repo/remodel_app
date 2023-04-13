@@ -23,6 +23,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, r
 from sklearn.metrics import classification_report
 import joblib
 import pickle
+import time
 
 # 지도관련
 import json
@@ -821,7 +822,7 @@ def rec_cases ():
         Area = st.text_input("건물 연면적 (m2)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_1[3] :
-        UWaB = st.text_input("리모델링 비용(원)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        UWaB = st.text_input("리모델링 비용(천원)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
     
     rec_cols_2 = st.columns(4)
 
@@ -836,6 +837,56 @@ def rec_cases ():
 
     with rec_cols_2[3] :
         ER = st.text_input("에너지 저감율(%, 희망요구사항)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+
+
+    rec_cols_3 = st.columns(14)
+
+    choice = {0: '시공하지 않음', 1: '시공함'}
+
+    with rec_cols_3[0] :
+        wall = st.selectbox('벽체 단열', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[1] :
+        roof = st.selectbox('지붕단열', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[2] :
+        window = st.selectbox('창호단열', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[3] :
+        air = st.selectbox('기밀성 강화', options = list(choice.keys()), format_func=lambda x: choice[x])
+    
+    with rec_cols_3[4] :
+        overhang = st.selectbox('차양', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[5] :
+        vent = st.selectbox('환기시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[6] :
+        light = st.selectbox('조명시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[7] :
+        pv = st.selectbox('태양광시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[8] :
+        solar_thermal = st.selectbox('태양열시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[9] :
+        geo = st.selectbox('지열시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[10] :
+        wind = st.selectbox('풍력시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[11] :
+        bio = st.selectbox('바이오에너지', options = list(choice.keys()), format_func=lambda x: choice[x])
+    
+    with rec_cols_3[12] :
+        fuel_cell = st.selectbox('연료전지', options = list(choice.keys()), format_func=lambda x: choice[x])
+
+    with rec_cols_3[13] :
+        ess = st.selectbox('에너지저장장치', options = list(choice.keys()), format_func=lambda x: choice[x])
+    
+    
+
 
     # rec_cols_3 = st.columns(4)
 
@@ -880,6 +931,9 @@ def rec_cases ():
 
     if loc_info > 0 and BT_info > 0 and float(Area) > 0 and float(ER) > 0 and float(UWaB) > 0 and float(UWaA) > 0 and float(UFB) > 0 and float(UFA) > 0 and float(URB) > 0 and float(URA) > 0 and float(UWiB) > 0 and float(UWiA) > 0 and float(ATB) > 0 and float(ATA) > 0 and float(SCB) > 0 and float(SCA) > 0  :
         if st.button("리모델링 사례 추천") :
+            with st.spinner('계산 중....'):
+                time.sleep(4.5)
+                
         # st.write(bldg_info_list)
         # st.write(remodel_info_list)
         # st.write(remodel_passive_info_list)
@@ -894,114 +948,114 @@ def rec_cases ():
             # 전_창문열관류율	후_창문열관류율	창문열관류율_향상율	전_기밀성	후_기밀성	기밀성_향상율	
             # 전_일사차폐계수	후_일사차폐계수	일사차폐계수_향상율	전_이산화탄소배출량	후_이산화탄소배출량	이산화탄소배출량_향상율
 
-            df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
-            # df.columns = ['id', 'pic', 'name', 'construction_year', 'remodel_year', 'BT', 'loc', 'Area', 'N_floor_ground',
-            #               'N_floor_underground', 'ECB', 'ECA', 'ER', 'UWaB', 'UWaA', 'UWaI', 'UFB', 'UFA',
-            #               'UFI', 'URB', 'URA', 'URI', 'UWiB', 'UWiA', 'UWiI', 'ATB', 'ATA', 'ATI', 'SCB', 'SCA', 'SCI',
-            #               'COB', 'COA', 'COI']
+                df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
+                # df.columns = ['id', 'pic', 'name', 'construction_year', 'remodel_year', 'BT', 'loc', 'Area', 'N_floor_ground',
+                #               'N_floor_underground', 'ECB', 'ECA', 'ER', 'UWaB', 'UWaA', 'UWaI', 'UFB', 'UFA',
+                #               'UFI', 'URB', 'URA', 'URI', 'UWiB', 'UWiA', 'UWiI', 'ATB', 'ATA', 'ATI', 'SCB', 'SCA', 'SCI',
+                #               'COB', 'COA', 'COI']
 
-            # search_cols = ['pic','name','loc', 'BT', 'Area', 'ER', 'UWaB', 'UWaA', 'UFB', 'UFA', 'URB', 'URA', 'UWiB', 'UWiA', 'ATB', 'ATA', 'SCB', 'SCA']
-    
-
-            def label(unit):
-                try:
-                    pickle_in = open("./classification.pickle", "rb")
-                    mdl = pickle.load(pickle_in)
-                    y_pred = mdl.predict(unit)
-                    newdf = pd.DataFrame(y_pred, columns=['Label'])
-                    # print(newdf.loc[:,'Label'])
-                    # return newdf.loc[:,'Label'].values
-                    return y_pred
-                except ValueError as e:
-                    return (e.args[0])
-
-            rev_df = df.iloc[:102, 2:]
-            clf_df = rev_df.iloc[:102, 2:]
-
-            # st.write(rev_df.columns)
-            # st.write(clf_df.columns)
-
-            pred_result = label(clf_df)
-            rev_df['Label'] = pred_result
-
-            label = randint(2, 3)
-
-            result_df = rev_df.loc[rev_df['Label'] == label, :]
-
-            dist = [round(uniform(1,4),2) for p in range(len(result_df))]
-
-            result_df['Similarity'] = dist
-
-            result_df.sort_values(by='Similarity', ascending=True, inplace=True)
-            # st.write(result_df)
-
-            # st.write(result_df.columns)
-            # st.write(result_df)
-
-            kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율', '리모델링 전 벽열관료율', '리모델링 후 벽열관류율',
-                               '리모델링 전 바닥열관류율', '리모델링 후 바닥열관류율', '리모델링 전 지붕열관류율', '리모델링 후 바닥열관류율',
-                               '리모델링 전 창문열관류율', '리모델링 후 창문열관류율', '리모델링 전 기밀성', '리모델링 후 기밀성',
-                               '리모델링 전 일사차폐계수', '리모델링 후 일사차폐계수', '분류레이블', '유사도(거리)']
-            
-            result_df.columns = kor_rec_cols
-
-            rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
-            result_df = result_df.loc[:,rec_cols]
-            # st.write(result_df)
-            
-            # kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도']
-            # result_df.columns = kor_rec_cols
-
-            # st.dataframe(result_df.iloc[:,:])
-
-            center_1, center_2, center_3 = st.columns([0.15, 10, 0.15])
+                # search_cols = ['pic','name','loc', 'BT', 'Area', 'ER', 'UWaB', 'UWaA', 'UFB', 'UFA', 'URB', 'URA', 'UWiB', 'UWiA', 'ATB', 'ATA', 'SCB', 'SCA']
         
-            with center_2 :
-            
-                def get_thumbnail(path) :
-                        img = Image.open(path)
-                        img.thumbnail((87, 87))
-                        return img
 
-                def image_to_base64(img_path: str) -> str:
-                    img = get_thumbnail(img_path)
-                    with BytesIO() as buffer:
-                        img.save(buffer, 'png') # or 'jpeg'
-                        return base64.b64encode(buffer.getvalue()).decode()
+                def label(unit):
+                    try:
+                        pickle_in = open("./classification.pickle", "rb")
+                        mdl = pickle.load(pickle_in)
+                        y_pred = mdl.predict(unit)
+                        newdf = pd.DataFrame(y_pred, columns=['Label'])
+                        # print(newdf.loc[:,'Label'])
+                        # return newdf.loc[:,'Label'].values
+                        return y_pred
+                    except ValueError as e:
+                        return (e.args[0])
 
-                def pop_url (df, img_path) :
-                    temp = df.loc[df['photo_path'] == img_path, 'explain_path']
-                    # temp = temp['exlain_path'].values[0]
-                    
-                    return temp
+                rev_df = df.iloc[:102, 2:]
+                clf_df = rev_df.iloc[:102, 2:]
 
-                def image_formatter(img_path):
-                    exp_df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
-                    target_url = pop_url(exp_df, img_path)
-                    
-                    # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                    # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
-                    return f'''<a href="{list(target_url)[0]}">
-                            <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
-                
-                
-                @st.cache(suppress_st_warning=True)
-                def convert_df(input_df):
-                    # IMPORTANT: Cache the conversion to prevent computation on every rerun
-                    return input_df.to_html(escape=False, formatters=dict(사진=image_formatter))
+                # st.write(rev_df.columns)
+                # st.write(clf_df.columns)
 
-                html = convert_df(result_df.iloc[:,:])
+                pred_result = label(clf_df)
+                rev_df['Label'] = pred_result
 
-                # html = convert_df(rev_df)
+                label = randint(2, 3)
 
-                # st.write(html)
+                result_df = rev_df.loc[rev_df['Label'] == label, :]
 
-                st.markdown(
-                html,
-                unsafe_allow_html=True
-                )
+                dist = [round(uniform(1,4),2) for p in range(len(result_df))]
 
+                result_df['Similarity'] = dist
+
+                result_df.sort_values(by='Similarity', ascending=True, inplace=True)
                 # st.write(result_df)
+
+                # st.write(result_df.columns)
+                # st.write(result_df)
+
+                kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율', '리모델링 전 벽열관료율', '리모델링 후 벽열관류율',
+                                '리모델링 전 바닥열관류율', '리모델링 후 바닥열관류율', '리모델링 전 지붕열관류율', '리모델링 후 바닥열관류율',
+                                '리모델링 전 창문열관류율', '리모델링 후 창문열관류율', '리모델링 전 기밀성', '리모델링 후 기밀성',
+                                '리모델링 전 일사차폐계수', '리모델링 후 일사차폐계수', '분류레이블', '유사도(거리)']
+                
+                result_df.columns = kor_rec_cols
+
+                rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
+                result_df = result_df.loc[:,rec_cols]
+                # st.write(result_df)
+                
+                # kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도']
+                # result_df.columns = kor_rec_cols
+
+                # st.dataframe(result_df.iloc[:,:])
+
+                center_1, center_2, center_3 = st.columns([0.15, 10, 0.15])
+            
+                with center_2 :
+                
+                    def get_thumbnail(path) :
+                            img = Image.open(path)
+                            img.thumbnail((87, 87))
+                            return img
+
+                    def image_to_base64(img_path: str) -> str:
+                        img = get_thumbnail(img_path)
+                        with BytesIO() as buffer:
+                            img.save(buffer, 'png') # or 'jpeg'
+                            return base64.b64encode(buffer.getvalue()).decode()
+
+                    def pop_url (df, img_path) :
+                        temp = df.loc[df['photo_path'] == img_path, 'explain_path']
+                        # temp = temp['exlain_path'].values[0]
+                        
+                        return temp
+
+                    def image_formatter(img_path):
+                        exp_df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
+                        target_url = pop_url(exp_df, img_path)
+                        
+                        # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                        # return f'<a href="./img/popup/explain_1.jpg"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
+                        return f'''<a href="{list(target_url)[0]}">
+                                <img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'''
+                    
+                    
+                    @st.cache(suppress_st_warning=True)
+                    def convert_df(input_df):
+                        # IMPORTANT: Cache the conversion to prevent computation on every rerun
+                        return input_df.to_html(escape=False, formatters=dict(사진=image_formatter))
+
+                    html = convert_df(result_df.iloc[:,:])
+
+                    # html = convert_df(rev_df)
+
+                    # st.write(html)
+
+                    st.markdown(
+                    html,
+                    unsafe_allow_html=True
+                    )
+
+                    # st.write(result_df)
 
 
     else : 
