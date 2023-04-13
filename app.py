@@ -291,8 +291,8 @@ def case_summary() : # 수집된 사례 데이터 집계
                   "교정 및 군사시설(16)": 2,
                   '기타시설(17)': 0}
 
-    col1 = st.columns(1)
-    with col1[0]:
+    col1, col2 = st.columns(2)
+    with col1:
         plt.rcParams['font.family'] ='Malgun Gothic'
         plt.rcParams['axes.unicode_minus'] =False
 
@@ -311,9 +311,7 @@ def case_summary() : # 수집된 사례 데이터 집계
         
         st.pyplot(fig)
     
-    col2 = st.columns(1)
-    
-    with col2[0]:
+    with col2:
         plt.rcParams['font.family'] ='Malgun Gothic'
         plt.rcParams['axes.unicode_minus'] =False
 
