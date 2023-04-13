@@ -292,7 +292,7 @@ def case_summary() : # 수집된 사례 데이터 집계
                   '기타시설(17)': 0}
 
     col1 = st.columns(1)
-    with col1:
+    with col1[0]:
         plt.rcParams['font.family'] ='Malgun Gothic'
         plt.rcParams['axes.unicode_minus'] =False
 
@@ -313,7 +313,7 @@ def case_summary() : # 수집된 사례 데이터 집계
     
     col2 = st.columns(1)
     
-    with col2:
+    with col2[0]:
         plt.rcParams['font.family'] ='Malgun Gothic'
         plt.rcParams['axes.unicode_minus'] =False
 
