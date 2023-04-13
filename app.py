@@ -986,9 +986,9 @@ def rec_cases ():
                 pred_result = label(clf_df)
                 rev_df['Label'] = pred_result
                 
-                # label = randint(2, 3)
-                label = label(np.array(rec_info).revel())
-                st.write(label)
+                label = randint(0, 3)
+                # label = label(np.array(rec_info).revel())
+                # st.write(label)
                 
                 result_df = rev_df.loc[rev_df['Label'] == label, :]
 
