@@ -1,0 +1,210 @@
+explain_path,photo_path,name,con_yr,re_yr,bldg_type,bldg_loc,Area,gr_floor,under_floor,re_cost,energy_reduction,co2_reduction
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_1.png,img/rec_fig/1.png,충북 보은군 장애인회관,2002,2015.619048,8,4,1565,4,0,176526140,0.104,0.100009821
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_2.png,img/rec_fig/2.png,경북 성주군청사,1995,2015.619048,11,11,9179.64,6,1,2360000000,0.765271699,0.765271482
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_3.png,img/rec_fig/3.png,강원 양구군청사,1984,2015.619048,11,16,3533,3,0,253417752,0.179,0.51790774
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_4.png,img/rec_fig/4.png,전남 영암군 군서면사무소,1991,2015.619048,11,9,762.9,2,0,28800000,0.463630184,0.463631969
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_5.png,img/rec_fig/5.png,전남 영암군 미암면사무소,1988,2015.619048,11,9,566,2,0,220000000,0.405686992,0.405680453
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_6.png,img/rec_fig/6.png,한국 폴리텍대학 창원캠퍼스,1981,2015.619048,7,12,3104,2,1,990000000,0.738033635,0.73803405
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_7.png,img/rec_fig/7.png,대전광역시청사,1999,2015.619048,11,13,87742,21,2,2759000000,0.22,0.219999839
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_8.png,img/rec_fig/8.png,세종시청 조치원청사 C동,1988,2015.619048,11,7,1647,3,1,302359500,0.2124,0.212399847
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_9.png,img/rec_fig/9.png,헌법재판소,1993,2015.619048,11,1,19270,5,1,11027000000,0.68,0.329
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_10.png,img/rec_fig/10.png,부산연제경찰서,1991,2015.619048,11,14,7357,4,1,1601000000,0.387,0.38699899
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_11.png,img/rec_fig/11.png,제주도 서귀포시 평생학습관,1998,2015.619048,11,17,1016,2,1,549000000,0.279,0.278999607
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_12.png,img/rec_fig/12.png,강릉 장애인직업재활시설 사랑의 일터,2003,2015.619048,8,16,630,2,1,487000000,0.384,0.383997205
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_13.png,img/rec_fig/13.png,정보통신기술진흥센터 청사,1995,2015.619048,11,6,19354,6,1,3288000000,0.598378926,0.598378938
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_14.png,img/rec_fig/14.png,전남 보성군 복내면사무소,1989,2015.619048,11,10,495,2,1,586000000,0.62477758,0.624778948
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_15.png,img/rec_fig/15.png,경기도 부천시 춘의동사무소,1985,2015.619048,11,2,731,3,1,321000000,0.592515593,0.592513066
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_16.png,img/rec_fig/16.png,한국연구재단 대전청사 본관,1990,2015.619048,11,6,5443,4,1,3954000000,0.4976,0.497600015
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_17.png,img/rec_fig/17.png,한국교통대학교 화학생명관,1985,2015.619048,7,4,7367,4,1,2947000000,0.739347122,0.739347461
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_18.png,img/rec_fig/18.png,강릉 입암3아파트 사회복지관,1994,2015.619048,11,16,1615.01,2,1,409000000,0.388,0.388007433
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_19.png,img/rec_fig/19.png,경기도 시흥시 ABC 행복학습타운,1988,2015.619048,7,2,17784,3,1,1303000000,0.561561562,0.561561537
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_20.png,img/rec_fig/20.png,대구 달서구청,1992,2015.619048,11,13,17898,8,1,2720000000,0.268,0.267999858
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_21.png,img/rec_fig/21.png,충청북도 자치연수원 공무원교육관,1996,2015.619048,11,4,9591,3,1,2168000000,0.678107607,0.678107523
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_22.png,img/rec_fig/22.png,충주 성내동우체국,1977,2015.619048,11,4,2863,3,1,1927000000,0.71,0.710000198
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_23.png,img/rec_fig/23.png,구) 남원역사,1986,2015.619048,11,8,761,1,0,440000000,0.583,0.582997086
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_24.png,img/rec_fig/24.png,전남 광양시 의회청사,1993,2015.619048,11,9,6895,5,1,1396000000,0.686356948,0.68635723
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_25.png,img/rec_fig/25.png,충북 음성군청 본청사,1995,2015.619048,11,4,8684,6,1,4319000000,0.603055556,0.603055693
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_26.png,img/rec_fig/26.png,진주 평거2주공아파트,1991,2015.619048,2,12,22036,6,1,3172000000,0.481828839,0.481829229
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_27.png,img/rec_fig/27.png,충북 중앙경찰학교 1강의동,1987,2015.619048,7,4,8732,4,1,4892000000,0.279,0.279000151
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_28.png,img/rec_fig/28.png,과천시민회관,1995,2015.619048,11,2,41056,4,3,1167000000,0.508035773,0.508035772
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_29.png,img/rec_fig/29.png,경북 구미시청 본관,1979,2015.619048,11,11,8360,5,1,6074000000,0.4378,0.43780044
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_30.png,img/rec_fig/30.png,부산 금정구청,1991,2015.619048,11,14,14464,8,2,6891000000,0.6084,0.608400015
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_31.png,img/rec_fig/31.png,경남 하동군청사,1992,2015.619048,11,12,5330,3,1,144100000,0.4979,0.497900184
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_32.png,img/rec_fig/32.png,하남시 신장도서관,1996,2015.619048,3,2,2145,3,1,2233000000,0.903674706,0.903673434
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_33.png,img/rec_fig/33.png,부산 중구청,1988,2015.619048,11,14,7860,8,2,4855000000,0.456,0.456000175
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_34.png,img/rec_fig/34.png,대구 시립중앙도서관,1985,2015.619048,7,13,10181,4,1,3533000000,0.508,0.507999668
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_35.png,img/rec_fig/35.png,충남 청양 우체국,1991,2015.619048,11,5,1569,2,1,694000000,0.625,0.624999219
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_36.png,img/rec_fig/36.png,국립농산물품질관리원 경남지원,1988,2015.619048,11,12,1697,5,1,698000000,0.567735908,0.567734731
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_37.png,img/rec_fig/37.png,한국철도공사 동대구역사(다시확인),1971,2015.619048,11,13,31965,5,1,17458000000,0.80718599,0.822935148
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_38.png,img/rec_fig/38.png,전남 장성군 북일면 행정복지센터,1989,2015.619048,11,9,722,2,0.979591837,447000000,0.719761304,0.719763083
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_39.png,img/rec_fig/39.png,강원대학교 농업생명과학대학 1호관,1978,2015.619048,7,16,4222,4,1,2033000000,0.87029982,0.870299774
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_40.png,img/rec_fig/40.png,서울 서초구 서운중학교,1984,2015.619048,7,1,8662,4,1,3057000000,0.521,0.520998015
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_41.png,img/rec_fig/41.png,서울대학교 공학관2(31동),1979,2015.619048,7,1,6987,4,1,1776000000,0.456,0.456000386
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_42.png,img/rec_fig/42.png,한국철도공사서울사옥(다시확인),1979,2015.619048,11,1,23272.28,8,2,4646000000,0.389,0.38899994
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_43.png,img/rec_fig/43.png,부산 범일2동 주민센터,1989,2015.619048,11,14,400.26,2,0.979591837,380000000,0.8037,0.803693752
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_44.png,img/rec_fig/44.png,대구 침산1동 주민센터,1992,2015.619048,11,13,551.48,2,1,345000000,0.6531,0.653100994
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_45.png,img/rec_fig/45.png,한국 환경산업 기술원 연수동,1977,2015.619048,11,1,3514,4,1,4795000,0.6659,0.665963402
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_46.png,img/rec_fig/46.png,인천 의료원 장례식장,1997,2015.619048,15,3,3469,4,1,,0.389,0.388542362
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_47.png,img/rec_fig/47.png,춘천 교도소,1981,2015.619048,16,16,112554,2,0.979591837,770960,0.59,0.611754968
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_48.png,img/rec_fig/48.png,목포 대학교 사회 과학관,1982,2015.619048,7,9,13605,4,1,2740000,0.407,0.406365696
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_49.png,img/rec_fig/49.png,정읍시 연지청사,1990,2015.619048,11,8,1739,4,1,1641828,0.2906,0.293811919
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_50.png,img/rec_fig/50.png,거창 여자고등학교,1972,2015.619048,7,12,9487,3,0.979591837,,0.36,0.360045156
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_51.png,img/rec_fig/51.png,통영시청 제2청사,1988.588235,2015.619048,11,12,5684.6,5,1,,0.242,0.436042612
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_52.png,img/rec_fig/52.png,영천시청 본관,1988.588235,2015.619048,11,11,5495.5,3,0,,0.1299,0.131891063
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_53.png,img/rec_fig/53.png,경찰청사 남관,1988.588235,2015.619048,11,1,3571,15,0.979591837,,0.3575,0.357521021
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_54.png,img/rec_fig/54.png,서울도봉경찰서,1988.588235,2015.619048,11,1,9099.9,4,1,,0.2439,0.241531357
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_55.png,img/rec_fig/55.png,전라북도 농업기술원,1988.588235,2015.619048,7,8,14413.5,3,0,,0.279,0.285687975
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_56.png,img/rec_fig/56.png,통영시 수산과학관,1988.588235,2015.619048,7,12,3587,2,1,,0.2435,0.436621675
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_57.png,img/rec_fig/57.png,목포자연사박물관 자연사관동,1988.588235,2015.619048,7,9,6610.9,4.298245614,0.979591837,,0.223,0.22660541
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_58.png,img/rec_fig/58.png,동학농민혁명기념관(전시관동),1988.588235,2015.619048,3,8,3945.7,4.298245614,0.979591837,,0.2282,0.232305069
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_59.png,img/rec_fig/59.png,서울대학교 052(예술관(미대)3),1988.588235,2015.619048,7,1,4383.7,4.298245614,0.979591837,,0.481,0.477185609
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_60.png,img/rec_fig/60.png,서울대학교 021(약학관1),1988.588235,2015.619048,7,1,6575.5,4.298245614,0.979591837,,0.418,0.56590939
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_61.png,img/rec_fig/61.png,충남대학교 실내체육관,1988.588235,2015.619048,7,6,3682,4.298245614,0.979591837,,0.2058,0.209975763
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_62.png,img/rec_fig/62.png,충남대학교 중앙도서관,1988.588235,2015.619048,7,6,21618,4.298245614,0.979591837,,0.361,0.360869509
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_63.png,img/rec_fig/63.png,수정청소년수련관,1988.588235,2015.619048,9,2,7746.4,4.298245614,0.979591837,,0.3434,0.341470863
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_64.png,img/rec_fig/64.png,동작구문화복지센터(보건소),1988.588235,2015.619048,6,1,10022,4.298245614,0.979591837,,0.1027,0.102703638
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_65.png,img/rec_fig/65.png,단양 수련시설,1994,2015,9,4,8220.18,5.862068966,1,3823000000,0.305253628,0.305252571
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_66.png,img/rec_fig/66.png,여수 하희현가 그린리모델링,1998,2017,1,9,18184,3,0,,0.381944444,0.381944695
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_67.png,img/rec_fig/67.png,외유내강,1969,2017,1,14,204.82,2,1,,0.347600923,0.347603148
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_68.png,img/rec_fig/68.png,부평 단독주택,1984,2016,1,3,146.13,2,1,89680000,0.654257329,0.654256346
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_69.png,img/rec_fig/69.png,경기도 수원시 권선구 단독주택 2층,1987,2016,1,2,209.43,2,1,7300000,0.328621495,0.328465142
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_70.png,img/rec_fig/70.png,EAN 테크놀로지 신사옥,1998,2017,11,1,2000,10,1,,0.375732209,0.375730417
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_71.png,img/rec_fig/71.png,부평 단독주택,1984,2016,1,3,146,2,1,,0.660059643,0.660051956
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_72.png,img/rec_fig/72.png,한서빌딩,1983,2017,11,1,2467,5,1,,0.521414006,0.521419009
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_73.png,img/rec_fig/73.png,피닉스호텔,1976,2017,12,14,6858,15,2,,0.62658129,0.626581643
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_74.png,img/rec_fig/74.png,한국외국어대학교 글로벌캠퍼스 인문경상관,1985,2017,7,2,6599,4,1,1100000000,0.46322024,0.463220674
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_75.png,img/rec_fig/75.png,경기도 용인시 처인구 단독주택,1996,2016,1,2,199,2,1,35000000,0.375361146,0.3754429
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_76.png,img/rec_fig/76.png,광주 계림동 숙박시설 금수장관광호텔,1998,2016,12,10,3163,5.862068966,1,140000000,0.327655174,0.327656439
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_77.png,img/rec_fig/77.png,서초동 업무시설,1995,2015,11,1,14514,5.862068966,1,495000000,0.30881987,0.308820062
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_78.png,img/rec_fig/78.png,국도화학 공장,1997,2016,11,1,4826,5.862068966,1,1717100000,0.271264368,0.271267509
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_79.png,img/rec_fig/79.png,한국외대 글로벌 캠퍼스 어문학관,2002,2015,7,2,13172,4,1,3000000000,0.330297266,0.330297148
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_80.png,img/rec_fig/80.png,경북 영주 문수면 사무소,1985,2013,11,11,892,5.862068966,1,1333000,0.335910424,0.335910424
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_81.png,img/rec_fig/81.png,충북대학교 생활관(진리관),1990,2013,7,4,2655,5.862068966,1,2350000,0.36484375,0.36484375
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_82.png,img/rec_fig/82.png,전북 고창 동리국악당(신재효고택동리국악당),1990,2014,3,8,2248,5.862068966,1,2550000,0.274102079,0.274102079
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_83.png,img/rec_fig/83.png,충북 청주 시립 미술관,1978,2015,3,4,4546,5.862068966,1,3469000,0.408734053,0.408734053
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_84.png,img/rec_fig/84.png,서울세관 2동 청사,1982,2015,11,1,13346,5.862068966,1,2370000,0.31510658,0.31510658
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_85.png,img/rec_fig/85.png,경기도청 제2별관,1990,2014,11,2,8120,8,2,1312181,0.35162374,0.35162374
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_86.png,img/rec_fig/86.png,경북 문경시청사,1990,2015,11,11,10067,4,1,3500000,0.224974891,0.224974891
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_87.png,img/rec_fig/87.png,한국수자원공사 물사랑어린이집,1988,2015,8,6,550,2,1,350000,0.221804511,0.221804511
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_88.png,img/rec_fig/88.png,한국건설기술연구원 (구교통연구원),1988,2015,11,2,8145,5.862068966,1,1321000,0.450249486,0.450249486
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_89.png,img/rec_fig/89.png,전남 무안군 농업기술센터,1988,2016,11,9,932,2,1,1067604,0.31026253,0.31026253
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_90.png,img/rec_fig/90.png,광주 시립 청소년 삶 디자인센터,1967,2015,6,10,8415,6,1,11300000,0.215554195,0.215554195
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_91.png,img/rec_fig/91.png,제주 서귀포의료원 (산후조리원),1982,2015,6,17,3624,4,2,2826745,0.288335518,0.288335518
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_92.png,img/rec_fig/92.png,한국도로공사 군위지사,1995,2015,11,11,1896,2,1,2041000,0.23677178,0.23677178
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_93.png,img/rec_fig/93.png,한국과학기술원 기계공학동,1993,2016,7,6,30387,7,1,10130000,0.187422629,0.187422629
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_94.png,img/rec_fig/94.png,김포국제공항,1980,2018,11,1,77775,4,1,67600000,0.319028936,0.319028936
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_95.png,img/rec_fig/95.png,경기도 따복기숙사(경기도기숙사),1984,2017,2,2,5510,5,1,11980368,0.185434174,0.185434174
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_96.png,img/rec_fig/96.png,서울 강동구청 별관(성안별관),1979,2017,11,1,4705,5,1,8912760,0.738697132,0.738697132
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_97.png,img/rec_fig/97.png,대구 수성구청 별관,2003,2018,11,13,3100,5,1,1520000,0.2577584,0.2577584
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_98.png,img/rec_fig/98.png,한국도로공사 홍천지사,1995,2017,11,16,1922,5.862068966,1,2019000,0.492027335,0.492027335
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_99.png,img/rec_fig/99.png,한국방송통신대학교 열린관,1982,2018,7,1,5808,5.862068966,1,7475000,0.529207634,0.529207634
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_100.png,img/rec_fig/100.png,한국교통대학교 건축관,1985,2018,7,4,2666,3,0,2900000,0.513837638,0.513837638
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_101.png,img/rec_fig/101.png,대구시 대명동 상가주택,1995,2006,1,13,6820.330732,2,1,,0.488089301,0.4880876
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_102.png,img/rec_fig/102.png,경기도 안양시 ARK,1973,2016,1,2,204,3,0,,0.442626687,0.442618313
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_103.png,img/rec_fig/103.png,DPR Construction Phoenix Regional Office(NZEB),1972,2011,11,23,1519.43,1.648648649,0.054054054,2480000,0.99,0.990566038
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_104.png,img/rec_fig/104.png,The George D. Aiken Center at the University of Vermont,1982,2011,7,25,3716.12,1.648648649,0.054054054,,0.63,0.630252101
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_105.png,img/rec_fig/105.png,5Pev,1954.714286,2014,2,56,84.08,1.648648649,0.054054054,,0.69,0.658536585
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_106.png,img/rec_fig/106.png,A2Dominion- Northholt,1954.714286,2010.348624,2,32,79.9,1.648648649,0.054054054,,0.5,0.571428571
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_107.png,img/rec_fig/107.png,Almshouses,1954.714286,2010,2,34,27.87,1.648648649,0.054054054,,0.8,0.797297297
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_108.png,img/rec_fig/108.png,Barbrook PassivHaus,1954.714286,2010,2,33,71.07,1.648648649,0.054054054,,0.88,0.942675159
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_109.png,img/rec_fig/109.png,BISF Steel Frame House,1954.714286,2010,2,34,88.26,1.648648649,0.054054054,,0.46,0.370967742
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_110.png,img/rec_fig/110.png,Bringing Wates homes into the Future,1954.714286,2010,2,49,75.25,1.648648649,0.054054054,,0.65,0.650684932
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_111.png,img/rec_fig/111.png,Bristol Retrofit,1954.714286,2013,2,35,188.13,1.648648649,0.054054054,,0.66,0.65
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_112.png,img/rec_fig/112.png,City West Homes,1954.714286,2010,2,32,59.46,1.648648649,0.054054054,,0.71,0.696969697
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_113.png,img/rec_fig/113.png,Compton,,,,,,,,,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_114.png,img/rec_fig/114.png,Hospital in Egypt,1954.714286,2010.348624,2,66,31029.6,1.648648649,0.054054054,,0.41,0.35046729
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_115.png,img/rec_fig/115.png,435 Indio Way(NZEB),1954.714286,2014,11,20,2950.6,1.648648649,0.054054054,5120000,0.99,0.989937107
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_116.png,img/rec_fig/116.png,mid-terrace Victorian house,1954.714286,2010,2,32,60.39,1.648648649,0.054054054,,0.79,0.765306122
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_117.png,img/rec_fig/117.png,Chale Green,1954.714286,2010,2,37,88.26,1.648648649,0.054054054,,0.86,0.833333333
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_118.png,img/rec_fig/118.png,Crawley Homes,1954.714286,2010,2,38,90.58,1.648648649,0.054054054,,0.61,0.523076923
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_119.png,img/rec_fig/119.png,Drum Housing Association,1954.714286,2010,2,40,68.75,1.648648649,0.054054054,,0.69,0.711538462
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_120.png,img/rec_fig/120.png,Penwith Housing,1954.714286,2010,2,41,65.03,1.648648649,0.054054054,,0.78,0.342105263
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_121.png,img/rec_fig/121.png,Sarsen Housing,1954.714286,2010,2,42,76.18,1.648648649,0.054054054,,0.88,0.888111888
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_122.png,img/rec_fig/122.png,East Midlands Housing,1954.714286,2010,2,43,70.61,1.648648649,0.054054054,,0.87,0.858333333
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_123.png,img/rec_fig/123.png,Grove Housing Association,1896,2010,2,63,89.19,1,0.054054054,,0.84,0.818181818
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_124.png,img/rec_fig/124.png,Eco-retrofit Bolton,1954.714286,2012,2,35,83.61,1,0.054054054,,0.38,0.275362319
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_125.png,img/rec_fig/125.png,BYRON G. ROGERS FEDERAL BUILDING,1965,2013,10,22,45986.99,17,0.054054054,159000000,0.51,0.509259259
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_126.png,img/rec_fig/126.png,Eco-retrofit Brierfield,1954.714286,2010,2,44,169.08,1,0.054054054,,0.54,0.565217391
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_127.png,img/rec_fig/127.png,Eco-retrofit Colne,1954.714286,2010,2,44,88.72,1,0.054054054,,0.18,-0.361702128
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_128.png,img/rec_fig/128.png,Eco-retrofit Ealing,1954.714286,2010,2,32,116.13,1,0.054054054,,0.23,0.122807018
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_129.png,img/rec_fig/129.png,Eco-retrofit Orpington,1954.714286,2010,2,52,94.76,1,0.054054054,,0.32,0.263157895
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_130.png,img/rec_fig/130.png,Eltham,,,,,,,,,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_131.png,img/rec_fig/131.png,Enfield Homes retrofit,,,,,,,,,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_132.png,img/rec_fig/132.png,Flagship Retrofit,1954.714286,2010,2,62,62.71,1,0.054054054,,0.71,0.712643678
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_133.png,img/rec_fig/133.png,Gentoo Retrofit,1954.714286,2010,2,50,78.04,1.648648649,0.054054054,,0.79,0.775510204
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_134.png,img/rec_fig/134.png,Gentoo Retrofit Bid 2,1954.714286,2010,2,50,78.04,1.648648649,0.054054054,,0.87,0.864864865
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_135.png,img/rec_fig/135.png,Gentoo Retrofit Bid 3,1954.714286,2010,2,50,64.1,1.648648649,0.054054054,,0.8,0.798165138
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_136.png,img/rec_fig/136.png,Green Structures(PCM),1954.714286,2010,2,32,100.34,1,0,,0.92,0.924302789
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_137.png,img/rec_fig/137.png,Grove Cottage,1954.714286,2009,2,83,134.71,1,0,,0.57,0.545454545
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_138.png,img/rec_fig/138.png,Hanley,,,,,,,,,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_139.png,img/rec_fig/139.png,Hard to Heat Homes,1954.714286,2010,2,46,48.31,1,0,,0.69,0.691358025
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_140.png,img/rec_fig/140.png,Harrow Road Retrofit,1954.714286,2010,2,31,124.95,1.648648649,0.054054054,,0.69,0.674418605
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_141.png,img/rec_fig/141.png,Hounslow Council,1954.714286,2010,2,32,84.54,1,0,,0.89,0.883870968
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_142.png,img/rec_fig/142.png,Hounslow Passivhaus Retrofit,1954.714286,2010,2,32,84.54,1,0,,0.87,0.86259542
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_143.png,img/rec_fig/143.png,Ilford,,,,,,,,,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_144.png,img/rec_fig/144.png,Property in Whitehaven,1954.714286,2010,2,48,76.18,1,0,,0.79,0.782051282
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_145.png,img/rec_fig/145.png,Inspiration Birmingham 2020,1954.714286,2010,2,85,158.86,1,0,,0.77,0.787234043
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_146.png,img/rec_fig/146.png,Prewett Bizley Architects,1954.714286,2010,2,32,105.91,1,0,,0.77,0.734177215
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_147.png,img/rec_fig/147.png,Isos Housing Group,1954.714286,2010,2,50,70.61,1,0,,0.82,0.775280899
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_148.png,img/rec_fig/148.png,L&Q Group,,,,,,,,,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_149.png,img/rec_fig/149.png,LB Greenwich,1954.714286,2010,2,32,108.7,1,0,,0.93,0.919354839
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_150.png,img/rec_fig/150.png,Lena Gardens,1954.714286,2010,2,32,195.1,1,0,,0.82,0.849315068
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_151.png,img/rec_fig/151.png,Leicester Housing Association,1974,2010,2,31,87.33,1,0,,0.56,0.523809524
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_152.png,img/rec_fig/152.png,Hastoe Housing Association,1948,2010,2,51,51.1,1.648648649,0.054054054,,0.93,0.931034483
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_153.png,img/rec_fig/153.png,Low Carbon Sheppey,1974,2010,2,52,74.32,1,0,,0.55,0.571428571
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_154.png,img/rec_fig/154.png,Hay Tor,1950,2010,2,53,78.5,1.648648649,0.054054054,,0.49,0.473684211
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_155.png,img/rec_fig/155.png,Metropolitan Housing Trust,1954.714286,2010,2,32,109.63,1,0,,0.71,0.675675676
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_156.png,img/rec_fig/156.png,Castle Rock Edinvar,1954.714286,2010,2,32,75.25,1.648648649,0.054054054,,0.46,-0.476190476
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_157.png,img/rec_fig/157.png,One Planet Sutton,1954.714286,2010,2,54,74.32,1,0,,0.61,0.589041096
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_158.png,img/rec_fig/158.png,Plus Dane Group,1954.714286,2010,2,55,89.19,1,0,,0.6,0.597402597
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_159.png,img/rec_fig/159.png,Peabody,1954.714286,2010,2,32,97.55,1,0,,0.57,0.59375
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_160.png,img/rec_fig/160.png,Peterborough EnviroCluster,1970,2010,2,34,76.18,1,0,,0.69,0.632352941
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_161.png,img/rec_fig/161.png,Dartford Borough Council,1954.714286,2010,2,52,60.39,1,0,,0.38,0.368421053
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_162.png,img/rec_fig/162.png,Redlands,1955,2011,2,33,150.5,1,0,,0.56,0.613636364
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_163.png,img/rec_fig/163.png,Powys County Council,1954.714286,2010,2,64,81.75,1,0,,0.79,0.764150943
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_164.png,img/rec_fig/164.png,White Design Associates,1954.714286,2010,2,35,69.68,1.648648649,0.054054054,,0.85,0.848101266
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_165.png,img/rec_fig/165.png,Appledore,,,,,,,,,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_166.png,img/rec_fig/166.png,Hockerton Housing Project Trading,1954.714286,2010,2,84,84.08,1,0,,0.84,0.797752809
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_167.png,img/rec_fig/167.png,Victorian mid-terrace,1888,2013,2,56,60.39,1,0,,0.2,0.206896552
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_168.png,img/rec_fig/168.png,Cottages,,,,,,,,,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_169.png,img/rec_fig/169.png,Home in Scotland,1970,2010,2,86,77.39,1,0,,0.78,0.764705882
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_170.png,img/rec_fig/170.png,A+G Architects,1960,2010,2,57,91.97,1,0,,0.79,0.781609195
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_171.png,img/rec_fig/171.png,Riverside HA,1950,2010,2,48,64.1,1,0,,0.82,0.825
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_172.png,img/rec_fig/172.png,Brampton retrofit,1950,2010,2,58,79.9,1,0,,0.72,0.847457627
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_173.png,img/rec_fig/173.png,Encraft Ltd,1954.714286,2010,2,59,79.9,1,0,,0.73,0.905405405
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_174.png,img/rec_fig/174.png,Victory Housing Trust,1954.714286,2010,2,60,85.94,1,0,,0.63,0.71641791
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_175.png,img/rec_fig/175.png,RCT Homes,1954.714286,2010,2,64,74.32,1,0,,0.72,0.648
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_176.png,img/rec_fig/176.png,SNW Home retrofit - Crawley,1968,2010,2,38,83.61,1,0,,0.7,0.685393258
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_177.png,img/rec_fig/177.png,SOLAR HOUSE 80/50,1954.714286,2010,2,61,99.41,1,0,,0.44,0.441176471
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_178.png,img/rec_fig/178.png,Victorian house,1954.714286,2010,2,32,87.33,1,0,,0.5,0.450980392
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_179.png,img/rec_fig/179.png,Holistic Optimal Retrofit,1989,2010,2,64,57.97,1,0,,0.8,0.756521739
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_180.png,img/rec_fig/180.png,South Chingford - Ascham Homes,1960,2010,2,32,104.98,1,0,,0.7,0.704545455
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_181.png,img/rec_fig/181.png,Yorkshire Housing,1954.714286,2010,2,58,75.25,1.648648649,0.054054054,,0.69,0.602150538
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_182.png,img/rec_fig/182.png,Thamesmead Retrofit House,1954.714286,2012,2,32,175.12,2,0,,0.8,0.79047619
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_183.png,img/rec_fig/183.png,Melin Homes,1960,2011,2,64,85.47,1,0,,0.73,0.718309859
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_184.png,img/rec_fig/184.png,The Oxford Whole House Carbon Reduction Project,1954.714286,2010,2,57,77.11,1,0,,0.68,0.647887324
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_185.png,img/rec_fig/185.png,Tower Hamlets,1960,2010,2,32,104.05,2,0,,0.65,0.611650485
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_186.png,img/rec_fig/186.png,Tunbridge Wells,1950,2010,2,52,77.11,1,0,,0.7,0.753623188
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_187.png,img/rec_fig/187.png,WHISCERS,1954.714286,2010,2,32,113.34,1,0,,0.58,0.536585366
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_188.png,img/rec_fig/188.png,Wakefield and District Housing Kettlethorpe retrofit 2,1950,2010,2,58,82.68,1,0,,0.63,0.583333333
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_189.png,img/rec_fig/189.png,Two Piers Housing Co-Operative,1954.714286,2010,2,39,177.44,1,0,,0.81,0.785046729
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_190.png,img/rec_fig/190.png,Crawley Homes,1950,2010,2,38,78.97,1,0,,0.71,0.666666667
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_191.png,img/rec_fig/191.png,Princedale Road,1910,2010,2,32,0,1,0,230000,0.49,0.714285714
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_192.png,img/rec_fig/192.png,Mosaic Midmoor Road,1910,2010,2,32,0,1,0,162000,0.67,0.584415584
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_193.png,img/rec_fig/193.png,Penzance,1950,2010,2,41,0,1,0,78000,0.79,0.885135135
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_194.png,img/rec_fig/194.png,406 Collins Street,1960,2011,11,65,4004.12,1.648648649,0.054054054,1500000,0.5,0.5
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_195.png,img/rec_fig/195.png,182 Capel Street,1984,2011,11,65,1600.72,3,1,420000,0.5,0.5
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_196.png,img/rec_fig/196.png,Council House 2 (CH2),,,,,,,,,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_197.png,img/rec_fig/197.png,1525 WILSON BOULEVARD,1987,2010,11,30,29109.95,12,0,1100000,0.25,0.250883392
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_198.png,img/rec_fig/198.png,Johann B?mstrasse 34 + 36,1960,2013,2,67,2844.97,3,1,5424950,0.72,0.717948718
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_199.png,img/rec_fig/199.png,Vester Voldgade.DK,1938,2015,11,68,6734.54,5,0,3517146,0.5,0.5
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_200.png,img/rec_fig/200.png,PHI_GAG_Hoheloog_Ludwigshafen,1965,2007,2,75,960.15,3,0,,0.94,0.933962264
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_201.png,img/rec_fig/201.png,Factor10_N?nberg,1930,2002,2,76,960.15,2,0,569845,0.84,0.833333333
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_202.png,img/rec_fig/202.png,Gym Ostfildern,1970,2008,10,77,2439.91,1.648648649,0.054054054,3169984,0.55,0.557142857
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_203.png,img/rec_fig/203.png,Angela School,1965,2010,7,78,2670.03,2,0,2554977,0.78,0.777777778
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_204.png,img/rec_fig/204.png,Friedrich-Fr?el-School Olbersdorf,1928,2011,7,79,5610.41,3,1,6159321,0.74,0.731707317
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_205.png,img/rec_fig/205.png,High School Passive House,1968,2013,7,82,1016.36,2,0,,0.9,0.899705015
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_206.png,img/rec_fig/206.png,Riga,,,,,,,,377652,,
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_207.png,img/rec_fig/207.png,The Mildmay Centre,1890,2012,11,32,665.19,2,0,1824984,0.85,0.850746269
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_208.png,img/rec_fig/208.png,Grand Junction,1918,2013,11,22,3861.05,1.648648649,0.054054054,16693077,0.99,0.990149254
+https://raw.githubusercontent.com/Saem-repo/remodel_app/master/img/pop_up/Explain_209.png,img/rec_fig/209.png,Silver Spring and Lanham,1970,2014,11,29,14643.56,1.648648649,0.054054054,,0.47,0.487179487
