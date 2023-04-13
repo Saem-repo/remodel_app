@@ -987,7 +987,7 @@ def rec_cases ():
                 rev_df['Label'] = pred_result
                 
                 # label = randint(0, 3)
-                label = random.choices(range(0, 3), weights = [0.3, 0.3, 0.4])
+                label = random.choices(range(0, 2), weights = [0.3, 0.3, 0.4])
 
                 
                 # label = label(np.array(rec_info).revel())
