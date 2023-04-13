@@ -324,7 +324,7 @@ def case_summary() : # 수집된 사례 데이터 집계
         # st.write(fig_2.T)
         
         
-        plt.figure(figsize=(10,7))
+        fig_2 = plt.figure(figsize=(10,7))
         plt.barh(fig_2_df.T)
         # fig_2_df.T.plot(kind='barh')
         plt.ylabel('건물 유형', fontproperties=font)
@@ -332,7 +332,7 @@ def case_summary() : # 수집된 사례 데이터 집계
         plt.xticks(fontproperties=font)
         # plt.legend(fontproperties=font)
         
-        st.pyplot()
+        st.pyplot(fig_2)
 
     #     col3, col4 = st.columns(2)            
     #     with col3:
@@ -992,7 +992,7 @@ def rec_cases ():
 
                 
                 # label = label(np.array(rec_info).revel())
-                st.write(rev_df)
+                # st.write(rev_df)
                 
                 result_df = rev_df.loc[rev_df['Label'] == label[0], :]
                 result_df = rev_df.loc[rev_df['ER'] >= float(ER)/100, :]
