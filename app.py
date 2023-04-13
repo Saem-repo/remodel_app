@@ -1009,8 +1009,13 @@ def rec_cases ():
                 
                 result_df.columns = kor_rec_cols
 
-                rec_cols = ['사진', '사례 이름', '위치', '건물 유형', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
+                rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
                 result_df = result_df.loc[:,rec_cols]
+
+                result_df['건물 유형'] = int(result_df['건물 유형'])
+                result_df['위치'] = int(result_df['위치'])
+                result_df['면적'] = round(float(result_df['면적']), 2)
+                result_df['에너지 저감율'] = round(float(result_df['에너지 저감율']), 2)
                 # st.write(result_df)
                 
                 # kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도']
