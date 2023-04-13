@@ -990,7 +990,7 @@ def rec_cases ():
                 # label = label(np.array(rec_info).revel())
                 # st.write(label)
                 
-                result_df = rev_df.loc[rev_df['Label'] == label, :]
+                result_df = rev_df.loc[(rev_df['ER'] >= ER) & (rev_df['Label'] == label), :]
 
                 dist = [round(uniform(1,4),2) for p in range(len(result_df))]
 
@@ -1009,7 +1009,7 @@ def rec_cases ():
                 
                 result_df.columns = kor_rec_cols
 
-                rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
+                rec_cols = ['사진', '사례 이름', '위치', '건물 유형', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
                 result_df = result_df.loc[:,rec_cols]
                 # st.write(result_df)
                 
