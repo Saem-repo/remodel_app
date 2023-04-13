@@ -979,16 +979,13 @@ def rec_cases ():
 
                 clf_df = clf_df.fillna(method='ffill')
 
-                st.write(rev_df)
-                st.write(clf_df)
-
                 # st.write(rev_df.columns)
                 # st.write(clf_df.columns)
 
                 pred_result = label(clf_df)
                 rev_df['Label'] = pred_result
                 
-                st.write(rev_df)
+                
                 
 
                 label = randint(2, 3)
