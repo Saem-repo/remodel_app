@@ -199,17 +199,17 @@ def home () :
         st.markdown(""" <style> .mid_col1 {
         font-size:20px; text-align: "center"; font-family: 'Cooper Black'; font-weight:'bold';, color: #000000;} 
         </style> """, unsafe_allow_html=True)
-        st.markdown('<p class="mid_col1"><strong>국내 지역별 전력 에너지 사용량</strong></p>',unsafe_allow_html=True)
+        st.markdown('<p class="mid_col1"><strong>국내 지역별 거주 시설 리모델링 시공 사례</strong></p>',unsafe_allow_html=True)
         
         fig_elec = px.choropleth_mapbox(df, geojson=kor_geo,
                                locations='sigun_code',
-                               color='전기사용량(TOE)',
+                               color='시공 사례(건)',
                                color_continuous_scale="matter",
                                range_color=(0, 2),
                                mapbox_style="carto-positron",
                                featureidkey="properties.SIG_CD",
                                zoom=6, center = {"lat": 37.982, "lon": 126.986},
-                               opacity=0.5, labels={'전력소비량' : '전기사용량(TOE)'})
+                               opacity=0.5, labels={'거주시설' : '시공 사례(건)'})
                             
         fig_elec.update_layout(margin={"r": 0, "t": 0, "l": 0, "b":0})
         st.plotly_chart(fig_elec)
@@ -220,17 +220,17 @@ def home () :
         st.markdown(""" <style> .mid_col2 {
         font-size:20px ; font-family: 'Cooper Black'; font-weight: 'bold';, color: #000000;} 
         </style> """, unsafe_allow_html=True)
-        st.markdown('<p class="mid_col2"><strong>국내 지역별 가스 에너지 사용량</strong></p>',unsafe_allow_html=True)
+        st.markdown('<p class="mid_col2"><strong>국내 지역별 업무 시설 리모델링 시공 사례</strong></p>',unsafe_allow_html=True)
         
         fig_gas = px.choropleth_mapbox(df, geojson=kor_geo,
                                locations='sigun_code',
-                               color='가스사용량(TOE)',
+                               color='시공 사례(건)',
                                color_continuous_scale="matter",
                                range_color=(0, 2),
                                mapbox_style="carto-positron",
                                featureidkey="properties.SIG_CD",
                                zoom=6, center = {"lat": 36.565, "lon": 126.986},
-                               opacity=0.5, labels={'가스소비량' : '가스사용량(TOE)'})
+                               opacity=0.5, labels={'업무시설' : '시공 사례(건)'})
                             
         fig_gas.update_layout(margin={"r": 0, "t": 0, "l": 0, "b":0})
         st.plotly_chart(fig_gas)
@@ -239,17 +239,17 @@ def home () :
         st.markdown(""" <style> .mid_col3 {
         font-size:20px ; font-family: 'Cooper Black'; font-weight:'bold';, color: #000000;} 
         </style> """, unsafe_allow_html=True)
-        st.markdown('<p class="mid_col3"><strong>국내 지역별 지역난방 에너지 사용량</strong></p>',unsafe_allow_html=True)
+        st.markdown('<p class="mid_col3"><strong>국내 지역별 기타시설 리모델링 시공 사례</strong></p>',unsafe_allow_html=True)
         
         fig_heat = px.choropleth_mapbox(df, geojson=kor_geo,
                                 locations='sigun_code',
-                                color='지역난방(TOE)',
+                                color='시공 사례(건)',
                                 color_continuous_scale="matter",
                                 range_color=(0, 2),
                                 mapbox_style="carto-positron",
                                 featureidkey="properties.SIG_CD",
                                 zoom=6, center = {"lat": 35.322, "lon": 126.986},
-                                opacity=0.5, labels={'지역난방소비량' : '지역난방(TOE)'})
+                                opacity=0.5, labels={'기타시설' : '시공 사례(건)'})
                                 
         fig_heat.update_layout(margin={"r": 0, "t": 0, "l": 0, "b":0})
         st.plotly_chart(fig_heat)
