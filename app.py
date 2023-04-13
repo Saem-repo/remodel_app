@@ -988,7 +988,8 @@ def rec_cases ():
                 
                 # label = randint(2, 3)
                 label = label(rec_info)
-
+                st.write(label)
+                
                 result_df = rev_df.loc[rev_df['Label'] == label, :]
 
                 dist = [round(uniform(1,4),2) for p in range(len(result_df))]
