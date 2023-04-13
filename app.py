@@ -332,7 +332,8 @@ def case_summary() : # 수집된 사례 데이터 집계
         
         plt.ylabel('건물 유형', fontproperties=font)
         plt.yticks(fontproperties=font)
-        plt.xticks(fontproperties=font)
+        plt.xticks(fontproperties=font, rotation=45)
+        
         # plt.legend(fontproperties=font)
         
         st.pyplot(fig_2)
