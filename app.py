@@ -985,6 +985,9 @@ def rec_cases ():
 
                 pred_result = label(clf_df)
                 rev_df['Label'] = pred_result
+                
+                st.write(rev_df)
+                
 
                 label = randint(2, 3)
 
