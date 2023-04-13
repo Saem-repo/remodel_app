@@ -990,7 +990,7 @@ def rec_cases ():
                 # label = label(np.array(rec_info).revel())
                 st.write(rev_df)
                 
-                result_df = rev_df.loc[(rev_df['ER'] >= ER/100) & (rev_df['Label'] == label), :]
+                result_df = rev_df.loc[(rev_df['ER'] >= float(ER)/100) & (rev_df['Label'] == label), :]
 
                 dist = [round(uniform(1,4),2) for p in range(len(result_df))]
 
