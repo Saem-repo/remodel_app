@@ -821,6 +821,11 @@ def rec_cases ():
 
     # 사례 추천을 위한 사용자 입력 
 
+    st.markdown('''
+                    - ### 사용자 입력 변수
+
+                ''')
+
     rec_cols_1 = st.columns(4)
     
     with rec_cols_1[0] :
