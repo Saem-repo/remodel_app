@@ -974,8 +974,9 @@ def rec_cases ():
                     except ValueError as e:
                         return (e.args[0])
 
-                rev_df = df.iloc[:, 2:]
-                clf_df = rev_df.iloc[:, 2:]
+                rev_df = df.iloc[:102, 2:]
+                rev_df['BT'] = rev_df['BT'] - 1.0
+                clf_df = rev_df.iloc[:102, 2:]
 
                 clf_df = clf_df.fillna(method='ffill')
 
@@ -985,10 +986,8 @@ def rec_cases ():
                 pred_result = label(clf_df)
                 rev_df['Label'] = pred_result
                 
-                
-                
-
-                label = randint(2, 3)
+                # label = randint(2, 3)
+                label = label(rec_info)
 
                 result_df = rev_df.loc[rev_df['Label'] == label, :]
 
