@@ -1024,7 +1024,7 @@ def rec_cases ():
                 
                 # st.write(rev_df.loc[rev_df.ER >= float(ER)/100])
 
-                result_df = rev_df[(rev_df.Label == label[0]) & (rev_df.ER >= float(ER)/100)]
+                result_df = rev_df.iloc[(rev_df.Label == label[0]) & (rev_df.ER >= float(ER)/100),:]
 
                 # result_df = rev_df.loc[(rev_df.Label == label[0]) & (rev_df.ER >= float(ER)/100)]
 
