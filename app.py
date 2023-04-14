@@ -1019,12 +1019,14 @@ def rec_cases ():
                 
                 # label = label(np.array(rec_info).revel())
                 # st.write(rev_df)
-                st.write(float(ER)/100)
-                st.write(rev_df.ER)
+                # st.write(float(ER)/100)
+                # st.write(rev_df.ER)
                 
-                st.write(rev_df.loc[rev_df.ER >= float(ER)/100])
+                # st.write(rev_df.loc[rev_df.ER >= float(ER)/100])
 
-                result_df = rev_df.loc[(rev_df.Label == label[0]) and (rev_df.ER >= float(ER)/100)]
+                result_df = rev_df[(rev_df.Label == label[0]) & (rev_df.ER >= float(ER)/100)]
+
+                # result_df = rev_df.loc[(rev_df.Label == label[0]) & (rev_df.ER >= float(ER)/100)]
 
                 # result_df = rev_df.loc[rev_df['ER'] >= float(ER)/100, :]
                 
