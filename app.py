@@ -700,7 +700,7 @@ def search_cases (): # 사례 검색
     #     st.write(remodel_renewable_info_list)
         # st.write(remodel_result_info_list)
         
-        search_result = df.loc[((df['design'] == bldg_info_list[0]) & (df['build_type'] == bldg_info_list[1])) | (df['structure'] == bldg_info_list[6]) , :]
+        search_result = df.loc[((df['design'] == bldg_info_list[0]) & (df['build_type'] == bldg_info_list[1])) , :]
 
         # st.write(search_result)
 
