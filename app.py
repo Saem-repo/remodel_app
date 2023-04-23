@@ -980,130 +980,84 @@ def rec_cases ():
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
 
 
-                # # K-Means 군집화: 에너지효율에 따른 군집
-                # estimator = KMeans(n_clusters = 3, random_state=101)
-                # ids = estimator.fit(np.array(rec_df['energy']).reshape(-1, 1))
+                # K-Means 군집화: 에너지효율에 따른 군집
+                estimator = KMeans(n_clusters = 3, random_state=101)
+                ids = estimator.fit(np.array(rec_df['energy']).reshape(-1, 1))
                 
-                # rec_df['label'] = ids.labels_ # 각 클래스 레이블을 데이터프레임에 추가
+                rec_df['label'] = ids.labels_ # 각 클래스 레이블을 데이터프레임에 추가
 
-                # X = rec_df.iloc[:,:-1]
-                # y = rec_df.iloc[:,-1]
+                X = rec_df.iloc[:,:-1]
+                y = rec_df.iloc[:,-1]
 
-                # X_train, X_test, y_train, y_test = ms.train_test_split(X, y, 
-                #                                                     test_size = 0.01, random_state = 100)
-                # # DT 객체 생성 및 훈련
-                # dt_clf = DecisionTreeClassifier(
-                #                                 criterion='entropy', ## 'gini', 'log_loss'
-                #                                 splitter='best', ## 'random'
-                #                                 max_depth=2, ## '최대 깊이'
-                #                                 min_samples_leaf=6, ## 최소 끝마디 샘플 수
-                #                                 min_samples_split=2, ## 최소 split 샘플 수
-                #                                 random_state=100
-                #                             )
-                # # grid_dt_clf = GridSearchCV(dt_clf, param_grid=param, cv=5, verbose=-1)
-                # dt_clf.fit(X_train,y_train)
+                X_train, X_test, y_train, y_test = ms.train_test_split(X, y, 
+                                                                    test_size = 0.01, random_state = 100)
+                # DT 객체 생성 및 훈련
+                dt_clf = DecisionTreeClassifier(
+                                                criterion='entropy', ## 'gini', 'log_loss'
+                                                splitter='best', ## 'random'
+                                                max_depth=2, ## '최대 깊이'
+                                                min_samples_leaf=6, ## 최소 끝마디 샘플 수
+                                                min_samples_split=2, ## 최소 split 샘플 수
+                                                random_state=100
+                                            )
+                # grid_dt_clf = GridSearchCV(dt_clf, param_grid=param, cv=5, verbose=-1)
+                dt_clf.fit(X_train,y_train)
 
-                # #Predict the response for test dataset
-                # y_pred = dt_clf.predict(np.array(rec_info).reshape(1, -1))
+                #Predict the response for test dataset
+                y_pred = dt_clf.predict(np.array(rec_info).reshape(1, -1))
 
-                # ## Plot Tree with plot_tree
-                # fig = plt.figure(figsize=(13, 10))
-                # _ = tree.plot_tree(dt_clf, 
-                #                    feature_names=X.columns,
-                #                 #   class_names=dt_clf.classes_,
-                #                    filled=True)
+                ## Plot Tree with plot_tree
+                fig = plt.figure(figsize=(13, 10))
+                _ = tree.plot_tree(dt_clf, 
+                                   feature_names=X.columns,
+                                #   class_names=dt_clf.classes_,
+                                   filled=True)
                 
-                # st.write(y_pred)
-                # st.pyplot(fig)
-                
-                # st.write(rec_df)
+                # decision tree plot
+                st.pyplot(fig)
                 
                 
-                # # rec_df_2 = df_rev.iloc[:102,:]
-                # rec_df_2 = df_rev.iloc[:,:]
-                # rec_df_2['Label'] = rec_df['label']
+                # rec_df_2 = df_rev.iloc[:102,:]
+                rec_df_2 = df_rev.iloc[:,:]
+                rec_df_2['Label'] = rec_df['label']
 
                 
-                # # result_df = rec_df_2.loc[(rec_df_2.Label == y_pred[0]) & (rec_df_2.loc == rec_info[0]) & (rec_df_2.build_type == rec_info[1]), :]
+                # result_df = rec_df_2.loc[(rec_df_2.Label == y_pred[0]) & (rec_df_2.loc == rec_info[0]) & (rec_df_2.build_type == rec_info[1]), :]
 
-                # result_df = rec_df_2.loc[(rec_df_2.Label == y_pred[0]) & (rec_df_2.build_type == rec_info[1]), :]
+                result_df = rec_df_2.loc[(rec_df_2.Label == y_pred[0]) & (rec_df_2.build_type == rec_info[1]), :]
 
                 # st.write(result_df)
 
                 # st.write(rec_info)
 
-                # from sklearn.metrics.pairwise import cosine_similarity
-
-                # result_df_new = result_df.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
-                # 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
-                # 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
-
                 from sklearn.metrics.pairwise import cosine_similarity
 
-                
-                
-                
-                df_rev
-
-                rec_df = df_rev.loc[:,['explain_path','photo_path','name','loc','build_type','built_year','area','ground_floor','underground_floor',
+                result_df_new = result_df.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+
+                sim = cosine_similarity(result_df_new, np.array(rec_info).reshape(1,-1))*100
                 
-                
-                
-                rec_df_rev = rec_df.iloc[:,3:]
+                st.write(sim)
 
-                
+                result_df['Similarity'] = np.round(sim,2)
 
-
-                st.write(rec_df_rev)
-
-                sim = cosine_similarity(rec_df_rev, np.array(rec_info).reshape(1,-1))*100
-
-                rec_df['Similarity'] = np.round(sim,2)
-
-                result_df_final = rec_df.loc[:,['photo_path','name','loc','build_type','built_year',
-                                                'area','ground_floor','underground_floor','cost','energy','Similarity']]
+                result_df.sort_values(by='Similarity', ascending=False, inplace=True)
 
 
+                result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
+                                                    'area','ground_floor','underground_floor','cost','energy','Label','Similarity']]
                 st.write(result_df_final)
 
-                result_df_final = rec_df.loc[(rec_df.loc == rec_info[0]) & (rec_df.build_type == rec_info[1]), :]
+                # st.write(result_df.columns)
+                # st.write(result_df)
 
+                result_df_new_new = result_df_final.iloc[:,1:]
 
-                kor_rec_cols = ['사진', '사례 이름', '위치','건물유형','준공년도',
-                                '연면적','지상층수','지하층수','리모델링비용','에너지효율성','유사도']                                
+                kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
+                                '연면적','지상층수','지하층수','리모델링비용','에너지효율성','분류레이블','유사도']                                
                 
-                result_df_final.columns = kor_rec_cols
-
-                
-
-
-
-
-
-                # # sim = cosine_similarity(result_df_new, np.array(rec_info).reshape(1,-1))*100
-                
-                # st.write(sim)
-
-                # result_df['Similarity'] = np.round(sim,2)
-
-                # result_df.sort_values(by='Similarity', ascending=False, inplace=True)
-
-
-                # result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
-                #                                     'area','ground_floor','underground_floor','cost','energy','Label','Similarity']]
-                # st.write(result_df_final)
-
-                # # st.write(result_df.columns)
-                # # st.write(result_df)
-
-                # result_df_new_new = result_df_final.iloc[:,1:]
-
-                # kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
-                #                 '연면적','지상층수','지하층수','리모델링비용','에너지효율성','분류레이블','유사도']                                
-                
-                # result_df_new_new.columns = kor_rec_cols
+                result_df_new_new.columns = kor_rec_cols
 
                 # # rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
                 # # result_df = result_df.loc[:,rec_cols]
@@ -1159,8 +1113,8 @@ def rec_cases ():
                         # IMPORTANT: Cache the conversion to prevent computation on every rerun
                         return input_df.to_html(escape=False, formatters=dict(사진=image_formatter))
 
-                    # html = convert_df(result_df_new_new.iloc[:,:])
-                    html = convert_df(result_df_final.iloc[:,:])
+                    html = convert_df(result_df_new_new.iloc[:,:])
+                    # html = convert_df(result_df_final.iloc[:,:])
 
                     # html = convert_df(rev_df)
 
