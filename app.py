@@ -923,7 +923,7 @@ def rec_cases ():
     with rec_cols_5[4] :
         ess = st.selectbox('에너지저장장치', options = list(choice.keys()), format_func=lambda x: choice[x])
         
-    rec_info = [loc_info, BT_info, built_year, Area, ground_floor, underground_floor, cost, ER, wall, roof, window, air, overhang, vent, light, pv, solar_thermal, geo, fuel_cell, ess]
+    rec_info = [loc_info, BT_info, built_year, Area, ground_floor, underground_floor, cost, ER, wall, roof, window, air, overhang, hvac, vent, light, pv, solar_thermal, geo, fuel_cell, ess]
 
 
 
@@ -933,21 +933,7 @@ def rec_cases ():
     if loc_info > 0 and BT_info > 0 and float(Area) > 0 and float(ER) > 0 and float(cost) > 0 and int(built_year) > 0 :
         if st.button("리모델링 사례 추천") :
             with st.spinner('계산 중....'):
-                time.sleep(4.5)
-                
-        # st.write(bldg_info_list)
-        # st.write(remodel_info_list)
-        # st.write(remodel_passive_info_list)
-        # st.write(remodel_active_info_list)
-        # st.write(remodel_renewable_info_list)
-        # st.write(remodel_result_info_list)
-
-            # 원래 수집 데이터 셋 !! 아래는 각 변수들 이름 및 대응되는 영어 명칭!!
-            # Id	사진	이름	준공년도	리모델링년도	빌딩타입	위치	면적	지상층수	지하층수
-            # 전_에너지소비량	후_에너지소비량	에너지저감율	전_벽열관류율	후_벽열관류율	벽열관류율_향상율
-            # 전_바닥열관류율	후_바닥열관류율	바닥열관류율_향상율	전_지붕열관류율	후_지붕열관류율	지붕열관류율_향상율
-            # 전_창문열관류율	후_창문열관류율	창문열관류율_향상율	전_기밀성	후_기밀성	기밀성_향상율	
-            # 전_일사차폐계수	후_일사차폐계수	일사차폐계수_향상율	전_이산화탄소배출량	후_이산화탄소배출량	이산화탄소배출량_향상율
+                # time.sleep(4.5)
                 
                 df = pd.read_csv("./dataset/rec/remodel_data_rec.csv", encoding='euc-kr')
                 
@@ -962,7 +948,8 @@ def rec_cases ():
                 
                 
                 # 사용자 입력 변수들... 이걸 기반으로 뽑아내야함...
-                rec_info = [loc_info, BT_info, Area, ground_floor, underground_floor, cost, ER, wall, roof, window, air, overhang, vent, light, pv, solar_thermal, geo, fuel_cell, ess]
+                # rec_info = [loc_info, BT_info, built_year, Area, ground_floor, underground_floor, cost, ER, 
+                #             wall, roof, window, air, overhang, hvac, vent, light, pv, solar_thermal, geo, fuel_cell, ess]
         
                 # 기존 모델은 의미가 없어져서 주석처리
                 # def label(unit):
@@ -977,6 +964,61 @@ def rec_cases ():
                 #     except ValueError as e:
                 #         return (e.args[0])
 
+                df_rev['cost'] = df_rev['cost'].fillna(df_rev['cost'].mean())
+                df_rev['cost'] = df_rev['cost']/1000
+
+                df_rev['energy'] = df_rev['energy']*100
+
+                # K-Means 군집화: 에너지효율에 따른 군집
+                estimator = KMeans(n_clusters = 3, random_state=101)
+                ids = estimator.fit(np.array(df_rev['energy']).reshape(-1, 1))
+                
+                rec_df = df_rev.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+                
+                rec_df['label'] = ids.labels_ # 각 클래스 레이블을 데이터프레임에 추가
+
+                X = rec_df.iloc[:102,:-1]
+                y = rec_df.iloc[:102,-1]
+
+                X_train, X_test, y_train, y_test = ms.train_test_split(X, y, 
+                                                                    test_size = 0.1, random_state = 100)
+                # DT 객체 생성 및 훈련
+                dt_clf = DecisionTreeClassifier(
+                                                criterion='entropy', ## 'gini', 'log_loss'
+                                                splitter='best', ## 'random'
+                                                max_depth=2, ## '최대 깊이'
+                                                min_samples_leaf=6, ## 최소 끝마디 샘플 수
+                                                min_samples_split=2, ## 최소 split 샘플 수
+                                                random_state=100
+                                            )
+                # grid_dt_clf = GridSearchCV(dt_clf, param_grid=param, cv=5, verbose=-1)
+                dt_clf.fit(X_train,y_train)
+
+                #Predict the response for test dataset
+                y_pred = dt_clf.predict(np.array(rec_info))
+
+                ## Plot Tree with plot_tree
+                fig = plt.figure(figsize=(15, 10))
+                _ = tree.plot_tree(dt_clf, 
+                                   feature_names=X.columns,
+                                #   class_names=dt_clf.classes_,
+                                   filled=True)
+                
+                st.write(y_pred)
+
+                st.pyplot(fig)
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 rev_df = df.iloc[:102, 2:]
                 rev_df['BT'] = rev_df['BT'] - 1.0
                 clf_df = rev_df.iloc[:102, 2:]
@@ -993,12 +1035,12 @@ def rec_cases ():
                 label = random.choices(range(0, 3), weights = [0, 0.5, 0.5])
 
                 
-                # label = label(np.array(rec_info).revel())
-                # st.write(rev_df)
-                # st.write(float(ER)/100)
-                # st.write(rev_df.ER)
+                label = label(np.array(rec_info).revel())
+                st.write(rev_df)
+                st.write(float(ER)/100)
+                st.write(rev_df.ER)
                 
-                # st.write(rev_df.loc[rev_df.ER >= float(ER)/100])
+                st.write(rev_df.loc[rev_df.ER >= float(ER)/100])
 
                 result_df = rev_df.loc[(rev_df.Label == label[0]) & (rev_df.ER >= float(ER)/100),:]
 
