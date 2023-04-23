@@ -1045,7 +1045,7 @@ def rec_cases ():
                 
                 df_rev
 
-                rec_df = df_rev.loc[:,['explain_path','photo_path','name','loc','build_type','built_year','area','ground_floor','underground_floor',
+                rec_df = df_rev.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year','area','ground_floor','underground_floor',
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
                 
