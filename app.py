@@ -1063,6 +1063,9 @@ def rec_cases ():
                 result_df_final = rec_df.loc[:,['photo_path','name','loc','build_type','built_year',
                                                 'area','ground_floor','underground_floor','cost','energy','Similarity']]
 
+
+                st.write(rec_df_rev)
+                
                 result_df_final = result_df_final.loc[(result_df_final.loc == rec_info[0]) & (result_df_final.build_type == rec_info[1]), :]
 
 
