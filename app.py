@@ -981,8 +981,8 @@ def rec_cases ():
                 
                 rec_df['label'] = ids.labels_ # 각 클래스 레이블을 데이터프레임에 추가
 
-                X = rec_df.iloc[:102,:-1]
-                y = rec_df.iloc[:102,-1]
+                X = rec_df.iloc[:,:-1]
+                y = rec_df.iloc[:,-1]
 
                 X_train, X_test, y_train, y_test = ms.train_test_split(X, y, 
                                                                     test_size = 0.1, random_state = 100)
@@ -1014,7 +1014,8 @@ def rec_cases ():
                 st.write(rec_df)
                 
                 
-                rec_df_2 = df_rev.iloc[:102]
+                # rec_df_2 = df_rev.iloc[:102,:]
+                rec_df_2 = df_rev.iloc[:,:]
                 rec_df_2['Label'] = rec_df['label']
 
                 
