@@ -1051,6 +1051,11 @@ def rec_cases ():
                 
                 rec_df_rev = rec_df.iloc[:,3:]
 
+                
+
+
+                st.write(rec_df_rev)
+
                 sim = cosine_similarity(rec_df_rev, np.array(rec_info).reshape(1,-1))*100
 
                 rec_df['Similarity'] = np.round(sim,2)
@@ -1058,13 +1063,15 @@ def rec_cases ():
                 result_df_final = rec_df.loc[:,['photo_path','name','loc','build_type','built_year',
                                                 'area','ground_floor','underground_floor','cost','energy','Similarity']]
 
+                result_df_final = result_df_final.loc[(result_df_final.loc == rec_info[0]) & (result_df_final.build_type == rec_info[1]), :]
+
 
                 kor_rec_cols = ['사진', '사례 이름', '위치','건물유형','준공년도',
                                 '연면적','지상층수','지하층수','리모델링비용','에너지효율성','유사도']                                
                 
                 result_df_final.columns = kor_rec_cols
 
-                result_df_final = result_df_final.loc[(result_df_final.loc == rec_info[0]) & (result_df_final.build_type == rec_info[1]), :]
+                
 
 
 
