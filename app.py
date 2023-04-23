@@ -1038,7 +1038,7 @@ def rec_cases ():
 
                 sim = cosine_similarity(result_df_new, np.array(rec_info).reshape(1,-1))*100
                 
-                st.write(sim)
+                # st.write(sim)
 
                 result_df['Similarity'] = np.round(sim,2)
 
@@ -1047,7 +1047,7 @@ def rec_cases ():
 
                 result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
                                                     'area','ground_floor','underground_floor','cost','energy','Label','Similarity']]
-                st.write(result_df_final)
+                # st.write(result_df_final)
 
                 # st.write(result_df.columns)
                 # st.write(result_df)
