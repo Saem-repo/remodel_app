@@ -1048,7 +1048,7 @@ def rec_cases ():
 
 
                 result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
-                                                    'area','ground_floor','underground_floor','cost','energy','Label','similarity']]
+                                                    'area','ground_floor','underground_floor','cost','energy','Label','Similarity']]
                 st.write(result_df_final)
 
                 # st.write(result_df.columns)
