@@ -22,6 +22,13 @@ from io import BytesIO
 
 from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, f1_score
 from sklearn.metrics import classification_report
+from sklearn.cluster import KMeans
+import random
+from sklearn import tree
+from sklearn.tree import DecisionTreeClassifier
+import sklearn.model_selection as ms
+from sklearn.model_selection import GridSearchCV
+
 import joblib
 import pickle
 import time
@@ -826,7 +833,7 @@ def rec_cases ():
 
                 ''')
 
-    rec_cols_1 = st.columns(4)
+    rec_cols_1 = st.columns(6)
     
     with rec_cols_1[0] :
         loc = {1: '서울', 2: '경기도', 3: '인천', 4: '충청북도', 5: '충청남도', 6: '대전', 7: '세종', 8: '전라북도',
@@ -846,25 +853,28 @@ def rec_cases ():
         BT_info = st.selectbox('건물유형', options = list(BT.keys()), format_func=lambda x: BT[x])
 
     with rec_cols_1[2] :
+        built_year = st.text_input("준공년도", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        
+    with rec_cols_1[3] :
         Area = st.text_input("건물 연면적 (m2)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
-    with rec_cols_1[3] :
-        UWaB = st.text_input("리모델링 비용(천원)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+    with rec_cols_1[4] :
+        ground_floor = st.text_input("지상 층수", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+
+    with rec_cols_1[5] :
+        underground_floor = st.text_input("지하 층수", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        
     
     rec_cols_2 = st.columns(4)
 
     with rec_cols_2[0] :
-        UFB = st.text_input("리모델링 전 에너지 소비량(kWh/㎡·yr)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        cost = st.text_input("리모델링 비용(천원)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_2[1] :
-        UWaA = st.text_input("리모델링 전 이산화탄소 배출량(kgCO₂eq)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
-
-    with rec_cols_2[2] :
-        SCA = st.text_input("이산화탄소 저감율(%, 희망요구사항)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
-
-    with rec_cols_2[3] :
         ER = st.text_input("에너지 저감율(%, 희망요구사항)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        
 
+    
 
     rec_cols_3 = st.columns(5)
 
@@ -883,81 +893,40 @@ def rec_cases ():
         air = st.selectbox('기밀성 강화', options = list(choice.keys()), format_func=lambda x: choice[x])
     
     with rec_cols_3[4] :
-        overhang = st.selectbox('차양', options = list(choice.keys()), format_func=lambda x: choice[x])
+        overhang = st.selectbox('차양(외부)', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    rec_cols_4 = st.columns(5)
+    rec_cols_4 = st.columns(3)
     
-    with rec_cols_3[0] :
+    with rec_cols_4[0] :
+        hvac = st.selectbox('냉난방시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
+        
+    with rec_cols_4[1] :
         vent = st.selectbox('환기시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[1] :
+    with rec_cols_4[2] :
         light = st.selectbox('조명시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_3[2] :
-        pv = st.selectbox('태양광시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
-
-    with rec_cols_3[3] :
-        solar_thermal = st.selectbox('태양열시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
-
-    with rec_cols_3[4] :
-        geo = st.selectbox('지열시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
-
-    
     rec_cols_5 = st.columns(5)
     
     with rec_cols_5[0] :
-        wind = st.selectbox('풍력시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
-
-    with rec_cols_5[1] :
-        bio = st.selectbox('바이오에너지', options = list(choice.keys()), format_func=lambda x: choice[x])
+        pv = st.selectbox('태양광시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
     
+    with rec_cols_5[1] :
+        solar_thermal = st.selectbox('태양열시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
+
     with rec_cols_5[2] :
+        geo = st.selectbox('지열시스템', options = list(choice.keys()), format_func=lambda x: choice[x])
+    
+    with rec_cols_5[3] :
         fuel_cell = st.selectbox('연료전지', options = list(choice.keys()), format_func=lambda x: choice[x])
 
-    with rec_cols_5[3] :
+    with rec_cols_5[4] :
         ess = st.selectbox('에너지저장장치', options = list(choice.keys()), format_func=lambda x: choice[x])
-    
-    
+        
+    rec_info = [loc_info, BT_info, built_year, Area, ground_floor, underground_floor, cost, ER, wall, roof, window, air, overhang, vent, light, pv, solar_thermal, geo, fuel_cell, ess]
 
 
-    # rec_cols_3 = st.columns(4)
 
-    # with rec_cols_3[0] :
-    #     URB = st.text_input("리모델링 전 지붕열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
-
-    # with rec_cols_3[1] :
-    #     URA = st.text_input("리모델링 후 지붕열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
-    
-    # with rec_cols_3[2] :
-    #     UWiB = st.text_input("리모델링 전 창문열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
-
-    # with rec_cols_3[3] :
-    #     UWiA = st.text_input("리모델링 후 창문열관류율", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
-
-    # rec_cols_4 = st.columns(4)
-
-    # with rec_cols_4[0] :
-    #     ATB = st.text_input("리모델링 전 기밀성", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
-
-    # with rec_cols_4[1] :
-    #     ATA = st.text_input("리모델링 후 기밀성", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
-
-    # with rec_cols_4[2] :
-    #     SCB = st.text_input("리모델링 전 일사차폐계수", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
-    
-    # with rec_cols_4[3] :
-
-        URB = 10
-        SCB = 10
-        ATA = 10
-        ATB = 10
-        UWiA = 10
-        UWiB = 10
-        URA = 10
-        URB = 10
-        UFA = 10
-
-    rec_info = [loc_info, BT_info, Area, ER, UWaB, UWaA, UFB, UFA, URB, URA, UWiB, UWiA, ATB, ATA, SCB, SCA]
 
     # st.write(rec_info)
 
@@ -980,26 +949,33 @@ def rec_cases ():
             # 전_창문열관류율	후_창문열관류율	창문열관류율_향상율	전_기밀성	후_기밀성	기밀성_향상율	
             # 전_일사차폐계수	후_일사차폐계수	일사차폐계수_향상율	전_이산화탄소배출량	후_이산화탄소배출량	이산화탄소배출량_향상율
                 
-                df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
-                # df.columns = ['id', 'pic', 'name', 'construction_year', 'remodel_year', 'BT', 'loc', 'Area', 'N_floor_ground',
-                #               'N_floor_underground', 'ECB', 'ECA', 'ER', 'UWaB', 'UWaA', 'UWaI', 'UFB', 'UFA',
-                #               'UFI', 'URB', 'URA', 'URI', 'UWiB', 'UWiA', 'UWiI', 'ATB', 'ATA', 'ATI', 'SCB', 'SCA', 'SCI',
-                #               'COB', 'COA', 'COI']
-
-                # search_cols = ['pic','name','loc', 'BT', 'Area', 'ER', 'UWaB', 'UWaA', 'UFB', 'UFA', 'URB', 'URA', 'UWiB', 'UWiA', 'ATB', 'ATA', 'SCB', 'SCA']
+                df = pd.read_csv("./dataset/rec/remodel_data_rec.csv", encoding='euc-kr')
+                
+                # 새 데이터프레임의 컬럼명...
+                # 'explain_path', 'photo_path', 'name', 'design', 'built_year', 're_year',
+                # 'area', 'ground_floor', 'underground_floor', 'build_type', 'loc',
+                # 'wall', 'roof', 'window', 'windowframe', 'airtight', 'windowcontrol',
+                # 'awning', 'coolheat', 'ventilation', 'lighting', 'sunlight',
+                # 'solarheat', 'geothermal', 'windpower', 'bio', 'fuelcell',
+                # 'cogeneration', 'ess', 'cost', 'energy'
+                df_rev = df.copy()
+                
+                
+                # 사용자 입력 변수들... 이걸 기반으로 뽑아내야함...
+                rec_info = [loc_info, BT_info, Area, ground_floor, underground_floor, cost, ER, wall, roof, window, air, overhang, vent, light, pv, solar_thermal, geo, fuel_cell, ess]
         
-
-                def label(unit):
-                    try:
-                        pickle_in = open("./classification.pickle", "rb")
-                        mdl = pickle.load(pickle_in)
-                        y_pred = mdl.predict(unit)
-                        newdf = pd.DataFrame(y_pred, columns=['Label'])
-                        # print(newdf.loc[:,'Label'])
-                        # return newdf.loc[:,'Label'].values
-                        return y_pred
-                    except ValueError as e:
-                        return (e.args[0])
+                # 기존 모델은 의미가 없어져서 주석처리
+                # def label(unit):
+                #     try:
+                #         pickle_in = open("./classification.pickle", "rb")
+                #         mdl = pickle.load(pickle_in)
+                #         y_pred = mdl.predict(unit)
+                #         newdf = pd.DataFrame(y_pred, columns=['Label'])
+                #         # print(newdf.loc[:,'Label'])
+                #         # return newdf.loc[:,'Label'].values
+                #         return y_pred
+                #     except ValueError as e:
+                #         return (e.args[0])
 
                 rev_df = df.iloc[:102, 2:]
                 rev_df['BT'] = rev_df['BT'] - 1.0
