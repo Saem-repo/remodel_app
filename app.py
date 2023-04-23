@@ -930,7 +930,7 @@ def rec_cases ():
 
     # st.write(rec_info)
 
-    if loc_info > 0 and BT_info > 0 and float(Area) > 0 and float(ER) > 0 and float(UWaB) > 0 and float(UWaA) > 0 and float(UFB) > 0 and float(UFA) > 0 and float(URB) > 0 and float(URA) > 0 and float(UWiB) > 0 and float(UWiA) > 0 and float(ATB) > 0 and float(ATA) > 0 and float(SCB) > 0 and float(SCA) > 0  :
+    if loc_info > 0 and BT_info > 0 and float(Area) > 0 and float(ER) > 0 and float(cost) > 0 and int(built_year) > 0 :
         if st.button("리모델링 사례 추천") :
             with st.spinner('계산 중....'):
                 time.sleep(4.5)
