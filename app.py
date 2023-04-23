@@ -971,9 +971,14 @@ def rec_cases ():
 
                 
                 
-                rec_df = df_rev.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                # rec_df = df_rev.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                # 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                # 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+
+                rec_df = df_rev.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+
 
                 # K-Means 군집화: 에너지효율에 따른 군집
                 estimator = KMeans(n_clusters = 3, random_state=101)
