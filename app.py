@@ -1049,7 +1049,7 @@ def rec_cases ():
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
                 
-                rec_df_rev = rec_df.iloc[:,4:]
+                rec_df_rev = rec_df.iloc[:,3:]
 
                 sim = cosine_similarity(rec_df_rev, np.array(rec_info).reshape(1,-1))*100
 
