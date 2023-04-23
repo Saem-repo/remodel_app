@@ -990,7 +990,7 @@ def rec_cases ():
                 y = rec_df.iloc[:,-1]
 
                 X_train, X_test, y_train, y_test = ms.train_test_split(X, y, 
-                                                                    test_size = 0.1, random_state = 100)
+                                                                    test_size = 0.01, random_state = 100)
                 # DT 객체 생성 및 훈련
                 dt_clf = DecisionTreeClassifier(
                                                 criterion='entropy', ## 'gini', 'log_loss'
@@ -1045,27 +1045,33 @@ def rec_cases ():
                 result_df['Similarity'] = sim
 
                 result_df.sort_values(by='Similarity', ascending=False, inplace=True)
-                st.write(result_df)
+
+
+                result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
+                                                    'area','ground_floor','underground_floor','cost','energy','Label','similarity']]
+                st.write(result_df_final)
 
                 # st.write(result_df.columns)
                 # st.write(result_df)
 
-                kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율', '리모델링 전 벽열관료율', '리모델링 후 벽열관류율',
-                                '리모델링 전 바닥열관류율', '리모델링 후 바닥열관류율', '리모델링 전 지붕열관류율', '리모델링 후 바닥열관류율',
-                                '리모델링 전 창문열관류율', '리모델링 후 창문열관류율', '리모델링 전 기밀성', '리모델링 후 기밀성',
-                                '리모델링 전 일사차폐계수', '리모델링 후 일사차폐계수', '분류레이블', '유사도(거리)']
+                result_df_new_new = result_df_final.iloc[:,1:]
+
+                kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
+                                '연면적','지상층수','지하층수','리모델링비용','에너지효율성','분류레이블','유사도']                                
                 
-                result_df.columns = kor_rec_cols
+                result_df_new_new.columns = kor_rec_cols
 
-                rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
-                result_df = result_df.loc[:,rec_cols]
+                # rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
+                # result_df = result_df.loc[:,rec_cols]
 
-                result_df.columns = ['사진', '사례 이름', '위치', '건물 유형', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
+                
+                st.write(result_df_new_new)
+                # result_df.columns = ['사진', '사례 이름', '위치', '건물 유형', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
 
-                result_df['건물 유형'] = result_df['건물 유형'].astype('int')
-                result_df['위치'] = result_df['위치'].astype('int')
-                result_df['면적'] = round(result_df['면적'].astype('float'), 2)
-                result_df['에너지 저감율'] = round(result_df['에너지 저감율'].astype('float'), 2)
+                # result_df['건물 유형'] = result_df['건물 유형'].astype('int')
+                # result_df['위치'] = result_df['위치'].astype('int')
+                # result_df['면적'] = round(result_df['면적'].astype('float'), 2)
+                # result_df['에너지 저감율'] = round(result_df['에너지 저감율'].astype('float'), 2)
                 # st.write(result_df)
                 
                 # kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도']
