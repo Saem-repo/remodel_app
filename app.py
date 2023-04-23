@@ -1049,6 +1049,8 @@ def rec_cases ():
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
                 
+                
+                
                 rec_df_rev = rec_df.iloc[:,3:]
 
                 
@@ -1066,7 +1068,7 @@ def rec_cases ():
 
                 st.write(result_df_final)
 
-                result_df_final = result_df_final.loc[(result_df_final.loc == rec_info[0]) & (result_df_final.build_type == rec_info[1]), :]
+                result_df_final = rec_df.loc[(rec_df.loc == rec_info[0]) & (rec_df.build_type == rec_info[1]), :]
 
 
                 kor_rec_cols = ['사진', '사례 이름', '위치','건물유형','준공년도',
