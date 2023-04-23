@@ -969,13 +969,15 @@ def rec_cases ():
 
                 df_rev['energy'] = df_rev['energy']*100
 
-                # K-Means 군집화: 에너지효율에 따른 군집
-                estimator = KMeans(n_clusters = 3, random_state=101)
-                ids = estimator.fit(np.array(df_rev['energy']).reshape(-1, 1))
+                
                 
                 rec_df = df_rev.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+
+                # K-Means 군집화: 에너지효율에 따른 군집
+                estimator = KMeans(n_clusters = 3, random_state=101)
+                ids = estimator.fit(np.array(rec_df['energy']).reshape(-1, 1))
                 
                 rec_df['label'] = ids.labels_ # 각 클래스 레이블을 데이터프레임에 추가
 
