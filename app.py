@@ -1014,41 +1014,15 @@ def rec_cases ():
                 st.write(rec_df)
                 
                 
-                
-                
-                
-                
-                
-                
-                
-                rev_df = df.iloc[:102, 2:]
-                rev_df['BT'] = rev_df['BT'] - 1.0
-                clf_df = rev_df.iloc[:102, 2:]
-
-                clf_df = clf_df.fillna(method='ffill')
-
-                # st.write(rev_df.columns)
-                # st.write(clf_df.columns)
-
-                pred_result = label(clf_df)
-                rev_df['Label'] = pred_result
-                
-                # label = randint(0, 3)
-                label = random.choices(range(0, 3), weights = [0, 0.5, 0.5])
+                rec_df_2 = df_rev.iloc[:102]
+                rec_df_2['Label'] = rec_df['label']
 
                 
-                label = label(np.array(rec_info).revel())
-                st.write(rev_df)
-                st.write(float(ER)/100)
-                st.write(rev_df.ER)
-                
-                st.write(rev_df.loc[rev_df.ER >= float(ER)/100])
+                result_df = rec_df_2.loc[(rec_df_2.Label == y_pred),:]
 
-                result_df = rev_df.loc[(rev_df.Label == label[0]) & (rev_df.ER >= float(ER)/100),:]
+                st.write(result_df)
 
-                # result_df = rev_df.loc[(rev_df.Label == label[0]) & (rev_df.ER >= float(ER)/100)]
 
-                # result_df = rev_df.loc[rev_df['ER'] >= float(ER)/100, :]
                 
                 dist = [round(uniform(1,4),2) for p in range(len(result_df))]
 
