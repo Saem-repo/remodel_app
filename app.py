@@ -1034,15 +1034,10 @@ def rec_cases ():
                 
                 st.write(sim)
 
-
-
-                
-                dist = [round(uniform(1,4),2) for p in range(len(result_df))]
-
-                result_df['Similarity'] = dist
+                result_df['Similarity'] = sim
 
                 result_df.sort_values(by='Similarity', ascending=True, inplace=True)
-                # st.write(result_df)
+                st.write(result_df)
 
                 # st.write(result_df.columns)
                 # st.write(result_df)
