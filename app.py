@@ -1002,16 +1002,16 @@ def rec_cases ():
                 y_pred = dt_clf.predict(np.array(rec_info).reshape(1, -1))
 
                 ## Plot Tree with plot_tree
-                fig = plt.figure(figsize=(15, 10))
+                fig = plt.figure(figsize=(13, 10))
                 _ = tree.plot_tree(dt_clf, 
                                    feature_names=X.columns,
                                 #   class_names=dt_clf.classes_,
                                    filled=True)
                 
                 st.write(y_pred)
-
                 st.pyplot(fig)
                 
+                st.write(rec_df)
                 
                 
                 
