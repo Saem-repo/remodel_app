@@ -1059,8 +1059,8 @@ def rec_cases ():
                                                 'area','ground_floor','underground_floor','cost','energy','Similarity']]
 
 
-                kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
-                                '연면적','지상층수','지하층수','리모델링비용','에너지효율성','분류레이블','유사도']                                
+                kor_rec_cols = ['사진', '사례 이름', '위치','건물유형','준공년도',
+                                '연면적','지상층수','지하층수','리모델링비용','에너지효율성','유사도']                                
                 
                 result_df_final.columns = kor_rec_cols
 
