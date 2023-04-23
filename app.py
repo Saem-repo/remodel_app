@@ -1101,7 +1101,7 @@ def rec_cases ():
                         return temp
 
                     def image_formatter(img_path):
-                        exp_df = pd.read_csv("./dataset/rec/rev_rec_df.csv", encoding='euc-kr')
+                        exp_df = pd.read_csv("./dataset/rec/remodel_data_rec.csv", encoding='euc-kr')
                         target_url = pop_url(exp_df, img_path)
                         
                         # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
