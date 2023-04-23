@@ -1026,7 +1026,7 @@ def rec_cases ():
 
                 result_df = rec_df_2.loc[(rec_df_2.Label == y_pred[0]) & (rec_df_2.build_type == rec_info[1]), :]
 
-                # st.write(result_df)
+                st.write(result_df)
 
                 # st.write(rec_info)
 
