@@ -868,7 +868,7 @@ def rec_cases ():
     rec_cols_2 = st.columns(4)
 
     with rec_cols_2[0] :
-        cost = st.text_input("리모델링 비용(천원)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        cost = st.text_input("리모델링 예상 비용(천원)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
 
     with rec_cols_2[1] :
         ER = st.text_input("에너지 저감율(%, 희망요구사항)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
@@ -1047,9 +1047,9 @@ def rec_cases ():
 
                 result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
                                                     'area','ground_floor','underground_floor','cost','energy','Label','Similarity']]
-                # st.write(result_df_final)
+                st.write(loc)
 
-                # st.write(result_df.columns)
+                st.write(BT)
                 # st.write(result_df)
 
                 result_df_new_new = result_df_final.iloc[:,1:]
