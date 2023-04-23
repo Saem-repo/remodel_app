@@ -1064,8 +1064,8 @@ def rec_cases ():
                                                 'area','ground_floor','underground_floor','cost','energy','Similarity']]
 
 
-                st.write(rec_df_rev)
-                
+                st.write(result_df_final)
+
                 result_df_final = result_df_final.loc[(result_df_final.loc == rec_info[0]) & (result_df_final.build_type == rec_info[1]), :]
 
 
