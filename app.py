@@ -1022,6 +1022,19 @@ def rec_cases ():
 
                 st.write(result_df)
 
+                st.write(rec_info)
+
+                from sklearn.metrics.pairwise import cosine_similarity
+
+                result_df_new = result_df.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+
+                sim = cosine_similarity(result_df_new, rec_info)
+                
+                st.write(sim)
+
+
 
                 
                 dist = [round(uniform(1,4),2) for p in range(len(result_df))]
