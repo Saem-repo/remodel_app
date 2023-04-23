@@ -1042,7 +1042,7 @@ def rec_cases ():
                 
                 st.write(sim)
 
-                result_df['Similarity'] = sim
+                result_df['Similarity'] = round(sim,2)
 
                 result_df.sort_values(by='Similarity', ascending=False, inplace=True)
 
