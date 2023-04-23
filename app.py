@@ -999,7 +999,7 @@ def rec_cases ():
                 dt_clf.fit(X_train,y_train)
 
                 #Predict the response for test dataset
-                y_pred = dt_clf.predict(np.array(rec_info))
+                y_pred = dt_clf.predict(np.array(rec_info).reshape(1, -1))
 
                 ## Plot Tree with plot_tree
                 fig = plt.figure(figsize=(15, 10))
