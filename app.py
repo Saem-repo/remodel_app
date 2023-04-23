@@ -1018,7 +1018,7 @@ def rec_cases ():
                 rec_df_2['Label'] = rec_df['label']
 
                 
-                result_df = rec_df_2.loc[(rec_df_2.Label == y_pred),:]
+                result_df = rec_df_2.loc[(rec_df_2.Label == y_pred[0]),:]
 
                 st.write(result_df)
 
