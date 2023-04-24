@@ -1047,13 +1047,14 @@ def rec_cases ():
 
                 result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
                                                     'area','ground_floor','underground_floor','cost','energy','Label','Similarity']]
-                st.write(loc)
-                st.write(BT)
+                # st.write(loc)
+                # st.write(BT)
+                
                 # st.write(result_df)
 
-                for key, value in loc.items():
-                    if key == result_df_final['loc'] :
-                        print(value)
+                # for key, value in loc.items():
+                #     if key == result_df_final['loc'] :
+                #         print(value)
 
                 
                 result_df_new_new = result_df_final.iloc[:,1:]
