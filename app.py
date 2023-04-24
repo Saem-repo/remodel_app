@@ -805,13 +805,13 @@ def rec_cases ():
 
     col1, col2, col3 = st.columns([0.15, 0.8, 0.1])
     
-    with col2:               
-        st.markdown('''<p class="font2"><strong> 리모델링 설계/시공 사례 추천 모델 순서도 </strong></p>  
-                       <p class="font3"><strong> ※ 이미지 확대를 원할시 이미지에 마우스 커서를 올렸을 때 나타나는 우측 상단에 확대 버튼을 누르세요.
-                    ''', unsafe_allow_html=True)
-        st.image('./img/ml.png')
+    # with col2:               
+    #     st.markdown('''<p class="font2"><strong> 리모델링 설계/시공 사례 추천 모델 순서도 </strong></p>  
+    #                    <p class="font3"><strong> ※ 이미지 확대를 원할시 이미지에 마우스 커서를 올렸을 때 나타나는 우측 상단에 확대 버튼을 누르세요.
+    #                 ''', unsafe_allow_html=True)
+    #     st.image('./img/ml.png')
 
-    st.markdown("---")
+    # st.markdown("---")
 
     #Define a label prediction function
     def label(unit):
@@ -1007,7 +1007,7 @@ def rec_cases ():
                 y_pred = dt_clf.predict(np.array(rec_info).reshape(1, -1))
 
                 ## Plot Tree with plot_tree
-                fig = plt.figure(figsize=(13, 10))
+                fig = plt.figure(figsize=(10, 8))
                 _ = tree.plot_tree(dt_clf, 
                                    feature_names=X.columns,
                                 #   class_names=dt_clf.classes_,
@@ -1048,11 +1048,17 @@ def rec_cases ():
                 result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
                                                     'area','ground_floor','underground_floor','cost','energy','Label','Similarity']]
                 st.write(loc)
-
                 st.write(BT)
                 # st.write(result_df)
 
+                for key, value in loc.items():
+                    if key == result_df_final['loc'] :
+                        print(value)
+
+                
                 result_df_new_new = result_df_final.iloc[:,1:]
+
+                # result_df_new_new['cost'] = result_df_new_new['cost']
 
                 kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
                                 '연면적','지상층수','지하층수','리모델링비용','에너지효율성','분류레이블','유사도']                                
