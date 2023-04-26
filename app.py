@@ -970,7 +970,7 @@ def rec_cases ():
                 df_rev['energy'] = df_rev['energy']*100
 
                 
-                
+                st.write(df_rev.info())
                 # rec_df = df_rev.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
                 # 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 # 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
