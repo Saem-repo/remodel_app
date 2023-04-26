@@ -1028,7 +1028,7 @@ def rec_cases ():
 
                 st.write(result_df)
 
-                # st.write(rec_info)
+                st.write(rec_info)
 
                 from sklearn.metrics.pairwise import cosine_similarity
 
