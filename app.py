@@ -854,27 +854,31 @@ def rec_cases ():
 
     with rec_cols_1[2] :
         built_year = st.text_input("준공년도", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        built_year = int(built_year)
         
     with rec_cols_1[3] :
         Area = st.text_input("건물 연면적 (m2)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        Area = float(Area)
 
     with rec_cols_1[4] :
         ground_floor = st.text_input("지상 층수", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        ground_floor = int(ground_floor)
 
     with rec_cols_1[5] :
         underground_floor = st.text_input("지하 층수", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        underground_floor = int(underground_floor)
         
     
     rec_cols_2 = st.columns(4)
 
     with rec_cols_2[0] :
         cost = st.text_input("리모델링 예상 비용(천원)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        cost = float(cost)
 
     with rec_cols_2[1] :
         ER = st.text_input("에너지 저감율(%, 희망요구사항)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
+        ER = float(ER)
         
-
-    
 
     rec_cols_3 = st.columns(5)
 
