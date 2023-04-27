@@ -1085,7 +1085,7 @@ def rec_cases ():
                 with fig_cols[1] :
                     worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                     if(worst_grade_df.empty):
-                        st.markdown('### 에너지 효율 등급별(7등급) 리모델링 시공 항목')
+                        st.markdown('### 에너지 효율 등급별(2등급) 리모델링 시공 항목')
                     
                         worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                         worst_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
@@ -1096,7 +1096,7 @@ def rec_cases ():
                         st.pyplot(fig_2)
                     
                     else :    # 예외가 발생했을 때 실행됨
-                        st.error("x테이블에 값이 없습니다..")     
+                        st.error("테이블에 값이 없습니다..")     
 
                 
                 
