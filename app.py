@@ -1080,7 +1080,7 @@ def rec_cases ():
                 with fig_cols[0] :
                     st.markdown('###  에너지 효율 등급(1+++등급) 리모델링 시공 항목')
                     first_grade_df = result_df.loc[(result_df['energy_grade'] == '1+++'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
-                    first_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
+                    # first_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
                     # st.write(first_grade_df)
                     fig_1 = first_grade_df.plot(kind='bar', figsize=(13,10)).figure
                     plt.xticks(rotation=0)
