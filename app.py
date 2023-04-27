@@ -1088,9 +1088,11 @@ def rec_cases ():
                     
                 with fig_cols[1] :
                     worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
-                    st.write((worst_grade_df==0).all())
-                    if not (worst_grade_df==0).all():
-                        st.write('19012')
+                    
+                    if (worst_grade_df==0).all():
+                        st.error("테이블에 값이 없습니다..")     
+                                            
+                    else :    # 예외가 발생했을 때 실행됨
                         
                         st.markdown('### 에너지 효율 등급별(7등급) 리모델링 시공 항목')
                     
@@ -1101,9 +1103,6 @@ def rec_cases ():
                         plt.xticks(rotation=0)
 
                         st.pyplot(fig_2)
-                    
-                    else :    # 예외가 발생했을 때 실행됨
-                        st.error("테이블에 값이 없습니다..")     
 
                 
                 
