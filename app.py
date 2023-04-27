@@ -974,7 +974,7 @@ def rec_cases ():
                 df_rev['energy'] = df_rev['energy']*100
 
                 
-                st.write(df_rev.info())
+                # st.write(df_rev.info())
                 # rec_df = df_rev.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
                 # 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 # 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
@@ -1074,6 +1074,7 @@ def rec_cases ():
                 fig_cols = st.columns(2)
     
                 with fig_cols[0] :
+                    st.markdown('###  에너지 효율 등급(1+++등급) 리모델링 시공 항목')
                     first_grade_df = result_df.loc[(result_df['energy_grade'] == '1+++'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                     first_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
                     # st.write(first_grade_df)
@@ -1084,6 +1085,7 @@ def rec_cases ():
                 with fig_cols[1] :
                     worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                     if(worst_grade_df.empty):
+                        st.markdown('### 에너지 효율 등급별(7등급) 리모델링 시공 항목')
                     
                         worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                         worst_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
