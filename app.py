@@ -1068,8 +1068,8 @@ def rec_cases ():
                 font = fm.FontProperties(fname="./font/Malgun Gothic.ttf")
                 plt.rc('font', family=font_name)
 
-                plt.rcParams['font.family'] ='Malgun Gothic'
-                plt.rcParams['axes.unicode_minus'] =False
+                # plt.rcParams['font.family'] ='Malgun Gothic'
+                # plt.rcParams['axes.unicode_minus'] =False
 
                 fig_cols = st.columns(2)
     
