@@ -1066,13 +1066,13 @@ def rec_cases ():
 
                 fig_cols = st.columns(2)
     
-                with fig_cols[0] :
-                    fig_1 = result_df.loc[(result_df['energy_grade'] == '1+++'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum().plot(kind='bar', figsize=(13,10))
-                    st.pyplot(fig_1)
+                # with fig_cols[0] :
+                #     fig_1 = result_df.loc[(result_df['energy_grade'] == '1+++'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum().plot(kind='bar', figsize=(13,10))
+                #     st.pyplot(fig_1)
                     
-                with fig_cols[1] :
-                    fig_2 = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum().plot(kind='bar', figsize=(13,10))
-                    st.pyplot(fig_2)
+                # with fig_cols[1] :
+                #     fig_2 = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum().plot(kind='bar', figsize=(13,10))
+                #     st.pyplot(fig_2)
                 
                 
                 center_1, center_2, center_3 = st.columns([0.15, 10, 0.15])
