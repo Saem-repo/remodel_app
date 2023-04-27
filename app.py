@@ -1065,14 +1065,16 @@ def rec_cases ():
 
                 result_df_final_total.columns = kor_rec_cols
 
-                import matplotlib.font_manager as fm
+                # import matplotlib.font_manager as fm
     
-                font_name = fm.FontProperties(fname="./font/Malgun Gothic.ttf").get_name()
-                font = fm.FontProperties(fname="./font/Malgun Gothic.ttf")
-                plt.rc('font', family=font_name)
+                # font_name = fm.FontProperties(fname="./font/Malgun Gothic.ttf").get_name()
+                # font = fm.FontProperties(fname="./font/Malgun Gothic.ttf")
+                # plt.rc('font', family=font_name)
 
                 # plt.rcParams['font.family'] ='Malgun Gothic'
                 # plt.rcParams['axes.unicode_minus'] =False
+                
+                st.markdown("---")
 
                 fig_cols = st.columns(2)
                 # st.write(len(result_df))
@@ -1094,20 +1096,20 @@ def rec_cases ():
                         st.error("테이블에 값이 없습니다..")     
                                             
                     else :    # 예외가 발생했을 때 실행됨
-                        st.write('9846519874651')
+                        
                         st.write(worst_grade_df)
                         st.markdown('### 에너지 효율 등급별(7등급) 리모델링 시공 항목')
                     
-                        worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
+                        # worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                         # worst_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
-                        # st.write(worst_grade_df)
+                        
                         fig_2 = worst_grade_df.plot(kind='bar', figsize=(13,10)).figure
                         plt.xticks(rotation=0)
-
                         st.pyplot(fig_2)
 
                 
-                
+                st.markdown("---")
+
                 center_1, center_2, center_3 = st.columns([0.15, 10, 0.15])
             
                 with center_2 :
