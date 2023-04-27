@@ -1053,12 +1053,12 @@ def rec_cases ():
                 result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
                                                     'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
                 
-                result_df_final_new = result_df_final.iloc[:,1:]
+                result_df_final_new = result_df_final.iloc[:10,1:]
 
                 # result_df_new_new['cost'] = result_df_new_new['cost']
 
                 kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
-                                '연면적','지상층수','지하층수','리모델링비용','에너지절감률','에너지효율등급','연간단위면적당 에너지소비량','유사도']                                
+                                '연면적','지상층수','지하층수','리모델링비용','에너지절감률(%)','에너지효율등급','연간단위면적당 에너지소비량','유사도']                                
                 
                 result_df_final_new.columns = kor_rec_cols
 
