@@ -1062,16 +1062,29 @@ def rec_cases ():
                 
                 result_df_final_new.columns = kor_rec_cols
 
-                
+                import matplotlib.font_manager as fm
+    
+                font_name = fm.FontProperties(fname="./font/Malgun Gothic.ttf").get_name()
+                font = fm.FontProperties(fname="./font/Malgun Gothic.ttf")
+                plt.rc('font', family=font_name)
+
+                plt.rcParams['font.family'] ='Malgun Gothic'
+                plt.rcParams['axes.unicode_minus'] =False
 
                 fig_cols = st.columns(2)
     
                 with fig_cols[0] :
-                    fig_1 = result_df.loc[(result_df['energy_grade'] == '1+++'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum().plot(kind='bar', figsize=(13,10)).figure
+                    first_grade_df = result_df.loc[(result_df['energy_grade'] == '1+++'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
+                    first_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
+                    
+                    fig_1 = first_grade_df.plot(kind='bar', figsize=(13,10)).figure
                     st.pyplot(fig_1)
                     
                 with fig_cols[1] :
-                    fig_2 = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum().plot(kind='bar', figsize=(13,10)).figure
+                    worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
+                    first_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
+                    
+                    fig_2 = worst_grade_df.plot(kind='bar', figsize=(13,10)).figure
                     st.pyplot(fig_2)
                 
                 
