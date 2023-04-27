@@ -1047,8 +1047,8 @@ def rec_cases ():
                 result_df = rec_df[rec_df['build_type'] == rec_info[1]].sort_values(by='similarity', ascending=False)
                 
                 
-                st.write(result_df)
-                st.write(rec_info)
+                # st.write(result_df)
+                # st.write(rec_info)
 
                 result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
                                                     'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
@@ -1076,7 +1076,7 @@ def rec_cases ():
                 with fig_cols[0] :
                     first_grade_df = result_df.loc[(result_df['energy_grade'] == '1+++'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                     first_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
-                    st.write(first_grade_df)
+                    # st.write(first_grade_df)
                     fig_1 = first_grade_df.plot(kind='bar', figsize=(13,10)).figure
                     plt.xticks(rotation=0)
                     st.pyplot(fig_1)
@@ -1087,7 +1087,7 @@ def rec_cases ():
                     
                         worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                         worst_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
-                        st.write(worst_grade_df)
+                        # st.write(worst_grade_df)
                         fig_2 = worst_grade_df.plot(kind='bar', figsize=(13,10)).figure
                         plt.xticks(rotation=0)
 
