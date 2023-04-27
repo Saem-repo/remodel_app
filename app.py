@@ -1054,6 +1054,7 @@ def rec_cases ():
                                                     'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
                 
                 result_df_final_new = result_df_final.iloc[:5,1:]
+                result_df_final_total = result_df_final.iloc[:,1:] # 사례 별 항목들 대문에
 
                 # result_df_new_new['cost'] = result_df_new_new['cost']
 
@@ -1061,6 +1062,8 @@ def rec_cases ():
                                 '연면적','지상층수','지하층수','리모델링비용','에너지절감률(%)','에너지효율등급','연간단위면적당 에너지소비량','유사도']                                
                 
                 result_df_final_new.columns = kor_rec_cols
+
+                result_df_final_total.columns = kor_rec_cols
 
                 import matplotlib.font_manager as fm
     
@@ -1072,6 +1075,7 @@ def rec_cases ():
                 # plt.rcParams['axes.unicode_minus'] =False
 
                 fig_cols = st.columns(2)
+                st.write(len(result_df))
     
                 with fig_cols[0] :
                     st.markdown('###  에너지 효율 등급(1+++등급) 리모델링 시공 항목')
@@ -1085,7 +1089,7 @@ def rec_cases ():
                 with fig_cols[1] :
                     worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                     if(worst_grade_df.empty):
-                        st.markdown('### 에너지 효율 등급별(2등급) 리모델링 시공 항목')
+                        st.markdown('### 에너지 효율 등급별(1등급) 리모델링 시공 항목')
                     
                         worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                         worst_grade_df.columns = ['벽체단열','지붕단열','창문단열','기밀성강화','차양(외부)','냉난방시스템','환기시스템','조명시스템','태양광','태양열','지열','연료전지','에너지저장시스템']
