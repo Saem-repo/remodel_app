@@ -1089,7 +1089,7 @@ def rec_cases ():
                 with fig_cols[1] :
                     worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
                     st.write(worst_grade_df)
-                    if(worst_grade_df.iloc[:,0]==0).all():
+                    if(worst_grade_df['0']==0).all():
                         st.markdown('### 에너지 효율 등급별(2등급) 리모델링 시공 항목')
                     
                         worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
