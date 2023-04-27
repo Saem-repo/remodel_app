@@ -1108,7 +1108,8 @@ def rec_cases ():
                 center_1, center_2, center_3 = st.columns([0.15, 10, 0.15])
             
                 with center_2 :
-                
+                    st.markdown('### 유사도 기반 리모델링 설계/시공 사례 추천표')
+                    
                     def get_thumbnail(path) :
                             img = Image.open(path)
                             img.thumbnail((87, 87))
