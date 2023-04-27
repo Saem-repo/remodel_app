@@ -307,8 +307,8 @@ def case_summary() : # 수집된 사례 데이터 집계
                   "교정 및 군사시설(16)": 2,
                   '기타시설(17)': 0}
 
-    col1 = st.columns(1)
-    # col1, col2 = st.columns(2)
+    # col1 = st.columns(1)
+    col1, col2 = st.columns(2)
     with col1:
         plt.rcParams['font.family'] ='Malgun Gothic'
         plt.rcParams['axes.unicode_minus'] =False
@@ -328,91 +328,91 @@ def case_summary() : # 수집된 사례 데이터 집계
         
         st.pyplot(fig)
     
-    # with col2:
-    #     plt.rcParams['font.family'] ='Malgun Gothic'
-    #     plt.rcParams['axes.unicode_minus'] =False
+    with col2:
+        plt.rcParams['font.family'] ='Malgun Gothic'
+        plt.rcParams['axes.unicode_minus'] =False
 
-    #     st.markdown('### 전체 건물 유형별 리모델링 사례')
-    #     # st.set_option('deprecation.showPyplotGlobalUse', False)
+        st.markdown('### 전체 건물 유형별 리모델링 사례')
+        # st.set_option('deprecation.showPyplotGlobalUse', False)
         
-    #     fig_2_df = pd.DataFrame([build_type], columns=build_type.keys())
-    #     fig_2_df.index = ['사례 건수(건)']
-    #     # st.write(fig_2)
-    #     # st.write(fig_2.T)
+        fig_2_df = pd.DataFrame([build_type], columns=build_type.keys())
+        fig_2_df.index = ['사례 건수(건)']
+        # st.write(fig_2)
+        # st.write(fig_2.T)
         
-    #     fig_2 = plt.figure(figsize=(10,7))
+        fig_2 = plt.figure(figsize=(10,7))
         
-    #     # fig_2_df.T.plot(kind='barh')
-    #     sns.barplot(fig_2_df)
+        # fig_2_df.T.plot(kind='barh')
+        sns.barplot(fig_2_df)
         
-    #     plt.ylabel('건물 유형', fontproperties=font)
-    #     plt.yticks(fontproperties=font)
-    #     plt.xticks(fontproperties=font, rotation=45)
+        plt.ylabel('건물 유형', fontproperties=font)
+        plt.yticks(fontproperties=font)
+        plt.xticks(fontproperties=font, rotation=45)
         
-    #     # plt.legend(fontproperties=font)
+        # plt.legend(fontproperties=font)
         
-    #     st.pyplot(fig_2)
+        st.pyplot(fig_2)
 
-    # #     col3, col4 = st.columns(2)            
-    # #     with col3:
-    # #         st.markdown('### Temperature')
-    # #         lineplot(energy_sum_w6, energy_win_w6,'temp')
+    #     col3, col4 = st.columns(2)            
+    #     with col3:
+    #         st.markdown('### Temperature')
+    #         lineplot(energy_sum_w6, energy_win_w6,'temp')
 
-    # #     with col4:
-    # #         st.markdown('### Humidity')
-    # #         lineplot(energy_sum_w6, energy_win_w6,'humidity')
-
-
-    # # if eda_menu == "Building Energy":
-        
-    # #     st.markdown(''' ### Source and Target Buildings ''')
-
-    # #     with st.expander("Statistics of source building"):
-    # #         st.write('Source buildings (in Summer)')
-    # #         st.table(energy_sum.describe())
-        
-        
-        
-    # #     def lineplot(df, df1, data_cols) :
-    # #         # plt.style.use('dark_background')
-    # #         filtered_df_sum = df.loc[:,data_cols]
-    # #         filtered_df_win = df1.loc[:,data_cols]
+    #     with col4:
+    #         st.markdown('### Humidity')
+    #         lineplot(energy_sum_w6, energy_win_w6,'humidity')
 
 
-    # #         # print(filtered_df.columns[0])
-    # #         fig = plt.figure(figsize=(10,7))
-    # #         plt.plot(filtered_df_sum, color='r', label='Summer')
-    # #         plt.plot(filtered_df_win, color='y', label='Winter')
+    # if eda_menu == "Building Energy":
+        
+    #     st.markdown(''' ### Source and Target Buildings ''')
+
+    #     with st.expander("Statistics of source building"):
+    #         st.write('Source buildings (in Summer)')
+    #         st.table(energy_sum.describe())
+        
+        
+        
+    #     def lineplot(df, df1, data_cols) :
+    #         # plt.style.use('dark_background')
+    #         filtered_df_sum = df.loc[:,data_cols]
+    #         filtered_df_win = df1.loc[:,data_cols]
+
+
+    #         # print(filtered_df.columns[0])
+    #         fig = plt.figure(figsize=(10,7))
+    #         plt.plot(filtered_df_sum, color='r', label='Summer')
+    #         plt.plot(filtered_df_win, color='y', label='Winter')
             
-    # #         if data_cols == 'temp' :
-    # #             plt.ylabel('Outdoor Temperature $(\N{DEGREE SIGN}C)$')
-    # #         elif data_cols == 'humidity' :
-    # #             plt.ylabel('Outdoor Relative Humidity Difference (%)')
-    # #         else :
-    # #             plt.ylabel('Energy Consumption $(kWh)$')
+    #         if data_cols == 'temp' :
+    #             plt.ylabel('Outdoor Temperature $(\N{DEGREE SIGN}C)$')
+    #         elif data_cols == 'humidity' :
+    #             plt.ylabel('Outdoor Relative Humidity Difference (%)')
+    #         else :
+    #             plt.ylabel('Energy Consumption $(kWh)$')
             
-    # #         plt.legend(loc='best')
+    #         plt.legend(loc='best')
             
-    # #         return st.pyplot(fig)
+    #         return st.pyplot(fig)
         
-    # #     col1, col2 = st.columns(2)
+    #     col1, col2 = st.columns(2)
         
-    # #     with col1:
-    # #         st.markdown('### Energy profile of W1 in different season')
-    # #         lineplot(energy_sum_w1, energy_win_w1,'applied_engi')
+    #     with col1:
+    #         st.markdown('### Energy profile of W1 in different season')
+    #         lineplot(energy_sum_w1, energy_win_w1,'applied_engi')
             
-    # #     with col2:
-    # #         st.markdown('### Energy profile of W6 in different season')
-    # #         lineplot(energy_sum_w6, energy_win_w6,'mir_dorm')
+    #     with col2:
+    #         st.markdown('### Energy profile of W6 in different season')
+    #         lineplot(energy_sum_w6, energy_win_w6,'mir_dorm')
 
-    # #     col3, col4 = st.columns(2)            
-    # #     with col3:
-    # #         st.markdown('### Temperature')
-    # #         lineplot(energy_sum_w6, energy_win_w6,'temp')
+    #     col3, col4 = st.columns(2)            
+    #     with col3:
+    #         st.markdown('### Temperature')
+    #         lineplot(energy_sum_w6, energy_win_w6,'temp')
 
-    # #     with col4:
-    # #         st.markdown('### Humidity')
-    # #         lineplot(energy_sum_w6, energy_win_w6,'humidity')
+    #     with col4:
+    #         st.markdown('### Humidity')
+    #         lineplot(energy_sum_w6, energy_win_w6,'humidity')
 
 
 def search_cases (): # 사례 검색
