@@ -938,8 +938,8 @@ def rec_cases ():
         if st.button("리모델링 사례 추천") :
             with st.spinner('계산 중....'):
                 # time.sleep(4.5)
-                
-                df = pd.read_csv("./dataset/rec/remodel_data_rec.csv", encoding='euc-kr')
+                from sklearn.metrics.pairwise import cosine_similarity
+                df = pd.read_csv("./dataset/rec/remodel_data_rec_final.csv", encoding='euc-kr')
                 
                 # 새 데이터프레임의 컬럼명...
                 # 'explain_path', 'photo_path', 'name', 'design', 'built_year', 're_year',
@@ -979,115 +979,102 @@ def rec_cases ():
                 # 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 # 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
 
-                rec_df = df_rev.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                rec_df = df_rev.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year','area','ground_floor','underground_floor',
+                'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                'lighting','sunlight','solarheat','geothermal','fuelcell','ess','area_year_energy_','energy_grade']]
+
+
+
+                # # K-Means 군집화: 에너지효율에 따른 군집
+                # estimator = KMeans(n_clusters = 3, random_state=101)
+                # ids = estimator.fit(np.array(rec_df['energy']).reshape(-1, 1))
+                
+                # rec_df['label'] = ids.labels_ # 각 클래스 레이블을 데이터프레임에 추가
+
+                # X = rec_df.iloc[:,:-1]
+                # y = rec_df.iloc[:,-1]
+
+                # X_train, X_test, y_train, y_test = ms.train_test_split(X, y, 
+                #                                                     test_size = 0.01, random_state = 100)
+                # # DT 객체 생성 및 훈련
+                # dt_clf = DecisionTreeClassifier(
+                #                                 criterion='entropy', ## 'gini', 'log_loss'
+                #                                 splitter='best', ## 'random'
+                #                                 max_depth=2, ## '최대 깊이'
+                #                                 min_samples_leaf=6, ## 최소 끝마디 샘플 수
+                #                                 min_samples_split=2, ## 최소 split 샘플 수
+                #                                 random_state=100
+                #                             )
+                # # grid_dt_clf = GridSearchCV(dt_clf, param_grid=param, cv=5, verbose=-1)
+                # dt_clf.fit(X_train,y_train)
+
+                # #Predict the response for test dataset
+                # y_pred = dt_clf.predict(np.array(rec_info).reshape(1, -1))
+
+                # ## Plot Tree with plot_tree
+                # fig = plt.figure(figsize=(10, 8))
+                # _ = tree.plot_tree(dt_clf, 
+                #                    feature_names=X.columns,
+                #                 #   class_names=dt_clf.classes_,
+                #                    filled=True)
+                
+                # # decision tree plot
+                # st.pyplot(fig)
+
+                # 각 변수들에 가중치를 결정할 수 잇게끔 사용자로부터 입력 받게 만들 예정
+                weights = [1, 1, 1, 1, 0.5, 0.3, 0.1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+
+                weights_type = [0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+                weights_year = [0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+                weights_area = [0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+                weights_energy = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+
+                sim_df = rec_df.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
-
-
-                # K-Means 군집화: 에너지효율에 따른 군집
-                estimator = KMeans(n_clusters = 3, random_state=101)
-                ids = estimator.fit(np.array(rec_df['energy']).reshape(-1, 1))
                 
-                rec_df['label'] = ids.labels_ # 각 클래스 레이블을 데이터프레임에 추가
+                fitted_df = sim_df.copy() # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
 
-                X = rec_df.iloc[:,:-1]
-                y = rec_df.iloc[:,-1]
-
-                X_train, X_test, y_train, y_test = ms.train_test_split(X, y, 
-                                                                    test_size = 0.01, random_state = 100)
-                # DT 객체 생성 및 훈련
-                dt_clf = DecisionTreeClassifier(
-                                                criterion='entropy', ## 'gini', 'log_loss'
-                                                splitter='best', ## 'random'
-                                                max_depth=2, ## '최대 깊이'
-                                                min_samples_leaf=6, ## 최소 끝마디 샘플 수
-                                                min_samples_split=2, ## 최소 split 샘플 수
-                                                random_state=100
-                                            )
-                # grid_dt_clf = GridSearchCV(dt_clf, param_grid=param, cv=5, verbose=-1)
-                dt_clf.fit(X_train,y_train)
-
-                #Predict the response for test dataset
-                y_pred = dt_clf.predict(np.array(rec_info).reshape(1, -1))
-
-                ## Plot Tree with plot_tree
-                fig = plt.figure(figsize=(10, 8))
-                _ = tree.plot_tree(dt_clf, 
-                                   feature_names=X.columns,
-                                #   class_names=dt_clf.classes_,
-                                   filled=True)
+                fitted_df = sim_df.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                'lighting','sunlight','solarheat','geothermal','fuelcell','ess']] # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
                 
-                # decision tree plot
-                st.pyplot(fig)
+                fitted_df = fitted_df.multiply(weights)
+                rec_info_new = np.multiply(np.array(rec_info),weights)
+                sim = cosine_similarity(fitted_df, rec_info_new.reshape(1,-1))*100
+
+                rec_df['similarity'] = np.round(sim, 2)
+                result_df = rec_df[rec_df['build_type'] == rec_info[1]].sort_values(by='similarity', ascending=False)
                 
                 
-                # rec_df_2 = df_rev.iloc[:102,:]
-                rec_df_2 = df_rev.iloc[:,:]
-                rec_df_2['Label'] = rec_df['label']
-
-                
-                # result_df = rec_df_2.loc[(rec_df_2.Label == y_pred[0]) & (rec_df_2.loc == rec_info[0]) & (rec_df_2.build_type == rec_info[1]), :]
-
-                result_df = rec_df_2.loc[(rec_df_2.Label == y_pred[0]) & (rec_df_2.build_type == rec_info[1]), :]
-
                 st.write(result_df)
-
                 st.write(rec_info)
 
-                from sklearn.metrics.pairwise import cosine_similarity
-
-                result_df_new = result_df.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
-                'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
-                'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
-
-                sim = cosine_similarity(result_df_new, np.array(rec_info).reshape(1,-1))*100
-                
-                # st.write(sim)
-
-                result_df['Similarity'] = np.round(sim,2)
-
-                result_df.sort_values(by='Similarity', ascending=False, inplace=True)
-
-
                 result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
-                                                    'area','ground_floor','underground_floor','cost','energy','Label','Similarity']]
-                # st.write(loc)
-                # st.write(BT)
+                                                    'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
                 
-                # st.write(result_df)
-
-                # for key, value in loc.items():
-                #     if key == result_df_final['loc'] :
-                #         print(value)
-
-                
-                result_df_new_new = result_df_final.iloc[:,1:]
+                result_df_final_new = result_df_final.iloc[:,1:]
 
                 # result_df_new_new['cost'] = result_df_new_new['cost']
 
                 kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
-                                '연면적','지상층수','지하층수','리모델링비용','에너지효율성','분류레이블','유사도']                                
+                                '연면적','지상층수','지하층수','리모델링비용','에너지절감률','에너지효율등급','연간단위면적당 에너지소비량','유사도']                                
                 
-                result_df_new_new.columns = kor_rec_cols
-
-                # # rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
-                # # result_df = result_df.loc[:,rec_cols]
+                result_df_final_new.columns = kor_rec_cols
 
                 
-                # st.write(result_df_new_new)
-                # result_df.columns = ['사진', '사례 이름', '위치', '건물 유형', '면적', '에너지 저감율','분류레이블', '유사도(거리)']
 
-                # result_df['건물 유형'] = result_df['건물 유형'].astype('int')
-                # result_df['위치'] = result_df['위치'].astype('int')
-                # result_df['면적'] = round(result_df['면적'].astype('float'), 2)
-                # result_df['에너지 저감율'] = round(result_df['에너지 저감율'].astype('float'), 2)
-                # st.write(result_df)
+                fig_cols = st.columns(2)
+    
+                with fig_cols[0] :
+                    fig_1 = result_df.loc[(result_df['energy_grade'] == '1+++'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum().plot(kind='bar', figsize=(13,10))
+                    st.pyplot(fig_1)
+                    
+                with fig_cols[1] :
+                    fig_2 = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum().plot(kind='bar', figsize=(13,10))
+                    st.pyplot(fig_2)
                 
-                # kor_rec_cols = ['사진', '사례 이름', '건물 유형', '위치', '면적', '에너지 저감율','분류레이블', '유사도']
-                # result_df.columns = kor_rec_cols
-
-                # st.dataframe(result_df.iloc[:,:])
-
+                
                 center_1, center_2, center_3 = st.columns([0.15, 10, 0.15])
             
                 with center_2 :
@@ -1110,7 +1097,7 @@ def rec_cases ():
                         return temp
 
                     def image_formatter(img_path):
-                        exp_df = pd.read_csv("./dataset/rec/remodel_data_rec.csv", encoding='euc-kr')
+                        exp_df = pd.read_csv("./dataset/rec/remodel_data_rec_final.csv", encoding='euc-kr')
                         target_url = pop_url(exp_df, img_path)
                         
                         # return f'<a href="{img_path}"><img src="data:image/png;base64,{image_to_base64(img_path)}"></a>'
@@ -1124,7 +1111,7 @@ def rec_cases ():
                         # IMPORTANT: Cache the conversion to prevent computation on every rerun
                         return input_df.to_html(escape=False, formatters=dict(사진=image_formatter))
 
-                    html = convert_df(result_df_new_new.iloc[:,:])
+                    html = convert_df(result_df_final_new.iloc[:,:])
                     # html = convert_df(result_df_final.iloc[:,:])
 
                     # html = convert_df(rev_df)
