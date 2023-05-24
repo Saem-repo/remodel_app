@@ -1104,7 +1104,7 @@ def rec_cases ():
                         st.write(len(loc), len(BT), len(design))
 
                         for key, value in BT.items() :
-                            if key == result_df_final_new['건물유형'][0] :
+                            if key == result_df_final_new['건물유형'].values[0] :
                                 result_df_final_new['건물유형'] = value
 
                         st.write(result_df_final_new['건물유형'])
