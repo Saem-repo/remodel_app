@@ -980,7 +980,7 @@ def rec_cases ():
                 # 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 # 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
 
-                rec_df = df_rev.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year','area','ground_floor','underground_floor',
+                rec_df = df_rev.loc[:102,['explain_path','photo_path','name','design','loc','build_type','built_year','area','ground_floor','underground_floor',
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess','area_year_energy_','energy_grade']]
 
@@ -1030,13 +1030,13 @@ def rec_cases ():
                 weights_area = [0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
                 weights_energy = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
 
-                sim_df = rec_df.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
                 
                 fitted_df = sim_df.copy() # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
 
-                fitted_df = sim_df.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                fitted_df = sim_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']] # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
                 
@@ -1051,7 +1051,7 @@ def rec_cases ():
                 # st.write(result_df)
                 # st.write(rec_info)
 
-                result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
+                result_df_final = result_df.loc[:102,['explain_path','photo_path','name','design','loc','build_type','built_year',
                                                     'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
                 
                 result_df_final_new = result_df_final.iloc[:5,1:]
