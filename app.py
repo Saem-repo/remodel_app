@@ -1098,7 +1098,7 @@ def rec_cases ():
                                             
                     else :    # 예외가 발생했을 때 실행됨
                         
-                        st.write(worst_grade_df)
+                        st.write(result_df)
                         st.markdown('### 에너지 효율 등급별(7등급) 리모델링 시공 항목')
                     
                         worst_grade_df = result_df.loc[(result_df['energy_grade'] == '7'), ['wall','roof','window','airtight','awning','coolheat','ventilation','lighting','sunlight','solarheat','geothermal','fuelcell','ess']].sum()
