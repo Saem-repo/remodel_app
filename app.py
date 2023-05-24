@@ -1106,16 +1106,16 @@ def rec_cases ():
                             if key == result_df_final_new['건물유형'].values[0] :
                                 result_df_final_new['건물유형'] = value
 
-                        # for idx in range(len(result_df_final_new['설계/시공'])):
-                        #     # st.write(result_df_final_new['위치'].values[idx])
-                        #     # st.write(list(loc.keys())[idx])
-                        #     # for key, value in loc.items() :
-                        #     for idx_key in range(len(result_df_final_new['설계/시공'].values)):
-                        #        if list(design.keys())[idx_key] == result_df_final_new['설계/시공'].values[idx] :
-                        #         # st.write(result_df_final_new['설계/시공'].values[idx])
-                        #         # st.write(list(design.keys())[idx_key])
-                        #         st.write(design[list(design.keys())[idx_key]])
-                        #         result_df_final_new['설계/시공'] = design[list(design.keys())[idx_key]]
+                        for idx in range(len(result_df_final_new['설계/시공'])):
+                            # st.write(result_df_final_new['위치'].values[idx])
+                            # st.write(list(loc.keys())[idx])
+                            # for key, value in loc.items() :
+                            for idx_key in range(max(result_df_final_new['설계/시공'].values)):
+                               if list(design.keys())[idx_key] == result_df_final_new['설계/시공'].values[idx] :
+                                # st.write(result_df_final_new['설계/시공'].values[idx])
+                                # st.write(list(design.keys())[idx_key])
+                                st.write(design[list(design.keys())[idx_key]])
+                                result_df_final_new['설계/시공'] = design[list(design.keys())[idx_key]]
 
                         for idx in range(len(result_df_final_new['위치'])):
                             # st.write(result_df_final_new['위치'].values[idx])
@@ -1126,7 +1126,7 @@ def rec_cases ():
                                 st.write(result_df_final_new['위치'].values[idx])
                                 st.write(list(loc.keys())[idx_key])
                                 st.write(loc[list(loc.keys())[idx_key]])
-                                # result_df_final_new['위치'] = loc[list(loc.keys())[idx_key]]
+                                result_df_final_new['위치'] = loc[list(loc.keys())[idx_key]]
 
                                 
                                 
