@@ -1126,7 +1126,7 @@ def rec_cases ():
                                 st.write(result_df_final_new['위치'].values[idx])
                                 st.write(list(loc.keys())[idx_key])
                                 st.write(loc[list(loc.keys())[idx_key]])
-                                result_df_final_new['위치'] = loc[list(loc.keys())[idx_key]]
+                                # result_df_final_new['위치'] = loc[list(loc.keys())[idx_key]]
 
                                 
                                 
