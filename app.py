@@ -1135,7 +1135,7 @@ def rec_cases ():
                         if list(design.keys())[idx_key] == result_df_final_new['설계/시공'].values[idx] :
                             # st.write(result_df_final_new['설계/시공'].values[idx])
                             # st.write(list(design.keys())[idx_key])
-                            st.write(design[list(design.keys())[idx_key]])
+                            # st.write(design[list(design.keys())[idx_key]])
                             temp_design.append(design[list(design.keys())[idx_key]]) 
                             # result_df_final_new['설계/시공'] = design[list(design.keys())[idx_key]]
 
@@ -1147,8 +1147,8 @@ def rec_cases ():
                             # st.write(loc[list(loc.keys())[idx_key]])
                             temp_loc.append(loc[list(loc.keys())[idx_key]])
                 
-                st.write(temp_design)
-                st.write(temp_loc)
+                # st.write(temp_design)
+                # st.write(temp_loc)
 
                 # st.write(result_df_final_new['건물유형'])
                 # st.write(result_df_final_new['설계/시공'])
