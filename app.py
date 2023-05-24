@@ -1100,8 +1100,14 @@ def rec_cases ():
                         st.write(result_df_final_new['위치'])
                         st.write(result_df_final_new['건물유형'])
 
-                        st.write(BT[result_df_final_new['건물유형'][0]])
+                        st.write(result_df_final_new['건물유형'][0])
                         st.write(len(loc), len(BT), len(design))
+
+                        for key, value in BT.items() :
+                            if key == result_df_final_new['건물유형'][0] :
+                                result_df_final_new['건물유형'] = value
+
+                        st.write(result_df_final_new['건물유형'])
 
                                             
                     else :    # 예외가 발생했을 때 실행됨
