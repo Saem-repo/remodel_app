@@ -1095,53 +1095,6 @@ def rec_cases ():
                     # st.write((worst_grade_df==0).all())
                     if (worst_grade_df==0).all():
                         st.error("테이블에 값이 없습니다..")     
-                        design = {1: "설계", 2: "시공"}
-                        # st.write(result_df_final_new['설계/시공'])
-                        # st.write(len(result_df_final_new['위치']))
-                        
-                        # st.write(max(loc, key=loc.get))
-                        st.write(max(result_df_final_new['설계/시공'].values))
-                        
-                        temp_design = []
-                        temp_loc = []
-
-                        for key, value in BT.items() :
-                            if key == result_df_final_new['건물유형'].values[0] :
-                                result_df_final_new['건물유형'] = value
-
-                        for idx in range(len(result_df_final_new['설계/시공'])):
-                            # st.write(result_df_final_new['위치'].values[idx])
-                            # st.write(list(loc.keys())[idx])
-                            # for key, value in loc.items() :
-                            for idx_key in range(max(result_df_final_new['설계/시공'].values)):
-                               if list(design.keys())[idx_key] == result_df_final_new['설계/시공'].values[idx] :
-                                # st.write(result_df_final_new['설계/시공'].values[idx])
-                                # st.write(list(design.keys())[idx_key])
-                                st.write(design[list(design.keys())[idx_key]])
-                                temp_design.append(design[list(design.keys())[idx_key]]) 
-                                # result_df_final_new['설계/시공'] = design[list(design.keys())[idx_key]]
-
-                        
-
-                        for idx in range(len(result_df_final_new['위치'])):
-                            # st.write(result_df_final_new['위치'].values[idx])
-                            # st.write(list(loc.keys())[idx])
-                            # for key, value in loc.items() :
-                            for idx_key in range(max(result_df_final_new['위치'].values)):
-                               if list(loc.keys())[idx_key] == result_df_final_new['위치'].values[idx] :
-                                st.write(result_df_final_new['위치'].values[idx])
-                                st.write(list(loc.keys())[idx_key])
-                                st.write(loc[list(loc.keys())[idx_key]])
-                                temp_loc.append(loc[list(loc.keys())[idx_key]])
-                        
-                        st.write(temp_design)
-                        st.write(temp_loc)
-
-                        # st.write(result_df_final_new['건물유형'])
-                        # st.write(result_df_final_new['설계/시공'])
-                        # st.write(result_df_final_new['위치'])
-                        result_df_final_new['설계/시공'] = temp_design
-                        result_df_final_new['위치'] = temp_loc
                                             
                     else :    # 예외가 발생했을 때 실행됨
                         
@@ -1154,7 +1107,56 @@ def rec_cases ():
                         plt.xticks(rotation=0)
                         st.pyplot(fig_2)
 
+
+
+                # 출력되는 결과물들에서 카테고리 값들 다시 원상복귀하는 코드
+                # 위치, 건물 유형, 설계/시공에 적용
+
+                loc = {1: '서울', 2: '경기도', 3: '인천', 4: '충청북도', 5: '충청남도', 6: '대전', 7: '세종', 8: '전라북도',
+                       9: '전라남도', 10: '광주', 11: '경상북도', 12: '경상남도', 13: '대구', 14: '부산', 15: '울산',
+                       16: '강원도', 17: '제주도', 18: '워싱턴주', 19: '오레곤주', 20: '캘리포니아주', 21: '아이다호주',
+                       22: '콜로라도주', 23: '애리조나주', 24: '미시간주', 25: '버몬트주', 26: '뉴욕주', 27: '메사츄세스주',
+                       28: '펜실베니아주', 29: '메릴랜드주', 30: '버지니아주', 31: '노팅햄셔주', 32: '런던', 33: '데본', 34: '캠브리지셔주'}
+        
+                BT = {1: '단독주택', 2: '공동주택', 3: '문화집회시설', 4: '판매시설', 5: '의료시설',
+                      6: '교육연구시설', 7: '노유자시설', 8: '수련시설', 9: '운동시설', 10: '업무시설',
+                      11: '숙박시설', 12: '위락시설', 13: '공장시설', 14: '묘지관련시설', 15: '교정및군사시설'}
+                design = {1: "설계", 2: "시공"}
+                        
+                temp_design = []
+                temp_loc = []
+
+                for key, value in BT.items() :
+                    if key == result_df_final_new['건물유형'].values[0] :
+                        result_df_final_new['건물유형'] = value
+
+                for idx in range(len(result_df_final_new['설계/시공'])):
+                    for idx_key in range(max(result_df_final_new['설계/시공'].values)):
+                        if list(design.keys())[idx_key] == result_df_final_new['설계/시공'].values[idx] :
+                            # st.write(result_df_final_new['설계/시공'].values[idx])
+                            # st.write(list(design.keys())[idx_key])
+                            st.write(design[list(design.keys())[idx_key]])
+                            temp_design.append(design[list(design.keys())[idx_key]]) 
+                            # result_df_final_new['설계/시공'] = design[list(design.keys())[idx_key]]
+
+                for idx in range(len(result_df_final_new['위치'])):
+                    for idx_key in range(max(result_df_final_new['위치'].values)):
+                        if list(loc.keys())[idx_key] == result_df_final_new['위치'].values[idx] :
+                            # st.write(result_df_final_new['위치'].values[idx])
+                            # st.write(list(loc.keys())[idx_key])
+                            # st.write(loc[list(loc.keys())[idx_key]])
+                            temp_loc.append(loc[list(loc.keys())[idx_key]])
                 
+                st.write(temp_design)
+                st.write(temp_loc)
+
+                # st.write(result_df_final_new['건물유형'])
+                # st.write(result_df_final_new['설계/시공'])
+                # st.write(result_df_final_new['위치'])
+                result_df_final_new['설계/시공'] = temp_design
+                result_df_final_new['위치'] = temp_loc
+
+
                 st.markdown("---")
 
                 center_1, center_2, center_3 = st.columns([0.15, 10, 0.15])
