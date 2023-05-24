@@ -1098,16 +1098,28 @@ def rec_cases ():
                         design = {1: "설계", 2: "시공"}
                         st.write(result_df_final_new['설계/시공'])
                         st.write(result_df_final_new['위치'])
-                        st.write(result_df_final_new['건물유형'])
+                        
 
-                        st.write(result_df_final_new['건물유형'].values[0])
-                        st.write(len(loc), len(BT), len(design))
-
+                        
                         for key, value in BT.items() :
                             if key == result_df_final_new['건물유형'].values[0] :
                                 result_df_final_new['건물유형'] = value
 
+                        for idx in range(len(result_df_final_new['설계/시공'])):
+                            for key, value in design.items() :
+                                if key == result_df_final_new['설계/시공'].values[idx] :
+                                    st.write(result_df_final_new['설계/시공'].values[idx])
+                                    result_df_final_new['설계/시공'] = value
+
+                        for idx in range(len(result_df_final_new['위치'])):
+                            for key, value in loc.items() :
+                                if key == result_df_final_new['위치'].values[idx] :
+                                    st.write(result_df_final_new['위치'].values[idx])
+                                    result_df_final_new['위치'] = value
+
                         st.write(result_df_final_new['건물유형'])
+                        st.write(result_df_final_new['설계/시공'])
+                        st.write(result_df_final_new['위치'])
 
                                             
                     else :    # 예외가 발생했을 때 실행됨
