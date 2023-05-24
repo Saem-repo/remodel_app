@@ -1030,7 +1030,7 @@ def rec_cases ():
                 weights_area = [0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
                 weights_energy = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
 
-                sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                sim_df = rec_df.loc[:,['loc','build_type','built_year','area','ground_floor','underground_floor',
                 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
                 
@@ -1100,6 +1100,7 @@ def rec_cases ():
                         # st.write(len(result_df_final_new['위치']))
                         
                         st.write(max(loc, key=loc.get))
+                        st.write(max(result_df_final_new['위치'].values))
                         
                         for key, value in BT.items() :
                             if key == result_df_final_new['건물유형'].values[0] :
