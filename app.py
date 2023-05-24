@@ -1097,7 +1097,7 @@ def rec_cases ():
                         st.error("테이블에 값이 없습니다..")     
                         design = {1: "설계", 2: "시공"}
                         # st.write(result_df_final_new['설계/시공'])
-                        st.write(len(result_df_final_new['위치']))
+                        # st.write(len(result_df_final_new['위치']))
                         
 
                         
@@ -1108,11 +1108,11 @@ def rec_cases ():
                         for idx in range(len(result_df_final_new['설계/시공'])):
                             for key, value in design.items() :
                                 if key == result_df_final_new['설계/시공'].values[idx] :
-                                    st.write(result_df_final_new['설계/시공'].values[idx])
+                                    # st.write(result_df_final_new['설계/시공'].values[idx])
                                     result_df_final_new['설계/시공'] = value
 
                         for idx in range(len(result_df_final_new['위치'])):
-                            st.write(result_df_final_new['위치'].values[idx])
+                            # st.write(result_df_final_new['위치'].values[idx])
                             st.write(list(loc.keys())[idx])
                             # for key, value in loc.items() :
                             if list(loc.keys())[idx] == result_df_final_new['위치'].values[idx] :
