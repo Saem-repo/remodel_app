@@ -1097,6 +1097,7 @@ def rec_cases ():
                         st.error("테이블에 값이 없습니다..")     
                         st.write(result_df_final_new)
                         st.write(list(BT.values()))
+                        st.write(len(loc), len(BT))
                                             
                     else :    # 예외가 발생했을 때 실행됨
                         
