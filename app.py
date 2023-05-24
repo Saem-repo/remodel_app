@@ -1095,7 +1095,7 @@ def rec_cases ():
                     # st.write((worst_grade_df==0).all())
                     if (worst_grade_df==0).all():
                         st.error("테이블에 값이 없습니다..")     
-                        st.write(result_df)
+                        st.write(result_df_final_new)
                         st.write(list(BT.values()))
                                             
                     else :    # 예외가 발생했을 때 실행됨
