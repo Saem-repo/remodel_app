@@ -1096,8 +1096,8 @@ def rec_cases ():
                     if (worst_grade_df==0).all():
                         st.error("테이블에 값이 없습니다..")     
                         design = {1: "설계", 2: "시공"}
-                        st.write(result_df_final_new['설계/시공'])
-                        st.write(result_df_final_new['위치'])
+                        # st.write(result_df_final_new['설계/시공'])
+                        st.write(len(result_df_final_new['위치']))
                         
 
                         
