@@ -1095,9 +1095,14 @@ def rec_cases ():
                     # st.write((worst_grade_df==0).all())
                     if (worst_grade_df==0).all():
                         st.error("테이블에 값이 없습니다..")     
-                        st.write(result_df_final_new)
+                        design = {1: "설계", 2: "시공"}
+                        st.write(result_df_final_new['설계/시공'])
+                        st.write(result_df_final_new['위치'])
+                        st.write(result_df_final_new['건물유형'])
+
                         st.write(list(BT.values()))
-                        st.write(len(loc), len(BT))
+                        st.write(len(loc), len(BT), len(design))
+
                                             
                     else :    # 예외가 발생했을 때 실행됨
                         
