@@ -1140,7 +1140,8 @@ def rec_cases ():
                         # st.write(result_df_final_new['건물유형'])
                         # st.write(result_df_final_new['설계/시공'])
                         # st.write(result_df_final_new['위치'])
-
+                        result_df_final_new['설계/시공'] = temp_design
+                        result_df_final_new['위치'] = temp_loc
                                             
                     else :    # 예외가 발생했을 때 실행됨
                         
