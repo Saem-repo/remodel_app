@@ -1100,7 +1100,7 @@ def rec_cases ():
                         st.write(result_df_final_new['위치'])
                         st.write(result_df_final_new['건물유형'])
 
-                        st.write(result_df_final_new.loc[0,'건물유형'])
+                        st.write(result_df_final_new.loc[0]['건물유형'])
                         st.write(len(loc), len(BT), len(design))
 
                         for key, value in BT.items() :
