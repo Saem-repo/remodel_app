@@ -1111,11 +1111,11 @@ def rec_cases ():
                                     st.write(result_df_final_new['설계/시공'].values[idx])
                                     result_df_final_new['설계/시공'] = value
 
-                        # for idx in range(len(result_df_final_new['위치'])):
-                        #     for key, value in loc.items() :
-                        #         if key == result_df_final_new['위치'].values[idx] :
-                        #             st.write(result_df_final_new['위치'].values[idx])
-                        #             result_df_final_new['위치'] = value
+                        for idx in range(len(result_df_final_new['위치'])):
+                            for key, value in loc.items() :
+                                if key == result_df_final_new['위치'].values[idx] :
+                                    st.write(result_df_final_new['위치'].values[idx])
+                                    result_df_final_new['위치'] = value
 
                         st.write(result_df_final_new['건물유형'])
                         st.write(result_df_final_new['설계/시공'])
