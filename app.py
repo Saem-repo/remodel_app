@@ -1100,7 +1100,7 @@ def rec_cases ():
                         # st.write(len(result_df_final_new['위치']))
                         
                         # st.write(max(loc, key=loc.get))
-                        # st.write(max(result_df_final_new['위치'].values))
+                        st.write(max(result_df_final_new['설계/시공'].values))
                         
                         for key, value in BT.items() :
                             if key == result_df_final_new['건물유형'].values[0] :
