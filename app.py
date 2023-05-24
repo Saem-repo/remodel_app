@@ -1115,7 +1115,7 @@ def rec_cases ():
                             # st.write(result_df_final_new['위치'].values[idx])
                             # st.write(list(loc.keys())[idx])
                             # for key, value in loc.items() :
-                            for idx_key in range(len(loc.keys())):
+                            for idx_key in range(max(loc, key=loc.get)):
                                if list(loc.keys())[idx_key] == result_df_final_new['위치'].values[idx] :
                                 st.write(result_df_final_new['위치'].values[idx])
                                 st.write(list(loc.keys())[idx_key])
