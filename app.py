@@ -1039,7 +1039,7 @@ def rec_cases ():
 
                 if remodel_weights == 0 :
                     # 여기는 준공년도 기준 탐색
-                    weights_year = [0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+                    weights_year = [0.1, 1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
                     sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
                     'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                     'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
@@ -1086,7 +1086,7 @@ def rec_cases ():
                     # plt.rcParams['axes.unicode_minus'] =False
                     
                 elif remodel_weights == 1 :
-                    weights_area = [0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+                    weights_area = [0.1, 1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
                     sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
                     'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                     'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
@@ -1133,7 +1133,7 @@ def rec_cases ():
                     # plt.rcParams['axes.unicode_minus'] =False
 
                 else : 
-                    weights_energy = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+                    weights_energy = [0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
                     sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
                     'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
                     'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
