@@ -870,7 +870,7 @@ def rec_cases ():
         underground_floor = int(underground_floor)
         
     
-    rec_cols_2 = st.columns(4)
+    rec_cols_2 = st.columns(3)
 
     with rec_cols_2[0] :
         cost = st.text_input("리모델링 예상 비용(천원)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
@@ -879,8 +879,12 @@ def rec_cases ():
     with rec_cols_2[1] :
         ER = st.text_input("에너지 저감율(%, 희망요구사항)", "0", max_chars=100, help="0보다 큰 값을 입력해주세요")
         ER = float(ER)
-        
 
+    with rec_cols_2[2] :
+        # 리모델링 사례 검색을 위한 가중치 결정 -> 사용자가 선택
+        weight_total = {0: '준공년도', 1: '건물 면적', 2: '에너지 효율'}
+        remodel_weight = st.selectbox('리모델링 사례 탐색 가중치', options = list(weight_total.keys()), format_func=lambda x: weight_total[x])
+        
     rec_cols_3 = st.columns(5)
 
     choice = {0: '시공하지 않음', 1: '시공함'}
