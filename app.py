@@ -1036,50 +1036,194 @@ def rec_cases ():
                 weights_area = [0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
                 weights_energy = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
 
-                sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
-                'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
-                'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+
+                if remodel_weights == 0 :
+                    # 여기는 준공년도 기준 탐색
+                    weights_year = [0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+                    sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                    'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                    'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+                    
+                    fitted_df = sim_df.copy() # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
+
+                    fitted_df = sim_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                    'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                    'lighting','sunlight','solarheat','geothermal','fuelcell','ess']] # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
+                    
+                    fitted_df = fitted_df.multiply(weights_year)
+                    rec_info_new = np.multiply(np.array(rec_info),weights_year)
+                    sim = cosine_similarity(fitted_df, rec_info_new.reshape(1,-1))*100
+
+                    rec_df['similarity'] = np.round(sim, 2)
+                    result_df = rec_df[rec_df['build_type'] == rec_info[1]].sort_values(by='similarity', ascending=False)
+                    
+                    
+                    # st.write(result_df)
+                    # st.write(rec_info)
+
+                    result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
+                                                        'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
+                    
+                    result_df_final_new = result_df_final.iloc[:5,1:]
+                    result_df_final_total = result_df_final.iloc[:,1:] # 사례 별 항목들 대문에
+
+                    # result_df_new_new['cost'] = result_df_new_new['cost']
+
+                    kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
+                                    '연면적','지상층수','지하층수','리모델링비용','에너지절감률(%)','에너지효율등급','연간단위면적당 에너지소비량','유사도']                                
+                    
+                    result_df_final_new.columns = kor_rec_cols
+
+                    result_df_final_total.columns = kor_rec_cols
+
+                    # import matplotlib.font_manager as fm
+        
+                    # font_name = fm.FontProperties(fname="./font/Malgun Gothic.ttf").get_name()
+                    # font = fm.FontProperties(fname="./font/Malgun Gothic.ttf")
+                    # plt.rc('font', family=font_name)
+
+                    # plt.rcParams['font.family'] ='Malgun Gothic'
+                    # plt.rcParams['axes.unicode_minus'] =False
+                    
+                elif remodel_weights == 1 :
+                    weights_area = [0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+                    sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                    'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                    'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+                    
+                    fitted_df = sim_df.copy() # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
+
+                    fitted_df = sim_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                    'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                    'lighting','sunlight','solarheat','geothermal','fuelcell','ess']] # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
+                    
+                    fitted_df = fitted_df.multiply(weights_area)
+                    rec_info_new = np.multiply(np.array(rec_info),weights_area)
+                    sim = cosine_similarity(fitted_df, rec_info_new.reshape(1,-1))*100
+
+                    rec_df['similarity'] = np.round(sim, 2)
+                    result_df = rec_df[rec_df['build_type'] == rec_info[1]].sort_values(by='similarity', ascending=False)
+                    
+                    
+                    # st.write(result_df)
+                    # st.write(rec_info)
+
+                    result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
+                                                        'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
+                    
+                    result_df_final_new = result_df_final.iloc[:5,1:]
+                    result_df_final_total = result_df_final.iloc[:,1:] # 사례 별 항목들 대문에
+
+                    # result_df_new_new['cost'] = result_df_new_new['cost']
+
+                    kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
+                                    '연면적','지상층수','지하층수','리모델링비용','에너지절감률(%)','에너지효율등급','연간단위면적당 에너지소비량','유사도']                                
+                    
+                    result_df_final_new.columns = kor_rec_cols
+
+                    result_df_final_total.columns = kor_rec_cols
+
+                    # import matplotlib.font_manager as fm
+        
+                    # font_name = fm.FontProperties(fname="./font/Malgun Gothic.ttf").get_name()
+                    # font = fm.FontProperties(fname="./font/Malgun Gothic.ttf")
+                    # plt.rc('font', family=font_name)
+
+                    # plt.rcParams['font.family'] ='Malgun Gothic'
+                    # plt.rcParams['axes.unicode_minus'] =False
+
+                else : 
+                    weights_energy = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+                    sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                    'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                    'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
+                    
+                    fitted_df = sim_df.copy() # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
+
+                    fitted_df = sim_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                    'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                    'lighting','sunlight','solarheat','geothermal','fuelcell','ess']] # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
+                    
+                    fitted_df = fitted_df.multiply(weights_energy)
+                    rec_info_new = np.multiply(np.array(rec_info),weights_energy)
+                    sim = cosine_similarity(fitted_df, rec_info_new.reshape(1,-1))*100
+
+                    rec_df['similarity'] = np.round(sim, 2)
+                    result_df = rec_df[rec_df['build_type'] == rec_info[1]].sort_values(by='similarity', ascending=False)
+                    
+                    
+                    # st.write(result_df)
+                    # st.write(rec_info)
+
+                    result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
+                                                        'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
+                    
+                    result_df_final_new = result_df_final.iloc[:5,1:]
+                    result_df_final_total = result_df_final.iloc[:,1:] # 사례 별 항목들 대문에
+
+                    # result_df_new_new['cost'] = result_df_new_new['cost']
+
+                    kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
+                                    '연면적','지상층수','지하층수','리모델링비용','에너지절감률(%)','에너지효율등급','연간단위면적당 에너지소비량','유사도']                                
+                    
+                    result_df_final_new.columns = kor_rec_cols
+
+                    result_df_final_total.columns = kor_rec_cols
+
+                    # import matplotlib.font_manager as fm
+        
+                    # font_name = fm.FontProperties(fname="./font/Malgun Gothic.ttf").get_name()
+                    # font = fm.FontProperties(fname="./font/Malgun Gothic.ttf")
+                    # plt.rc('font', family=font_name)
+
+                    # plt.rcParams['font.family'] ='Malgun Gothic'
+                    # plt.rcParams['axes.unicode_minus'] =False
+
+
+                # sim_df = rec_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                # 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                # 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']]
                 
-                fitted_df = sim_df.copy() # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
+                # fitted_df = sim_df.copy() # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
 
-                fitted_df = sim_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
-                'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
-                'lighting','sunlight','solarheat','geothermal','fuelcell','ess']] # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
+                # fitted_df = sim_df.loc[:102,['loc','build_type','built_year','area','ground_floor','underground_floor',
+                # 'cost','energy','wall','roof','window','airtight','awning','coolheat','ventilation',
+                # 'lighting','sunlight','solarheat','geothermal','fuelcell','ess']] # 가중치 유사도 기반 유사도 산출후 취합할라고!! 더미 데이터프레임
                 
-                fitted_df = fitted_df.multiply(weights)
-                rec_info_new = np.multiply(np.array(rec_info),weights)
-                sim = cosine_similarity(fitted_df, rec_info_new.reshape(1,-1))*100
+                # fitted_df = fitted_df.multiply(weights)
+                # rec_info_new = np.multiply(np.array(rec_info),weights)
+                # sim = cosine_similarity(fitted_df, rec_info_new.reshape(1,-1))*100
 
-                rec_df['similarity'] = np.round(sim, 2)
-                result_df = rec_df[rec_df['build_type'] == rec_info[1]].sort_values(by='similarity', ascending=False)
+                # rec_df['similarity'] = np.round(sim, 2)
+                # result_df = rec_df[rec_df['build_type'] == rec_info[1]].sort_values(by='similarity', ascending=False)
                 
                 
-                # st.write(result_df)
-                # st.write(rec_info)
+                # # st.write(result_df)
+                # # st.write(rec_info)
 
-                result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
-                                                    'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
+                # result_df_final = result_df.loc[:,['explain_path','photo_path','name','design','loc','build_type','built_year',
+                #                                     'area','ground_floor','underground_floor','cost','energy','energy_grade','area_year_energy_','similarity']]
                 
-                result_df_final_new = result_df_final.iloc[:5,1:]
-                result_df_final_total = result_df_final.iloc[:,1:] # 사례 별 항목들 대문에
+                # result_df_final_new = result_df_final.iloc[:5,1:]
+                # result_df_final_total = result_df_final.iloc[:,1:] # 사례 별 항목들 대문에
 
-                # result_df_new_new['cost'] = result_df_new_new['cost']
+                # # result_df_new_new['cost'] = result_df_new_new['cost']
 
-                kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
-                                '연면적','지상층수','지하층수','리모델링비용','에너지절감률(%)','에너지효율등급','연간단위면적당 에너지소비량','유사도']                                
+                # kor_rec_cols = ['사진', '사례 이름', '설계/시공','위치','건물유형','준공년도',
+                #                 '연면적','지상층수','지하층수','리모델링비용','에너지절감률(%)','에너지효율등급','연간단위면적당 에너지소비량','유사도']                                
                 
-                result_df_final_new.columns = kor_rec_cols
+                # result_df_final_new.columns = kor_rec_cols
 
-                result_df_final_total.columns = kor_rec_cols
+                # result_df_final_total.columns = kor_rec_cols
 
-                # import matplotlib.font_manager as fm
+                # # import matplotlib.font_manager as fm
     
-                # font_name = fm.FontProperties(fname="./font/Malgun Gothic.ttf").get_name()
-                # font = fm.FontProperties(fname="./font/Malgun Gothic.ttf")
-                # plt.rc('font', family=font_name)
+                # # font_name = fm.FontProperties(fname="./font/Malgun Gothic.ttf").get_name()
+                # # font = fm.FontProperties(fname="./font/Malgun Gothic.ttf")
+                # # plt.rc('font', family=font_name)
 
-                # plt.rcParams['font.family'] ='Malgun Gothic'
-                # plt.rcParams['axes.unicode_minus'] =False
+                # # plt.rcParams['font.family'] ='Malgun Gothic'
+                # # plt.rcParams['axes.unicode_minus'] =False
                 
                 st.markdown("---")
 
