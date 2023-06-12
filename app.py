@@ -883,7 +883,7 @@ def rec_cases ():
     with rec_cols_2[2] :
         # 리모델링 사례 검색을 위한 가중치 결정 -> 사용자가 선택
         weight_total = {0: '준공년도', 1: '건물 면적', 2: '에너지 효율'}
-        remodel_weight = st.selectbox('리모델링 사례 탐색 가중치', options = list(weight_total.keys()), format_func=lambda x: weight_total[x])
+        remodel_weights = st.selectbox('리모델링 사례 탐색 가중치', options = list(weight_total.keys()), format_func=lambda x: weight_total[x])
         
     rec_cols_3 = st.columns(5)
 
@@ -1029,7 +1029,7 @@ def rec_cases ():
                 # 각 변수들에 가중치를 결정할 수 잇게끔 사용자로부터 입력 받게 만들 예정
                 weights = [1, 1, 1, 1, 0.5, 0.3, 0.1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
 
-                st.write(weight_total)
+                st.write(remodel_weights)
 
                 weights_type = [0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
                 weights_year = [0.1, 0.1, 1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
