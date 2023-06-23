@@ -54,7 +54,7 @@ st.sidebar.image('./img/Home/SSEL_logo.png')
 #%%
 
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
-def streamlit_menu(example=2):
+def streamlit_menu(example):
     if example == 1:
         # 1. as sidebar menu
         with st.sidebar:
@@ -92,7 +92,7 @@ def streamlit_menu(example=2):
         return selected
 
 
-selected = streamlit_menu(example=1)   
+selected = streamlit_menu(example=2)   
 
 st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
