@@ -46,7 +46,7 @@ import plotly.graph_objects as go
 #%%
 st.set_page_config(layout='wide',
                    page_icon='./img/smart_grid.png', 
-                #    initial_sidebar_state='collapsed',
+                   initial_sidebar_state='collapsed',
                    page_title='건축물 리모델링 설계/시공 사례기반 시스템 (BRICS: Building Remodeling Information & Casebase System)')
 
 st.sidebar.image('./img/Home/SSEL_logo.png')
