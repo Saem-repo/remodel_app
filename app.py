@@ -54,7 +54,7 @@ st.sidebar.image('./img/Home/SSEL_logo.png')
 #%%
 
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
-def streamlit_menu(example=1):
+def streamlit_menu(example=2):
     if example == 1:
         # 1. as sidebar menu
         with st.sidebar:
