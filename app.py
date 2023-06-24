@@ -1378,11 +1378,31 @@ def contact () :
         font-size:25px ; font-family: 'Cooper Black'; color: #46CCFF; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     
-    st.markdown('''<p class="font"><strong>건축물 리모델링 설계/시공 사례기반 시스템</strong></p>   
-                   <p class="font1"><strong>BRICS : Building Remodeling Information & Casebase System</strong></p>
+    st.markdown('''<p class="font"><strong>**Smart and Sustainable Environment LAB** | **SSEL**</strong></p>   
+                   <p class="font1"><strong>**Contact Info** | 
+                        **Call** : +82-42-350-5667   
+                        **Website** : <http://ssel.kaist.ac.kr/></strong></p>
                 ''', unsafe_allow_html=True)
     
     st.markdown("---")
+
+    
+    # st.sidebar.info(''' **Smart and Sustainable Environment Design Laboratory (SSEL in KAIST) 
+    #                     연락처: 
+    #                     - 주소: 335 Gwahangno(373-1 Guseong-Dong), Daejeon 305-701, Republic of Korea
+    #                     - 전화: +82-42-350-5667 
+    #                     - 팩스: +82-42-350-3610
+    #                     - 웹페이지: <https://ssel.kaist.ac.kr>
+                        
+    #                     **Copyright SSEL all right reserved**
+
+    #                     ''')
+                        #**| SSEL** 
+                        # **E-mail** : saem@kaist.ac.kr  
+                        # **Website** :   
+                        # - Google Scholar : <https://scholar.google.co.kr/citations?hl=ko&user=r7tvGrUAAAAJ>   
+                        # - Research Gate : <https://www.researchgate.net/profile/Han-Saem-Park-3> 
+
 
 
 
