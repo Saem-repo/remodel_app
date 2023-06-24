@@ -1378,6 +1378,13 @@ def contact () :
         font-size:25px ; font-family: 'Cooper Black'; color: #46CCFF; text-align: center;} 
         </style> """, unsafe_allow_html=True)
     
+    
+    st.markdown('''<p class="font"><strong>연구실 소개 정보 추가</strong></p>   
+                   <p class="font1"><strong> 연구실 홈페이지에서 정보 가져오기!!
+                        </strong></p>
+                ''', unsafe_allow_html=True)
+
+
     st.markdown('''<p class="font"><strong>**Smart and Sustainable Environment LAB** | **SSEL**</strong></p>   
                    <p class="font1"><strong>**Contact Info** | 
                         **Call** : +82-42-350-5667   
