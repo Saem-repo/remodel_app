@@ -77,8 +77,8 @@ def streamlit_menu(example):
         # 2. horizontal menu w/o custom style
         selected = option_menu(
             menu_title=None,  # required
-            options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "유사 리모델링 사례 추천"],  # required
-            icons=["house", "sd-card", "search", "list-task"],  # optional
+            options=["홈", "리모델링 사례 현황", "리모델링 사례 검색", "유사 리모델링 사례 추천", "Contact"],  # required
+            icons=["house", "sd-card", "search", "list-task", "person lines fill"],  # optional
             menu_icon="cast",  # optional
             default_index=0,  # optional
             orientation="horizontal",
@@ -1365,6 +1365,26 @@ def rec_cases ():
         st.error("리모델링 작업 유형 및 0보다 큰 값 을 입력해주세요.")     
 
 
+def contact () :
+    
+    # img = Image.open('./img/home/smart_city.png')
+    # st.image(img)
+    # st.markdown("---")
+
+    st.markdown(""" <style> .font {
+        font-size:45px ; font-family: 'Cooper Black'; color: #0064ff; text-align: center;} 
+        </style> """, unsafe_allow_html=True)
+    st.markdown(""" <style> .font1 {
+        font-size:25px ; font-family: 'Cooper Black'; color: #46CCFF; text-align: center;} 
+        </style> """, unsafe_allow_html=True)
+    
+    st.markdown('''<p class="font"><strong>건축물 리모델링 설계/시공 사례기반 시스템</strong></p>   
+                   <p class="font1"><strong>BRICS : Building Remodeling Information & Casebase System</strong></p>
+                ''', unsafe_allow_html=True)
+    
+    st.markdown("---")
+
+
 
 # ============================================================================================================
 # 아래는 건드리지 않아도 됨!!
@@ -1372,7 +1392,8 @@ page_names_to_funcs = {
     "홈": home,
     "리모델링 사례 현황": case_summary,
     "리모델링 사례 검색": search_cases,
-    "유사 리모델링 사례 추천": rec_cases
+    "유사 리모델링 사례 추천": rec_cases,
+    "Contact": contact
     }
 
 page_names_to_funcs[selected]()
